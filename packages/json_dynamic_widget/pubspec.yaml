@@ -30,7 +30,9 @@ dependencies:
       path: "packages/json_theme"
   logging: "^1.3.0"
   meta: "^1.16.0"
-  template_expressions: "^3.3.1+2"
+  template_expressions:
+    git:
+      url: "https://github.com/reloved/template_expressions.git"
   uuid: "^4.1.0"
   yaml_writer: "^2.1.0"
   yaon: "^1.1.4+10"
