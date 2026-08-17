@@ -130,35 +130,34 @@ class JsonCustomScrollView extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonCustomScrollViewBuilder(
-               args: JsonCustomScrollViewBuilderModel.fromDynamic(
-                 {
-                   'anchor': anchor,
-                   'cacheExtent': cacheExtent,
-                   'center': center,
-                   'clipBehavior': clipBehavior,
-                   'controller': controller,
-                   'dragStartBehavior': dragStartBehavior,
-                   'hitTestBehavior': hitTestBehavior,
-                   'keyboardDismissBehavior': keyboardDismissBehavior,
-                   'paintOrder': paintOrder,
-                   'physics': physics,
-                   'primary': primary,
-                   'restorationId': restorationId,
-                   'reverse': reverse,
-                   'scrollBehavior': scrollBehavior,
-                   'scrollDirection': scrollDirection,
-                   'semanticChildCount': semanticChildCount,
-                   'shrinkWrap': shrinkWrap,
-                   'children': slivers,
+         jsonWidgetBuilder: () => JsonCustomScrollViewBuilder(
+           args: JsonCustomScrollViewBuilderModel.fromDynamic(
+             {
+               'anchor': anchor,
+               'cacheExtent': cacheExtent,
+               'center': center,
+               'clipBehavior': clipBehavior,
+               'controller': controller,
+               'dragStartBehavior': dragStartBehavior,
+               'hitTestBehavior': hitTestBehavior,
+               'keyboardDismissBehavior': keyboardDismissBehavior,
+               'paintOrder': paintOrder,
+               'physics': physics,
+               'primary': primary,
+               'restorationId': restorationId,
+               'reverse': reverse,
+               'scrollBehavior': scrollBehavior,
+               'scrollDirection': scrollDirection,
+               'semanticChildCount': semanticChildCount,
+               'shrinkWrap': shrinkWrap,
+               'children': slivers,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonCustomScrollViewBuilder.kType,
        );
 
@@ -598,40 +597,36 @@ class JsonCustomScrollViewBuilderModel extends JsonWidgetBuilderModel {
       'anchor': 0.0 == anchor ? null : anchor,
       'cacheExtent': cacheExtent,
       'center': center,
-      'clipBehavior':
-          Clip.hardEdge == clipBehavior
-              ? null
-              : ThemeEncoder.encodeClip(clipBehavior),
+      'clipBehavior': Clip.hardEdge == clipBehavior
+          ? null
+          : ThemeEncoder.encodeClip(clipBehavior),
       'controller': controller,
-      'dragStartBehavior':
-          DragStartBehavior.start == dragStartBehavior
-              ? null
-              : ThemeEncoder.encodeDragStartBehavior(dragStartBehavior),
-      'hitTestBehavior':
-          HitTestBehavior.opaque == hitTestBehavior
-              ? null
-              : ThemeEncoder.encodeHitTestBehavior(hitTestBehavior),
+      'dragStartBehavior': DragStartBehavior.start == dragStartBehavior
+          ? null
+          : ThemeEncoder.encodeDragStartBehavior(dragStartBehavior),
+      'hitTestBehavior': HitTestBehavior.opaque == hitTestBehavior
+          ? null
+          : ThemeEncoder.encodeHitTestBehavior(hitTestBehavior),
       'keyboardDismissBehavior':
           ThemeEncoder.encodeScrollViewKeyboardDismissBehavior(
             keyboardDismissBehavior,
           ),
-      'paintOrder':
-          SliverPaintOrder.firstIsTop == paintOrder ? null : paintOrder,
+      'paintOrder': SliverPaintOrder.firstIsTop == paintOrder
+          ? null
+          : paintOrder,
       'physics': ThemeEncoder.encodeScrollPhysics(physics),
       'primary': primary,
       'restorationId': restorationId,
       'reverse': false == reverse ? null : reverse,
       'scrollBehavior': ThemeEncoder.encodeScrollBehavior(scrollBehavior),
-      'scrollDirection':
-          Axis.vertical == scrollDirection
-              ? null
-              : ThemeEncoder.encodeAxis(scrollDirection),
+      'scrollDirection': Axis.vertical == scrollDirection
+          ? null
+          : ThemeEncoder.encodeAxis(scrollDirection),
       'semanticChildCount': semanticChildCount,
       'shrinkWrap': false == shrinkWrap ? null : shrinkWrap,
-      'children':
-          const <JsonWidgetData>[] == slivers
-              ? null
-              : JsonClass.toJsonList(slivers),
+      'children': const <JsonWidgetData>[] == slivers
+          ? null
+          : JsonClass.toJsonList(slivers),
 
       ...args,
     });
@@ -672,6 +667,5 @@ class CustomScrollViewSchema {
       'shrinkWrap': SchemaHelper.boolSchema,
       'children': SchemaHelper.arraySchema(JsonWidgetDataSchema.id),
     },
-    'required': [],
   };
 }

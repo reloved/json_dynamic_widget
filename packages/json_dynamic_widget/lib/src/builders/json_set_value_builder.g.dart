@@ -78,20 +78,13 @@ class JsonSetValue extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonSetValueBuilder(
-               args: JsonSetValueBuilderModel.fromDynamic(
-                 {
-                   'cleanup': cleanup,
-                   'values': values,
-                   'child': child,
-
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+         jsonWidgetBuilder: () => JsonSetValueBuilder(
+           args: JsonSetValueBuilderModel.fromDynamic(
+             {'cleanup': cleanup, 'values': values, 'child': child, ...args},
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonSetValueBuilder.kType,
        );
 
@@ -201,6 +194,5 @@ class SetValueSchema {
       'values': SchemaHelper.anySchema,
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': [],
   };
 }

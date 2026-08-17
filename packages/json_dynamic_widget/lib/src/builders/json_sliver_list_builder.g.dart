@@ -97,25 +97,24 @@ class JsonSliverList extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonSliverListBuilder(
-               args: JsonSliverListBuilderModel.fromDynamic(
-                 {
-                   'addAutomaticKeepAlives': addAutomaticKeepAlives,
-                   'addRepaintBoundaries': addRepaintBoundaries,
-                   'addSemanticIndexes': addSemanticIndexes,
-                   'childBuilder': childBuilder,
-                   'findChildIndexCallback': findChildIndexCallback,
-                   'semanticIndexCallback': semanticIndexCallback,
-                   'semanticIndexOffset': semanticIndexOffset,
-                   'children': children,
+         jsonWidgetBuilder: () => JsonSliverListBuilder(
+           args: JsonSliverListBuilderModel.fromDynamic(
+             {
+               'addAutomaticKeepAlives': addAutomaticKeepAlives,
+               'addRepaintBoundaries': addRepaintBoundaries,
+               'addSemanticIndexes': addSemanticIndexes,
+               'childBuilder': childBuilder,
+               'findChildIndexCallback': findChildIndexCallback,
+               'semanticIndexCallback': semanticIndexCallback,
+               'semanticIndexOffset': semanticIndexOffset,
+               'children': children,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonSliverListBuilder.kType,
        );
 
@@ -248,8 +247,9 @@ class JsonSliverListBuilderModel extends JsonWidgetBuilderModel {
       'childBuilder': childBuilder,
       'findChildIndexCallback': findChildIndexCallback,
       'semanticIndexCallback': semanticIndexCallback,
-      'semanticIndexOffset':
-          0 == semanticIndexOffset ? null : semanticIndexOffset,
+      'semanticIndexOffset': 0 == semanticIndexOffset
+          ? null
+          : semanticIndexOffset,
       'children': JsonClass.maybeToJsonList(children),
 
       ...args,
@@ -277,10 +277,5 @@ class SliverListSchema {
       'semanticIndexOffset': SchemaHelper.numberSchema,
       'children': SchemaHelper.arraySchema(JsonWidgetDataSchema.id),
     },
-    'required': [
-      'addAutomaticKeepAlives',
-      'addRepaintBoundaries',
-      'addSemanticIndexes',
-    ],
   };
 }

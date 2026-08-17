@@ -115,31 +115,30 @@ class JsonMaterial extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonMaterialBuilder(
-               args: JsonMaterialBuilderModel.fromDynamic(
-                 {
-                   'animationDuration': animationDuration,
-                   'borderOnForeground': borderOnForeground,
-                   'borderRadius': borderRadius,
-                   'clipBehavior': clipBehavior,
-                   'color': color,
-                   'elevation': elevation,
-                   'margin': margin,
-                   'materialType': materialType,
-                   'padding': padding,
-                   'shadowColor': shadowColor,
-                   'shape': shape,
-                   'surfaceTintColor': surfaceTintColor,
-                   'textStyle': textStyle,
-                   'child': child,
+         jsonWidgetBuilder: () => JsonMaterialBuilder(
+           args: JsonMaterialBuilderModel.fromDynamic(
+             {
+               'animationDuration': animationDuration,
+               'borderOnForeground': borderOnForeground,
+               'borderRadius': borderRadius,
+               'clipBehavior': clipBehavior,
+               'color': color,
+               'elevation': elevation,
+               'margin': margin,
+               'materialType': materialType,
+               'padding': padding,
+               'shadowColor': shadowColor,
+               'shape': shape,
+               'surfaceTintColor': surfaceTintColor,
+               'textStyle': textStyle,
+               'child': child,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonMaterialBuilder.kType,
        );
 
@@ -374,24 +373,22 @@ class JsonMaterialBuilderModel extends JsonWidgetBuilderModel {
   @override
   Map<String, dynamic> toJson() {
     return JsonClass.removeNull({
-      'animationDuration':
-          kThemeChangeDuration == animationDuration
-              ? null
-              : animationDuration.inMilliseconds,
-      'borderOnForeground':
-          true == borderOnForeground ? null : borderOnForeground,
+      'animationDuration': kThemeChangeDuration == animationDuration
+          ? null
+          : animationDuration.inMilliseconds,
+      'borderOnForeground': true == borderOnForeground
+          ? null
+          : borderOnForeground,
       'borderRadius': ThemeEncoder.encodeBorderRadius(borderRadius),
-      'clipBehavior':
-          Clip.none == clipBehavior
-              ? null
-              : ThemeEncoder.encodeClip(clipBehavior),
+      'clipBehavior': Clip.none == clipBehavior
+          ? null
+          : ThemeEncoder.encodeClip(clipBehavior),
       'color': ThemeEncoder.encodeColor(color),
       'elevation': 0.0 == elevation ? null : elevation,
       'margin': ThemeEncoder.encodeEdgeInsetsGeometry(margin),
-      'materialType':
-          MaterialType.canvas == materialType
-              ? null
-              : ThemeEncoder.encodeMaterialType(materialType),
+      'materialType': MaterialType.canvas == materialType
+          ? null
+          : ThemeEncoder.encodeMaterialType(materialType),
       'padding': ThemeEncoder.encodeEdgeInsetsGeometry(padding),
       'shadowColor': ThemeEncoder.encodeColor(shadowColor),
       'shape': ThemeEncoder.encodeShapeBorder(shape),
@@ -430,6 +427,5 @@ class MaterialSchema {
       'textStyle': SchemaHelper.objectSchema(TextStyleSchema.id),
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': [],
   };
 }

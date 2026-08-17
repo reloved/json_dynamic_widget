@@ -85,20 +85,19 @@ class JsonDecoratedBox extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonDecoratedBoxBuilder(
-               args: JsonDecoratedBoxBuilderModel.fromDynamic(
-                 {
-                   'decoration': decoration,
-                   'position': position,
-                   'child': child,
+         jsonWidgetBuilder: () => JsonDecoratedBoxBuilder(
+           args: JsonDecoratedBoxBuilderModel.fromDynamic(
+             {
+               'decoration': decoration,
+               'position': position,
+               'child': child,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonDecoratedBoxBuilder.kType,
        );
 
@@ -195,10 +194,9 @@ class JsonDecoratedBoxBuilderModel extends JsonWidgetBuilderModel {
   Map<String, dynamic> toJson() {
     return JsonClass.removeNull({
       'decoration': decoration,
-      'position':
-          DecorationPosition.background == position
-              ? null
-              : ThemeEncoder.encodeDecorationPosition(position),
+      'position': DecorationPosition.background == position
+          ? null
+          : ThemeEncoder.encodeDecorationPosition(position),
       'child': child?.toJson(),
 
       ...args,
@@ -221,6 +219,5 @@ class DecoratedBoxSchema {
       'position': SchemaHelper.objectSchema(DecorationPositionSchema.id),
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': ['decoration'],
   };
 }

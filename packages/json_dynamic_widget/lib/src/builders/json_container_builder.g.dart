@@ -117,30 +117,29 @@ class JsonContainer extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonContainerBuilder(
-               args: JsonContainerBuilderModel.fromDynamic(
-                 {
-                   'alignment': alignment,
-                   'clipBehavior': clipBehavior,
-                   'color': color,
-                   'constraints': constraints,
-                   'decoration': decoration,
-                   'foregroundDecoration': foregroundDecoration,
-                   'height': height,
-                   'margin': margin,
-                   'padding': padding,
-                   'transform': transform,
-                   'transformAlignment': transformAlignment,
-                   'width': width,
-                   'child': child,
+         jsonWidgetBuilder: () => JsonContainerBuilder(
+           args: JsonContainerBuilderModel.fromDynamic(
+             {
+               'alignment': alignment,
+               'clipBehavior': clipBehavior,
+               'color': color,
+               'constraints': constraints,
+               'decoration': decoration,
+               'foregroundDecoration': foregroundDecoration,
+               'height': height,
+               'margin': margin,
+               'padding': padding,
+               'transform': transform,
+               'transformAlignment': transformAlignment,
+               'width': width,
+               'child': child,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonContainerBuilder.kType,
        );
 
@@ -515,10 +514,9 @@ class JsonContainerBuilderModel extends JsonWidgetBuilderModel {
 
     return JsonClass.removeNull({
       'alignment': ThemeEncoder.encodeAlignmentGeometry(alignment),
-      'clipBehavior':
-          Clip.none == clipBehavior
-              ? null
-              : ThemeEncoder.encodeClip(clipBehavior),
+      'clipBehavior': Clip.none == clipBehavior
+          ? null
+          : ThemeEncoder.encodeClip(clipBehavior),
       'color': ThemeEncoder.encodeColor(color),
       'constraints': ThemeEncoder.encodeBoxConstraints(constraints),
       'decoration': decorationEncoded,
@@ -566,6 +564,5 @@ class ContainerSchema {
       'width': SchemaHelper.numberSchema,
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': [],
   };
 }

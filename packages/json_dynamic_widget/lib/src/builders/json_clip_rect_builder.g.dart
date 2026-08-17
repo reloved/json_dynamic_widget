@@ -82,20 +82,19 @@ class JsonClipRect extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonClipRectBuilder(
-               args: JsonClipRectBuilderModel.fromDynamic(
-                 {
-                   'clipBehavior': clipBehavior,
-                   'clipper': clipper,
-                   'child': child,
+         jsonWidgetBuilder: () => JsonClipRectBuilder(
+           args: JsonClipRectBuilderModel.fromDynamic(
+             {
+               'clipBehavior': clipBehavior,
+               'clipper': clipper,
+               'child': child,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonClipRectBuilder.kType,
        );
 
@@ -202,10 +201,9 @@ class JsonClipRectBuilderModel extends JsonWidgetBuilderModel {
   @override
   Map<String, dynamic> toJson() {
     return JsonClass.removeNull({
-      'clipBehavior':
-          Clip.hardEdge == clipBehavior
-              ? null
-              : ThemeEncoder.encodeClip(clipBehavior),
+      'clipBehavior': Clip.hardEdge == clipBehavior
+          ? null
+          : ThemeEncoder.encodeClip(clipBehavior),
       'clipper': clipper,
       'child': child?.toJson(),
 
@@ -229,6 +227,5 @@ class ClipRectSchema {
       'clipper': SchemaHelper.anySchema,
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': [],
   };
 }

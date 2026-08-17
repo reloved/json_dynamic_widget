@@ -85,21 +85,20 @@ class JsonFractionallySizedBox extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonFractionallySizedBoxBuilder(
-               args: JsonFractionallySizedBoxBuilderModel.fromDynamic(
-                 {
-                   'alignment': alignment,
-                   'heightFactor': heightFactor,
-                   'widthFactor': widthFactor,
-                   'child': child,
+         jsonWidgetBuilder: () => JsonFractionallySizedBoxBuilder(
+           args: JsonFractionallySizedBoxBuilderModel.fromDynamic(
+             {
+               'alignment': alignment,
+               'heightFactor': heightFactor,
+               'widthFactor': widthFactor,
+               'child': child,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonFractionallySizedBoxBuilder.kType,
        );
 
@@ -288,10 +287,9 @@ class JsonFractionallySizedBoxBuilderModel extends JsonWidgetBuilderModel {
   @override
   Map<String, dynamic> toJson() {
     return JsonClass.removeNull({
-      'alignment':
-          Alignment.center == alignment
-              ? null
-              : ThemeEncoder.encodeAlignmentGeometry(alignment),
+      'alignment': Alignment.center == alignment
+          ? null
+          : ThemeEncoder.encodeAlignmentGeometry(alignment),
       'heightFactor': heightFactor,
       'widthFactor': widthFactor,
       'child': child?.toJson(),
@@ -317,6 +315,5 @@ class FractionallySizedBoxSchema {
       'widthFactor': SchemaHelper.numberSchema,
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': [],
   };
 }

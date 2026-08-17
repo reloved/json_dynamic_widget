@@ -91,22 +91,21 @@ class JsonStack extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonStackBuilder(
-               args: JsonStackBuilderModel.fromDynamic(
-                 {
-                   'alignment': alignment,
-                   'clipBehavior': clipBehavior,
-                   'fit': fit,
-                   'textDirection': textDirection,
-                   'children': children,
+         jsonWidgetBuilder: () => JsonStackBuilder(
+           args: JsonStackBuilderModel.fromDynamic(
+             {
+               'alignment': alignment,
+               'clipBehavior': clipBehavior,
+               'fit': fit,
+               'textDirection': textDirection,
+               'children': children,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonStackBuilder.kType,
        );
 
@@ -329,20 +328,17 @@ class JsonStackBuilderModel extends JsonWidgetBuilderModel {
   @override
   Map<String, dynamic> toJson() {
     return JsonClass.removeNull({
-      'alignment':
-          AlignmentDirectional.topStart == alignment
-              ? null
-              : ThemeEncoder.encodeAlignmentGeometry(alignment),
-      'clipBehavior':
-          Clip.hardEdge == clipBehavior
-              ? null
-              : ThemeEncoder.encodeClip(clipBehavior),
+      'alignment': AlignmentDirectional.topStart == alignment
+          ? null
+          : ThemeEncoder.encodeAlignmentGeometry(alignment),
+      'clipBehavior': Clip.hardEdge == clipBehavior
+          ? null
+          : ThemeEncoder.encodeClip(clipBehavior),
       'fit': StackFit.loose == fit ? null : ThemeEncoder.encodeStackFit(fit),
       'textDirection': ThemeEncoder.encodeTextDirection(textDirection),
-      'children':
-          const <JsonWidgetData>[] == children
-              ? null
-              : JsonClass.toJsonList(children),
+      'children': const <JsonWidgetData>[] == children
+          ? null
+          : JsonClass.toJsonList(children),
 
       ...args,
     });
@@ -366,6 +362,5 @@ class StackSchema {
       'textDirection': SchemaHelper.objectSchema(TextDirectionSchema.id),
       'children': SchemaHelper.arraySchema(JsonWidgetDataSchema.id),
     },
-    'required': [],
   };
 }

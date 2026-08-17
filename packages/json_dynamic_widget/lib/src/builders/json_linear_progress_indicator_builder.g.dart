@@ -112,29 +112,28 @@ class JsonLinearProgressIndicator extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonLinearProgressIndicatorBuilder(
-               args: JsonLinearProgressIndicatorBuilderModel.fromDynamic(
-                 {
-                   'backgroundColor': backgroundColor,
-                   'borderRadius': borderRadius,
-                   'color': color,
-                   'minHeight': minHeight,
-                   'semanticsLabel': semanticsLabel,
-                   'semanticsValue': semanticsValue,
-                   'stopIndicatorColor': stopIndicatorColor,
-                   'stopIndicatorRadius': stopIndicatorRadius,
-                   'trackGap': trackGap,
-                   'value': value,
-                   'valueColor': valueColor,
-                   'year2023': year2023,
+         jsonWidgetBuilder: () => JsonLinearProgressIndicatorBuilder(
+           args: JsonLinearProgressIndicatorBuilderModel.fromDynamic(
+             {
+               'backgroundColor': backgroundColor,
+               'borderRadius': borderRadius,
+               'color': color,
+               'minHeight': minHeight,
+               'semanticsLabel': semanticsLabel,
+               'semanticsValue': semanticsValue,
+               'stopIndicatorColor': stopIndicatorColor,
+               'stopIndicatorRadius': stopIndicatorRadius,
+               'trackGap': trackGap,
+               'value': value,
+               'valueColor': valueColor,
+               'year2023': year2023,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonLinearProgressIndicatorBuilder.kType,
        );
 
@@ -463,6 +462,5 @@ class LinearProgressIndicatorSchema {
       'valueColor': SchemaHelper.anySchema,
       'year2023': SchemaHelper.boolSchema,
     },
-    'required': [],
   };
 }

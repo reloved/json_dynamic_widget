@@ -127,35 +127,34 @@ class JsonTabBarTheme extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonTabBarThemeBuilder(
-               args: JsonTabBarThemeBuilderModel.fromDynamic(
-                 {
-                   'data': data,
-                   'dividerColor': dividerColor,
-                   'dividerHeight': dividerHeight,
-                   'indicator': indicator,
-                   'indicatorAnimation': indicatorAnimation,
-                   'indicatorColor': indicatorColor,
-                   'indicatorSize': indicatorSize,
-                   'labelColor': labelColor,
-                   'labelPadding': labelPadding,
-                   'labelStyle': labelStyle,
-                   'mouseCursor': mouseCursor,
-                   'overlayColor': overlayColor,
-                   'splashFactory': splashFactory,
-                   'tabAlignment': tabAlignment,
-                   'textScaler': textScaler,
-                   'unselectedLabelColor': unselectedLabelColor,
-                   'unselectedLabelStyle': unselectedLabelStyle,
-                   'child': child,
+         jsonWidgetBuilder: () => JsonTabBarThemeBuilder(
+           args: JsonTabBarThemeBuilderModel.fromDynamic(
+             {
+               'data': data,
+               'dividerColor': dividerColor,
+               'dividerHeight': dividerHeight,
+               'indicator': indicator,
+               'indicatorAnimation': indicatorAnimation,
+               'indicatorColor': indicatorColor,
+               'indicatorSize': indicatorSize,
+               'labelColor': labelColor,
+               'labelPadding': labelPadding,
+               'labelStyle': labelStyle,
+               'mouseCursor': mouseCursor,
+               'overlayColor': overlayColor,
+               'splashFactory': splashFactory,
+               'tabAlignment': tabAlignment,
+               'textScaler': textScaler,
+               'unselectedLabelColor': unselectedLabelColor,
+               'unselectedLabelStyle': unselectedLabelStyle,
+               'child': child,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonTabBarThemeBuilder.kType,
        );
 
@@ -486,6 +485,5 @@ class TabBarThemeSchema {
       'unselectedLabelStyle': SchemaHelper.objectSchema(TextStyleSchema.id),
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': [],
   };
 }

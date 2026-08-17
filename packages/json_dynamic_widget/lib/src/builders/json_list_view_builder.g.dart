@@ -132,36 +132,35 @@ class JsonListView extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonListViewBuilder(
-               args: JsonListViewBuilderModel.fromDynamic(
-                 {
-                   'addAutomaticKeepAlives': addAutomaticKeepAlives,
-                   'addRepaintBoundaries': addRepaintBoundaries,
-                   'addSemanticIndexes': addSemanticIndexes,
-                   'cacheExtent': cacheExtent,
-                   'clipBehavior': clipBehavior,
-                   'controller': controller,
-                   'dragStartBehavior': dragStartBehavior,
-                   'findChildIndexCallback': findChildIndexCallback,
-                   'itemExtent': itemExtent,
-                   'keyboardDismissBehavior': keyboardDismissBehavior,
-                   'padding': padding,
-                   'physics': physics,
-                   'primary': primary,
-                   'prototypeItem': prototypeItem,
-                   'restorationId': restorationId,
-                   'reverse': reverse,
-                   'scrollDirection': scrollDirection,
-                   'shrinkWrap': shrinkWrap,
-                   'children': children,
+         jsonWidgetBuilder: () => JsonListViewBuilder(
+           args: JsonListViewBuilderModel.fromDynamic(
+             {
+               'addAutomaticKeepAlives': addAutomaticKeepAlives,
+               'addRepaintBoundaries': addRepaintBoundaries,
+               'addSemanticIndexes': addSemanticIndexes,
+               'cacheExtent': cacheExtent,
+               'clipBehavior': clipBehavior,
+               'controller': controller,
+               'dragStartBehavior': dragStartBehavior,
+               'findChildIndexCallback': findChildIndexCallback,
+               'itemExtent': itemExtent,
+               'keyboardDismissBehavior': keyboardDismissBehavior,
+               'padding': padding,
+               'physics': physics,
+               'primary': primary,
+               'prototypeItem': prototypeItem,
+               'restorationId': restorationId,
+               'reverse': reverse,
+               'scrollDirection': scrollDirection,
+               'shrinkWrap': shrinkWrap,
+               'children': children,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonListViewBuilder.kType,
        );
 
@@ -408,40 +407,40 @@ class JsonListViewBuilderModel extends JsonWidgetBuilderModel {
   @override
   Map<String, dynamic> toJson() {
     return JsonClass.removeNull({
-      'addAutomaticKeepAlives':
-          true == addAutomaticKeepAlives ? null : addAutomaticKeepAlives,
-      'addRepaintBoundaries':
-          true == addRepaintBoundaries ? null : addRepaintBoundaries,
-      'addSemanticIndexes':
-          true == addSemanticIndexes ? null : addSemanticIndexes,
+      'addAutomaticKeepAlives': true == addAutomaticKeepAlives
+          ? null
+          : addAutomaticKeepAlives,
+      'addRepaintBoundaries': true == addRepaintBoundaries
+          ? null
+          : addRepaintBoundaries,
+      'addSemanticIndexes': true == addSemanticIndexes
+          ? null
+          : addSemanticIndexes,
       'cacheExtent': cacheExtent,
-      'clipBehavior':
-          Clip.hardEdge == clipBehavior
-              ? null
-              : ThemeEncoder.encodeClip(clipBehavior),
+      'clipBehavior': Clip.hardEdge == clipBehavior
+          ? null
+          : ThemeEncoder.encodeClip(clipBehavior),
       'controller': controller,
-      'dragStartBehavior':
-          DragStartBehavior.start == dragStartBehavior
-              ? null
-              : ThemeEncoder.encodeDragStartBehavior(dragStartBehavior),
+      'dragStartBehavior': DragStartBehavior.start == dragStartBehavior
+          ? null
+          : ThemeEncoder.encodeDragStartBehavior(dragStartBehavior),
       'findChildIndexCallback': findChildIndexCallback,
       'itemExtent': itemExtent,
       'keyboardDismissBehavior':
           ScrollViewKeyboardDismissBehavior.manual == keyboardDismissBehavior
-              ? null
-              : ThemeEncoder.encodeScrollViewKeyboardDismissBehavior(
-                keyboardDismissBehavior,
-              ),
+          ? null
+          : ThemeEncoder.encodeScrollViewKeyboardDismissBehavior(
+              keyboardDismissBehavior,
+            ),
       'padding': ThemeEncoder.encodeEdgeInsets(padding),
       'physics': ThemeEncoder.encodeScrollPhysics(physics),
       'primary': primary,
       'prototypeItem': prototypeItem?.toJson(),
       'restorationId': restorationId,
       'reverse': false == reverse ? null : reverse,
-      'scrollDirection':
-          Axis.vertical == scrollDirection
-              ? null
-              : ThemeEncoder.encodeAxis(scrollDirection),
+      'scrollDirection': Axis.vertical == scrollDirection
+          ? null
+          : ThemeEncoder.encodeAxis(scrollDirection),
       'shrinkWrap': false == shrinkWrap ? null : shrinkWrap,
       'children': JsonClass.maybeToJsonList(children),
 
@@ -485,6 +484,5 @@ class ListViewSchema {
       'shrinkWrap': SchemaHelper.boolSchema,
       'children': SchemaHelper.arraySchema(JsonWidgetDataSchema.id),
     },
-    'required': [],
   };
 }

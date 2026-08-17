@@ -94,24 +94,23 @@ class JsonSafeArea extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonSafeAreaBuilder(
-               args: JsonSafeAreaBuilderModel.fromDynamic(
-                 {
-                   'bottom': bottom,
-                   'left': left,
-                   'maintainBottomViewPadding': maintainBottomViewPadding,
-                   'minimum': minimum,
-                   'right': right,
-                   'top': top,
-                   'child': child,
+         jsonWidgetBuilder: () => JsonSafeAreaBuilder(
+           args: JsonSafeAreaBuilderModel.fromDynamic(
+             {
+               'bottom': bottom,
+               'left': left,
+               'maintainBottomViewPadding': maintainBottomViewPadding,
+               'minimum': minimum,
+               'right': right,
+               'top': top,
+               'child': child,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonSafeAreaBuilder.kType,
        );
 
@@ -297,12 +296,12 @@ class JsonSafeAreaBuilderModel extends JsonWidgetBuilderModel {
     return JsonClass.removeNull({
       'bottom': true == bottom ? null : bottom,
       'left': true == left ? null : left,
-      'maintainBottomViewPadding':
-          false == maintainBottomViewPadding ? null : maintainBottomViewPadding,
-      'minimum':
-          EdgeInsets.zero == minimum
-              ? null
-              : ThemeEncoder.encodeEdgeInsets(minimum),
+      'maintainBottomViewPadding': false == maintainBottomViewPadding
+          ? null
+          : maintainBottomViewPadding,
+      'minimum': EdgeInsets.zero == minimum
+          ? null
+          : ThemeEncoder.encodeEdgeInsets(minimum),
       'right': true == right ? null : right,
       'top': true == top ? null : top,
       'child': child.toJson(),
@@ -331,6 +330,5 @@ class SafeAreaSchema {
       'top': SchemaHelper.boolSchema,
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': ['child'],
   };
 }

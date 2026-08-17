@@ -74,14 +74,13 @@ class JsonAspectRatio extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonAspectRatioBuilder(
-               args: JsonAspectRatioBuilderModel.fromDynamic(
-                 {'aspectRatio': aspectRatio, 'child': child, ...args},
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+         jsonWidgetBuilder: () => JsonAspectRatioBuilder(
+           args: JsonAspectRatioBuilderModel.fromDynamic(
+             {'aspectRatio': aspectRatio, 'child': child, ...args},
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonAspectRatioBuilder.kType,
        );
 
@@ -200,6 +199,5 @@ class AspectRatioSchema {
       'aspectRatio': SchemaHelper.numberSchema,
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': ['aspectRatio'],
   };
 }

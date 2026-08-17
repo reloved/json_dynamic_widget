@@ -94,24 +94,23 @@ class JsonPositioned extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonPositionedBuilder(
-               args: JsonPositionedBuilderModel.fromDynamic(
-                 {
-                   'bottom': bottom,
-                   'height': height,
-                   'left': left,
-                   'right': right,
-                   'top': top,
-                   'width': width,
-                   'child': child,
+         jsonWidgetBuilder: () => JsonPositionedBuilder(
+           args: JsonPositionedBuilderModel.fromDynamic(
+             {
+               'bottom': bottom,
+               'height': height,
+               'left': left,
+               'right': right,
+               'top': top,
+               'width': width,
+               'child': child,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonPositionedBuilder.kType,
        );
 
@@ -386,6 +385,5 @@ class PositionedSchema {
       'width': SchemaHelper.numberSchema,
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': ['child'],
   };
 }

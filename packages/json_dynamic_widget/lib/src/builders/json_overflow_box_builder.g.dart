@@ -94,24 +94,23 @@ class JsonOverflowBox extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonOverflowBoxBuilder(
-               args: JsonOverflowBoxBuilderModel.fromDynamic(
-                 {
-                   'alignment': alignment,
-                   'fit': fit,
-                   'maxHeight': maxHeight,
-                   'maxWidth': maxWidth,
-                   'minHeight': minHeight,
-                   'minWidth': minWidth,
-                   'child': child,
+         jsonWidgetBuilder: () => JsonOverflowBoxBuilder(
+           args: JsonOverflowBoxBuilderModel.fromDynamic(
+             {
+               'alignment': alignment,
+               'fit': fit,
+               'maxHeight': maxHeight,
+               'maxWidth': maxWidth,
+               'minHeight': minHeight,
+               'minWidth': minWidth,
+               'child': child,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonOverflowBoxBuilder.kType,
        );
 
@@ -329,14 +328,12 @@ class JsonOverflowBoxBuilderModel extends JsonWidgetBuilderModel {
   @override
   Map<String, dynamic> toJson() {
     return JsonClass.removeNull({
-      'alignment':
-          Alignment.center == alignment
-              ? null
-              : ThemeEncoder.encodeAlignmentGeometry(alignment),
-      'fit':
-          OverflowBoxFit.max == fit
-              ? null
-              : ThemeEncoder.encodeOverflowBoxFit(fit),
+      'alignment': Alignment.center == alignment
+          ? null
+          : ThemeEncoder.encodeAlignmentGeometry(alignment),
+      'fit': OverflowBoxFit.max == fit
+          ? null
+          : ThemeEncoder.encodeOverflowBoxFit(fit),
       'maxHeight': maxHeight,
       'maxWidth': maxWidth,
       'minHeight': minHeight,
@@ -367,6 +364,5 @@ class OverflowBoxSchema {
       'minWidth': SchemaHelper.numberSchema,
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': [],
   };
 }

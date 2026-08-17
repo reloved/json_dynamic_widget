@@ -137,38 +137,37 @@ class JsonMemoryImage extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonMemoryImageBuilder(
-               args: JsonMemoryImageBuilderModel.fromDynamic(
-                 {
-                   'alignment': alignment,
-                   'cacheHeight': cacheHeight,
-                   'cacheWidth': cacheWidth,
-                   'centerSlice': centerSlice,
-                   'color': color,
-                   'colorBlendMode': colorBlendMode,
-                   'errorBuilder': errorBuilder,
-                   'excludeFromSemantics': excludeFromSemantics,
-                   'filterQuality': filterQuality,
-                   'fit': fit,
-                   'frameBuilder': frameBuilder,
-                   'gaplessPlayback': gaplessPlayback,
-                   'height': height,
-                   'image': image,
-                   'isAntiAlias': isAntiAlias,
-                   'matchTextDirection': matchTextDirection,
-                   'opacity': opacity,
-                   'repeat': repeat,
-                   'scale': scale,
-                   'semanticLabel': semanticLabel,
-                   'width': width,
+         jsonWidgetBuilder: () => JsonMemoryImageBuilder(
+           args: JsonMemoryImageBuilderModel.fromDynamic(
+             {
+               'alignment': alignment,
+               'cacheHeight': cacheHeight,
+               'cacheWidth': cacheWidth,
+               'centerSlice': centerSlice,
+               'color': color,
+               'colorBlendMode': colorBlendMode,
+               'errorBuilder': errorBuilder,
+               'excludeFromSemantics': excludeFromSemantics,
+               'filterQuality': filterQuality,
+               'fit': fit,
+               'frameBuilder': frameBuilder,
+               'gaplessPlayback': gaplessPlayback,
+               'height': height,
+               'image': image,
+               'isAntiAlias': isAntiAlias,
+               'matchTextDirection': matchTextDirection,
+               'opacity': opacity,
+               'repeat': repeat,
+               'scale': scale,
+               'semanticLabel': semanticLabel,
+               'width': width,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonMemoryImageBuilder.kType,
        );
 
@@ -436,35 +435,34 @@ class JsonMemoryImageBuilderModel extends JsonWidgetBuilderModel {
   @override
   Map<String, dynamic> toJson() {
     return JsonClass.removeNull({
-      'alignment':
-          Alignment.center == alignment
-              ? null
-              : ThemeEncoder.encodeAlignment(alignment),
+      'alignment': Alignment.center == alignment
+          ? null
+          : ThemeEncoder.encodeAlignment(alignment),
       'cacheHeight': cacheHeight,
       'cacheWidth': cacheWidth,
       'centerSlice': ThemeEncoder.encodeRect(centerSlice),
       'color': ThemeEncoder.encodeColor(color),
       'colorBlendMode': ThemeEncoder.encodeBlendMode(colorBlendMode),
       'errorBuilder': errorBuilder,
-      'excludeFromSemantics':
-          false == excludeFromSemantics ? null : excludeFromSemantics,
-      'filterQuality':
-          FilterQuality.low == filterQuality
-              ? null
-              : ThemeEncoder.encodeFilterQuality(filterQuality),
+      'excludeFromSemantics': false == excludeFromSemantics
+          ? null
+          : excludeFromSemantics,
+      'filterQuality': FilterQuality.low == filterQuality
+          ? null
+          : ThemeEncoder.encodeFilterQuality(filterQuality),
       'fit': ThemeEncoder.encodeBoxFit(fit),
       'frameBuilder': frameBuilder,
       'gaplessPlayback': false == gaplessPlayback ? null : gaplessPlayback,
       'height': height,
       'image': image,
       'isAntiAlias': false == isAntiAlias ? null : isAntiAlias,
-      'matchTextDirection':
-          false == matchTextDirection ? null : matchTextDirection,
+      'matchTextDirection': false == matchTextDirection
+          ? null
+          : matchTextDirection,
       'opacity': opacity,
-      'repeat':
-          ImageRepeat.noRepeat == repeat
-              ? null
-              : ThemeEncoder.encodeImageRepeat(repeat),
+      'repeat': ImageRepeat.noRepeat == repeat
+          ? null
+          : ThemeEncoder.encodeImageRepeat(repeat),
       'scale': 1.0 == scale ? null : scale,
       'semanticLabel': semanticLabel,
       'width': width,
@@ -507,6 +505,5 @@ class MemoryImageSchema {
       'semanticLabel': SchemaHelper.stringSchema,
       'width': SchemaHelper.numberSchema,
     },
-    'required': ['image'],
   };
 }

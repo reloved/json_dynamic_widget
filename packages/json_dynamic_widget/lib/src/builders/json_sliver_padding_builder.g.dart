@@ -74,14 +74,13 @@ class JsonSliverPadding extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonSliverPaddingBuilder(
-               args: JsonSliverPaddingBuilderModel.fromDynamic(
-                 {'padding': padding, 'child': sliver, ...args},
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+         jsonWidgetBuilder: () => JsonSliverPaddingBuilder(
+           args: JsonSliverPaddingBuilderModel.fromDynamic(
+             {'padding': padding, 'child': sliver, ...args},
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonSliverPaddingBuilder.kType,
        );
 
@@ -195,6 +194,5 @@ class SliverPaddingSchema {
       'padding': SchemaHelper.objectSchema(EdgeInsetsGeometrySchema.id),
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': ['padding'],
   };
 }

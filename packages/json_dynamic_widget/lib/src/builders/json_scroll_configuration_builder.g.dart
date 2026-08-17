@@ -93,24 +93,23 @@ class JsonScrollConfiguration extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonScrollConfigurationBuilder(
-               args: JsonScrollConfigurationBuilderModel.fromDynamic(
-                 {
-                   'childBuilder': childBuilder,
-                   'dragDevices': dragDevices,
-                   'overscroll': overscroll,
-                   'physics': physics,
-                   'platform': platform,
-                   'scrollbars': scrollbars,
-                   'child': child,
+         jsonWidgetBuilder: () => JsonScrollConfigurationBuilder(
+           args: JsonScrollConfigurationBuilderModel.fromDynamic(
+             {
+               'childBuilder': childBuilder,
+               'dragDevices': dragDevices,
+               'overscroll': overscroll,
+               'physics': physics,
+               'platform': platform,
+               'scrollbars': scrollbars,
+               'child': child,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonScrollConfigurationBuilder.kType,
        );
 
@@ -265,6 +264,5 @@ class ScrollConfigurationSchema {
       'scrollbars': SchemaHelper.boolSchema,
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': ['child'],
   };
 }

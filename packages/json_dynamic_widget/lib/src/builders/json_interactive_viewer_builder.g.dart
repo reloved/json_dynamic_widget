@@ -131,35 +131,34 @@ class JsonInteractiveViewer extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonInteractiveViewerBuilder(
-               args: JsonInteractiveViewerBuilderModel.fromDynamic(
-                 {
-                   'alignment': alignment,
-                   'boundaryMargin': boundaryMargin,
-                   'clipBehavior': clipBehavior,
-                   'constrained': constrained,
-                   'interactionEndFrictionCoefficient':
-                       interactionEndFrictionCoefficient,
-                   'maxScale': maxScale,
-                   'minScale': minScale,
-                   'onInteractionEnd': onInteractionEnd,
-                   'onInteractionStart': onInteractionStart,
-                   'onInteractionUpdate': onInteractionUpdate,
-                   'panAxis': panAxis,
-                   'panEnabled': panEnabled,
-                   'scaleEnabled': scaleEnabled,
-                   'scaleFactor': scaleFactor,
-                   'trackpadScrollCausesScale': trackpadScrollCausesScale,
-                   'transformationController': transformationController,
-                   'child': child,
+         jsonWidgetBuilder: () => JsonInteractiveViewerBuilder(
+           args: JsonInteractiveViewerBuilderModel.fromDynamic(
+             {
+               'alignment': alignment,
+               'boundaryMargin': boundaryMargin,
+               'clipBehavior': clipBehavior,
+               'constrained': constrained,
+               'interactionEndFrictionCoefficient':
+                   interactionEndFrictionCoefficient,
+               'maxScale': maxScale,
+               'minScale': minScale,
+               'onInteractionEnd': onInteractionEnd,
+               'onInteractionStart': onInteractionStart,
+               'onInteractionUpdate': onInteractionUpdate,
+               'panAxis': panAxis,
+               'panEnabled': panEnabled,
+               'scaleEnabled': scaleEnabled,
+               'scaleFactor': scaleFactor,
+               'trackpadScrollCausesScale': trackpadScrollCausesScale,
+               'transformationController': transformationController,
+               'child': child,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonInteractiveViewerBuilder.kType,
        );
 
@@ -793,32 +792,33 @@ class JsonInteractiveViewerBuilderModel extends JsonWidgetBuilderModel {
   Map<String, dynamic> toJson() {
     return JsonClass.removeNull({
       'alignment': ThemeEncoder.encodeAlignment(alignment),
-      'boundaryMargin':
-          EdgeInsets.zero == boundaryMargin
-              ? null
-              : ThemeEncoder.encodeEdgeInsets(boundaryMargin),
-      'clipBehavior':
-          Clip.hardEdge == clipBehavior
-              ? null
-              : ThemeEncoder.encodeClip(clipBehavior),
+      'boundaryMargin': EdgeInsets.zero == boundaryMargin
+          ? null
+          : ThemeEncoder.encodeEdgeInsets(boundaryMargin),
+      'clipBehavior': Clip.hardEdge == clipBehavior
+          ? null
+          : ThemeEncoder.encodeClip(clipBehavior),
       'constrained': true == constrained ? null : constrained,
       'interactionEndFrictionCoefficient':
           0.0000135 == interactionEndFrictionCoefficient
-              ? null
-              : interactionEndFrictionCoefficient,
+          ? null
+          : interactionEndFrictionCoefficient,
       'maxScale': 2.5 == maxScale ? null : maxScale,
       'minScale': 0.8 == minScale ? null : minScale,
       'onInteractionEnd': onInteractionEnd,
       'onInteractionStart': onInteractionStart,
       'onInteractionUpdate': onInteractionUpdate,
-      'panAxis':
-          PanAxis.free == panAxis ? null : ThemeEncoder.encodePanAxis(panAxis),
+      'panAxis': PanAxis.free == panAxis
+          ? null
+          : ThemeEncoder.encodePanAxis(panAxis),
       'panEnabled': true == panEnabled ? null : panEnabled,
       'scaleEnabled': true == scaleEnabled ? null : scaleEnabled,
-      'scaleFactor':
-          kDefaultMouseScrollToScaleFactor == scaleFactor ? null : scaleFactor,
-      'trackpadScrollCausesScale':
-          false == trackpadScrollCausesScale ? null : trackpadScrollCausesScale,
+      'scaleFactor': kDefaultMouseScrollToScaleFactor == scaleFactor
+          ? null
+          : scaleFactor,
+      'trackpadScrollCausesScale': false == trackpadScrollCausesScale
+          ? null
+          : trackpadScrollCausesScale,
       'transformationController': transformationController,
       'child': child.toJson(),
 
@@ -856,6 +856,5 @@ class InteractiveViewerSchema {
       'transformationController': SchemaHelper.anySchema,
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': ['child'],
   };
 }

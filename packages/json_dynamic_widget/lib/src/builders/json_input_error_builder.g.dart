@@ -69,14 +69,13 @@ class JsonInputError extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonInputErrorBuilder(
-               args: JsonInputErrorBuilderModel.fromDynamic(
-                 {'text': error, ...args},
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+         jsonWidgetBuilder: () => JsonInputErrorBuilder(
+           args: JsonInputErrorBuilderModel.fromDynamic(
+             {'text': error, ...args},
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonInputErrorBuilder.kType,
        );
 
@@ -145,6 +144,5 @@ class InputErrorSchema {
     'type': 'object',
     'additionalProperties': false,
     'properties': {'text': SchemaHelper.stringSchema},
-    'required': [],
   };
 }

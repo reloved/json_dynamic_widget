@@ -85,21 +85,20 @@ class JsonFittedBox extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonFittedBoxBuilder(
-               args: JsonFittedBoxBuilderModel.fromDynamic(
-                 {
-                   'alignment': alignment,
-                   'clipBehavior': clipBehavior,
-                   'fit': fit,
-                   'child': child,
+         jsonWidgetBuilder: () => JsonFittedBoxBuilder(
+           args: JsonFittedBoxBuilderModel.fromDynamic(
+             {
+               'alignment': alignment,
+               'clipBehavior': clipBehavior,
+               'fit': fit,
+               'child': child,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonFittedBoxBuilder.kType,
        );
 
@@ -253,14 +252,12 @@ class JsonFittedBoxBuilderModel extends JsonWidgetBuilderModel {
   @override
   Map<String, dynamic> toJson() {
     return JsonClass.removeNull({
-      'alignment':
-          Alignment.center == alignment
-              ? null
-              : ThemeEncoder.encodeAlignmentGeometry(alignment),
-      'clipBehavior':
-          Clip.none == clipBehavior
-              ? null
-              : ThemeEncoder.encodeClip(clipBehavior),
+      'alignment': Alignment.center == alignment
+          ? null
+          : ThemeEncoder.encodeAlignmentGeometry(alignment),
+      'clipBehavior': Clip.none == clipBehavior
+          ? null
+          : ThemeEncoder.encodeClip(clipBehavior),
       'fit': BoxFit.contain == fit ? null : ThemeEncoder.encodeBoxFit(fit),
       'child': child?.toJson(),
 
@@ -285,6 +282,5 @@ class FittedBoxSchema {
       'fit': SchemaHelper.objectSchema(BoxFitSchema.id),
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': [],
   };
 }

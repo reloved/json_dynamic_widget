@@ -55,13 +55,12 @@ class JsonAppBarBuilder extends _JsonAppBarBuilder {
     final model = createModel(childBuilder: childBuilder, data: data);
 
     return AppBar(
-      actions:
-          model.actions == null
-              ? null
-              : [
-                for (var d in model.actions!)
-                  d.build(childBuilder: childBuilder, context: context),
-              ],
+      actions: model.actions == null
+          ? null
+          : [
+              for (var d in model.actions!)
+                d.build(childBuilder: childBuilder, context: context),
+            ],
       actionsIconTheme: model.actionsIconTheme,
       actionsPadding: model.actionsPadding,
       animateColor: model.animateColor,
@@ -183,49 +182,48 @@ class JsonAppBar extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonAppBarBuilder(
-               args: JsonAppBarBuilderModel.fromDynamic(
-                 {
-                   'actions': actions,
-                   'actionsIconTheme': actionsIconTheme,
-                   'actionsPadding': actionsPadding,
-                   'animateColor': animateColor,
-                   'automaticallyImplyLeading': automaticallyImplyLeading,
-                   'backgroundColor': backgroundColor,
-                   'bottom': bottom,
-                   'bottomOpacity': bottomOpacity,
-                   'centerTitle': centerTitle,
-                   'clipBehavior': clipBehavior,
-                   'elevation': elevation,
-                   'excludeHeaderSemantics': excludeHeaderSemantics,
-                   'flexibleSpace': flexibleSpace,
-                   'forceMaterialTransparency': forceMaterialTransparency,
-                   'foregroundColor': foregroundColor,
-                   'iconTheme': iconTheme,
-                   'leading': leading,
-                   'leadingWidth': leadingWidth,
-                   'notificationPredicate': notificationPredicate,
-                   'primary': primary,
-                   'scrolledUnderElevation': scrolledUnderElevation,
-                   'shadowColor': shadowColor,
-                   'shape': shape,
-                   'surfaceTintColor': surfaceTintColor,
-                   'systemOverlayStyle': systemOverlayStyle,
-                   'title': title,
-                   'titleSpacing': titleSpacing,
-                   'titleTextStyle': titleTextStyle,
-                   'toolbarHeight': toolbarHeight,
-                   'toolbarOpacity': toolbarOpacity,
-                   'toolbarTextStyle': toolbarTextStyle,
-                   'useDefaultSemanticsOrder': useDefaultSemanticsOrder,
+         jsonWidgetBuilder: () => JsonAppBarBuilder(
+           args: JsonAppBarBuilderModel.fromDynamic(
+             {
+               'actions': actions,
+               'actionsIconTheme': actionsIconTheme,
+               'actionsPadding': actionsPadding,
+               'animateColor': animateColor,
+               'automaticallyImplyLeading': automaticallyImplyLeading,
+               'backgroundColor': backgroundColor,
+               'bottom': bottom,
+               'bottomOpacity': bottomOpacity,
+               'centerTitle': centerTitle,
+               'clipBehavior': clipBehavior,
+               'elevation': elevation,
+               'excludeHeaderSemantics': excludeHeaderSemantics,
+               'flexibleSpace': flexibleSpace,
+               'forceMaterialTransparency': forceMaterialTransparency,
+               'foregroundColor': foregroundColor,
+               'iconTheme': iconTheme,
+               'leading': leading,
+               'leadingWidth': leadingWidth,
+               'notificationPredicate': notificationPredicate,
+               'primary': primary,
+               'scrolledUnderElevation': scrolledUnderElevation,
+               'shadowColor': shadowColor,
+               'shape': shape,
+               'surfaceTintColor': surfaceTintColor,
+               'systemOverlayStyle': systemOverlayStyle,
+               'title': title,
+               'titleSpacing': titleSpacing,
+               'titleTextStyle': titleTextStyle,
+               'toolbarHeight': toolbarHeight,
+               'toolbarOpacity': toolbarOpacity,
+               'toolbarTextStyle': toolbarTextStyle,
+               'useDefaultSemanticsOrder': useDefaultSemanticsOrder,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonAppBarBuilder.kType,
        );
 
@@ -1646,27 +1644,30 @@ class JsonAppBarBuilderModel extends JsonWidgetBuilderModel {
       'actionsIconTheme': ThemeEncoder.encodeIconThemeData(actionsIconTheme),
       'actionsPadding': ThemeEncoder.encodeEdgeInsetsGeometry(actionsPadding),
       'animateColor': false == animateColor ? null : animateColor,
-      'automaticallyImplyLeading':
-          true == automaticallyImplyLeading ? null : automaticallyImplyLeading,
+      'automaticallyImplyLeading': true == automaticallyImplyLeading
+          ? null
+          : automaticallyImplyLeading,
       'backgroundColor': ThemeEncoder.encodeColor(backgroundColor),
       'bottom': bottom?.toJson(),
       'bottomOpacity': 1.0 == bottomOpacity ? null : bottomOpacity,
       'centerTitle': centerTitle,
       'clipBehavior': ThemeEncoder.encodeClip(clipBehavior),
       'elevation': elevation,
-      'excludeHeaderSemantics':
-          false == excludeHeaderSemantics ? null : excludeHeaderSemantics,
+      'excludeHeaderSemantics': false == excludeHeaderSemantics
+          ? null
+          : excludeHeaderSemantics,
       'flexibleSpace': flexibleSpace?.toJson(),
-      'forceMaterialTransparency':
-          false == forceMaterialTransparency ? null : forceMaterialTransparency,
+      'forceMaterialTransparency': false == forceMaterialTransparency
+          ? null
+          : forceMaterialTransparency,
       'foregroundColor': ThemeEncoder.encodeColor(foregroundColor),
       'iconTheme': ThemeEncoder.encodeIconThemeData(iconTheme),
       'leading': leading?.toJson(),
       'leadingWidth': leadingWidth,
       'notificationPredicate':
           defaultScrollNotificationPredicate == notificationPredicate
-              ? null
-              : notificationPredicate,
+          ? null
+          : notificationPredicate,
       'primary': true == primary ? null : primary,
       'scrolledUnderElevation': scrolledUnderElevation,
       'shadowColor': ThemeEncoder.encodeColor(shadowColor),
@@ -1681,8 +1682,9 @@ class JsonAppBarBuilderModel extends JsonWidgetBuilderModel {
       'toolbarHeight': toolbarHeight,
       'toolbarOpacity': 1.0 == toolbarOpacity ? null : toolbarOpacity,
       'toolbarTextStyle': ThemeEncoder.encodeTextStyle(toolbarTextStyle),
-      'useDefaultSemanticsOrder':
-          true == useDefaultSemanticsOrder ? null : useDefaultSemanticsOrder,
+      'useDefaultSemanticsOrder': true == useDefaultSemanticsOrder
+          ? null
+          : useDefaultSemanticsOrder,
 
       ...args,
     });
@@ -1735,6 +1737,5 @@ class AppBarSchema {
       'toolbarTextStyle': SchemaHelper.objectSchema(TextStyleSchema.id),
       'useDefaultSemanticsOrder': SchemaHelper.boolSchema,
     },
-    'required': [],
   };
 }

@@ -82,20 +82,19 @@ class JsonIgnorePointer extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonIgnorePointerBuilder(
-               args: JsonIgnorePointerBuilderModel.fromDynamic(
-                 {
-                   'ignoring': ignoring,
-                   'ignoringSemantics': ignoringSemantics,
-                   'child': child,
+         jsonWidgetBuilder: () => JsonIgnorePointerBuilder(
+           args: JsonIgnorePointerBuilderModel.fromDynamic(
+             {
+               'ignoring': ignoring,
+               'ignoringSemantics': ignoringSemantics,
+               'child': child,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonIgnorePointerBuilder.kType,
        );
 
@@ -233,6 +232,5 @@ class IgnorePointerSchema {
       'ignoringSemantics': SchemaHelper.boolSchema,
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': [],
   };
 }

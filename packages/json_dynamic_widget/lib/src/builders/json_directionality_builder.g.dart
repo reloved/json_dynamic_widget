@@ -74,14 +74,13 @@ class JsonDirectionality extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonDirectionalityBuilder(
-               args: JsonDirectionalityBuilderModel.fromDynamic(
-                 {'textDirection': textDirection, 'child': child, ...args},
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+         jsonWidgetBuilder: () => JsonDirectionalityBuilder(
+           args: JsonDirectionalityBuilderModel.fromDynamic(
+             {'textDirection': textDirection, 'child': child, ...args},
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonDirectionalityBuilder.kType,
        );
 
@@ -201,6 +200,5 @@ class DirectionalitySchema {
       'textDirection': SchemaHelper.objectSchema(TextDirectionSchema.id),
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': ['textDirection', 'child'],
   };
 }

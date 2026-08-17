@@ -76,14 +76,13 @@ class JsonSizedBox extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonSizedBoxBuilder(
-               args: JsonSizedBoxBuilderModel.fromDynamic(
-                 {'height': height, 'width': width, 'child': child, ...args},
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+         jsonWidgetBuilder: () => JsonSizedBoxBuilder(
+           args: JsonSizedBoxBuilderModel.fromDynamic(
+             {'height': height, 'width': width, 'child': child, ...args},
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonSizedBoxBuilder.kType,
        );
 
@@ -207,6 +206,5 @@ class SizedBoxSchema {
       'width': SchemaHelper.numberSchema,
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': [],
   };
 }

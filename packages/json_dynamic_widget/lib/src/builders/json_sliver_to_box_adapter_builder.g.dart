@@ -72,14 +72,13 @@ class JsonSliverToBoxAdapter extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonSliverToBoxAdapterBuilder(
-               args: JsonSliverToBoxAdapterBuilderModel.fromDynamic(
-                 {'child': child, ...args},
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+         jsonWidgetBuilder: () => JsonSliverToBoxAdapterBuilder(
+           args: JsonSliverToBoxAdapterBuilderModel.fromDynamic(
+             {'child': child, ...args},
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonSliverToBoxAdapterBuilder.kType,
        );
 
@@ -160,6 +159,5 @@ class SliverToBoxAdapterSchema {
     'type': 'object',
     'additionalProperties': false,
     'properties': {'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id)},
-    'required': [],
   };
 }

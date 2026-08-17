@@ -126,33 +126,32 @@ class JsonAnimatedContainer extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonAnimatedContainerBuilder(
-               args: JsonAnimatedContainerBuilderModel.fromDynamic(
-                 {
-                   'alignment': alignment,
-                   'clipBehavior': clipBehavior,
-                   'color': color,
-                   'constraints': constraints,
-                   'curve': curve,
-                   'decoration': decoration,
-                   'duration': duration,
-                   'foregroundDecoration': foregroundDecoration,
-                   'height': height,
-                   'margin': margin,
-                   'onEnd': onEnd,
-                   'padding': padding,
-                   'transform': transform,
-                   'transformAlignment': transformAlignment,
-                   'width': width,
-                   'child': child,
+         jsonWidgetBuilder: () => JsonAnimatedContainerBuilder(
+           args: JsonAnimatedContainerBuilderModel.fromDynamic(
+             {
+               'alignment': alignment,
+               'clipBehavior': clipBehavior,
+               'color': color,
+               'constraints': constraints,
+               'curve': curve,
+               'decoration': decoration,
+               'duration': duration,
+               'foregroundDecoration': foregroundDecoration,
+               'height': height,
+               'margin': margin,
+               'onEnd': onEnd,
+               'padding': padding,
+               'transform': transform,
+               'transformAlignment': transformAlignment,
+               'width': width,
+               'child': child,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonAnimatedContainerBuilder.kType,
        );
 
@@ -533,10 +532,9 @@ class JsonAnimatedContainerBuilderModel extends JsonWidgetBuilderModel {
 
     return JsonClass.removeNull({
       'alignment': ThemeEncoder.encodeAlignmentGeometry(alignment),
-      'clipBehavior':
-          Clip.none == clipBehavior
-              ? null
-              : ThemeEncoder.encodeClip(clipBehavior),
+      'clipBehavior': Clip.none == clipBehavior
+          ? null
+          : ThemeEncoder.encodeClip(clipBehavior),
       'color': ThemeEncoder.encodeColor(color),
       'constraints': ThemeEncoder.encodeBoxConstraints(constraints),
       'curve': Curves.linear == curve ? null : CurvesValues.encode(curve),
@@ -590,6 +588,5 @@ class AnimatedContainerSchema {
       'width': SchemaHelper.numberSchema,
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': ['duration'],
   };
 }

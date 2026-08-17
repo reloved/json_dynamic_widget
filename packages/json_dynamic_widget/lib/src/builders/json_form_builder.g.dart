@@ -87,21 +87,20 @@ class JsonForm extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonFormBuilder(
-               args: JsonFormBuilderModel.fromDynamic(
-                 {
-                   'autovalidateMode': autovalidateMode,
-                   'canPop': canPop,
-                   'onChanged': onChanged,
-                   'child': child,
+         jsonWidgetBuilder: () => JsonFormBuilder(
+           args: JsonFormBuilderModel.fromDynamic(
+             {
+               'autovalidateMode': autovalidateMode,
+               'canPop': canPop,
+               'onChanged': onChanged,
+               'child': child,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonFormBuilder.kType,
        );
 
@@ -220,6 +219,5 @@ class FormSchema {
       'onChanged': SchemaHelper.anySchema,
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': ['child'],
   };
 }

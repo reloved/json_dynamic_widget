@@ -76,14 +76,13 @@ class JsonFlexible extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonFlexibleBuilder(
-               args: JsonFlexibleBuilderModel.fromDynamic(
-                 {'fit': fit, 'flex': flex, 'child': child, ...args},
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+         jsonWidgetBuilder: () => JsonFlexibleBuilder(
+           args: JsonFlexibleBuilderModel.fromDynamic(
+             {'fit': fit, 'flex': flex, 'child': child, ...args},
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonFlexibleBuilder.kType,
        );
 
@@ -239,6 +238,5 @@ class FlexibleSchema {
       'flex': SchemaHelper.numberSchema,
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': ['child'],
   };
 }

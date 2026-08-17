@@ -101,24 +101,23 @@ class JsonAnimatedSwitcher extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonAnimatedSwitcherBuilder(
-               args: JsonAnimatedSwitcherBuilderModel.fromDynamic(
-                 {
-                   'duration': duration,
-                   'layoutBuilder': layoutBuilder,
-                   'reverseDuration': reverseDuration,
-                   'switchInCurve': switchInCurve,
-                   'switchOutCurve': switchOutCurve,
-                   'transitionBuilder': transitionBuilder,
-                   'child': child,
+         jsonWidgetBuilder: () => JsonAnimatedSwitcherBuilder(
+           args: JsonAnimatedSwitcherBuilderModel.fromDynamic(
+             {
+               'duration': duration,
+               'layoutBuilder': layoutBuilder,
+               'reverseDuration': reverseDuration,
+               'switchInCurve': switchInCurve,
+               'switchOutCurve': switchOutCurve,
+               'transitionBuilder': transitionBuilder,
+               'child': child,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonAnimatedSwitcherBuilder.kType,
        );
 
@@ -412,23 +411,20 @@ class JsonAnimatedSwitcherBuilderModel extends JsonWidgetBuilderModel {
   Map<String, dynamic> toJson() {
     return JsonClass.removeNull({
       'duration': duration.inMilliseconds,
-      'layoutBuilder':
-          AnimatedSwitcher.defaultLayoutBuilder == layoutBuilder
-              ? null
-              : layoutBuilder,
+      'layoutBuilder': AnimatedSwitcher.defaultLayoutBuilder == layoutBuilder
+          ? null
+          : layoutBuilder,
       'reverseDuration': reverseDuration?.inMilliseconds,
-      'switchInCurve':
-          Curves.linear == switchInCurve
-              ? null
-              : CurvesValues.encode(switchInCurve),
-      'switchOutCurve':
-          Curves.linear == switchOutCurve
-              ? null
-              : CurvesValues.encode(switchOutCurve),
+      'switchInCurve': Curves.linear == switchInCurve
+          ? null
+          : CurvesValues.encode(switchInCurve),
+      'switchOutCurve': Curves.linear == switchOutCurve
+          ? null
+          : CurvesValues.encode(switchOutCurve),
       'transitionBuilder':
           AnimatedSwitcher.defaultTransitionBuilder == transitionBuilder
-              ? null
-              : transitionBuilder,
+          ? null
+          : transitionBuilder,
       'child': child?.toJson(),
 
       ...args,
@@ -455,6 +451,5 @@ class AnimatedSwitcherSchema {
       'transitionBuilder': SchemaHelper.anySchema,
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': ['duration'],
   };
 }

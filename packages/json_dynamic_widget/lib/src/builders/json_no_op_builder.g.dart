@@ -66,14 +66,13 @@ class JsonNoOp extends JsonWidgetData {
           args: args,
           registry: registry,
         ),
-        jsonWidgetBuilder:
-            () => JsonNoOpBuilder(
-              args: JsonNoOpBuilderModel.fromDynamic(
-                {...args},
-                args: args,
-                registry: registry,
-              ),
-            ),
+        jsonWidgetBuilder: () => JsonNoOpBuilder(
+          args: JsonNoOpBuilderModel.fromDynamic(
+            {...args},
+            args: args,
+            registry: registry,
+          ),
+        ),
         jsonWidgetType: JsonNoOpBuilder.kType,
       );
 }
@@ -138,6 +137,5 @@ class NoOpSchema {
     'type': 'object',
     'additionalProperties': false,
     'properties': {},
-    'required': [],
   };
 }

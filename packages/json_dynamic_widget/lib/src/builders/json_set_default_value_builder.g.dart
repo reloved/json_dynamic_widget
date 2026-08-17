@@ -76,14 +76,13 @@ class JsonSetDefaultValue extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonSetDefaultValueBuilder(
-               args: JsonSetDefaultValueBuilderModel.fromDynamic(
-                 {'values': values, 'child': child, ...args},
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+         jsonWidgetBuilder: () => JsonSetDefaultValueBuilder(
+           args: JsonSetDefaultValueBuilderModel.fromDynamic(
+             {'values': values, 'child': child, ...args},
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonSetDefaultValueBuilder.kType,
        );
 
@@ -179,6 +178,5 @@ class SetDefaultValueSchema {
       'values': SchemaHelper.anySchema,
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': [],
   };
 }

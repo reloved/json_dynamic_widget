@@ -159,85 +159,85 @@ class DefaultRegistrar extends _DefaultRegistrar {
   }
 
   void withAnimatedAlign() {
-    _builders[JsonAnimatedAlignBuilder
-        .kType] = const JsonWidgetBuilderContainer(
-      builder: JsonAnimatedAlignBuilder.fromDynamic,
-      schemaId: AnimatedAlignSchema.id,
-    );
+    _builders[JsonAnimatedAlignBuilder.kType] =
+        const JsonWidgetBuilderContainer(
+          builder: JsonAnimatedAlignBuilder.fromDynamic,
+          schemaId: AnimatedAlignSchema.id,
+        );
     _schemas[AnimatedAlignSchema.id] = AnimatedAlignSchema.schema;
   }
 
   void withAnimatedContainer() {
-    _builders[JsonAnimatedContainerBuilder
-        .kType] = const JsonWidgetBuilderContainer(
-      builder: JsonAnimatedContainerBuilder.fromDynamic,
-      schemaId: AnimatedContainerSchema.id,
-    );
+    _builders[JsonAnimatedContainerBuilder.kType] =
+        const JsonWidgetBuilderContainer(
+          builder: JsonAnimatedContainerBuilder.fromDynamic,
+          schemaId: AnimatedContainerSchema.id,
+        );
     _schemas[AnimatedContainerSchema.id] = AnimatedContainerSchema.schema;
   }
 
   void withAnimatedCrossFade() {
-    _builders[JsonAnimatedCrossFadeBuilder
-        .kType] = const JsonWidgetBuilderContainer(
-      builder: JsonAnimatedCrossFadeBuilder.fromDynamic,
-      schemaId: AnimatedCrossFadeSchema.id,
-    );
+    _builders[JsonAnimatedCrossFadeBuilder.kType] =
+        const JsonWidgetBuilderContainer(
+          builder: JsonAnimatedCrossFadeBuilder.fromDynamic,
+          schemaId: AnimatedCrossFadeSchema.id,
+        );
     _schemas[AnimatedCrossFadeSchema.id] = AnimatedCrossFadeSchema.schema;
   }
 
   void withAnimatedDefaultTextStyle() {
-    _builders[JsonAnimatedDefaultTextStyleBuilder
-        .kType] = const JsonWidgetBuilderContainer(
-      builder: JsonAnimatedDefaultTextStyleBuilder.fromDynamic,
-      schemaId: AnimatedDefaultTextStyleSchema.id,
-    );
+    _builders[JsonAnimatedDefaultTextStyleBuilder.kType] =
+        const JsonWidgetBuilderContainer(
+          builder: JsonAnimatedDefaultTextStyleBuilder.fromDynamic,
+          schemaId: AnimatedDefaultTextStyleSchema.id,
+        );
     _schemas[AnimatedDefaultTextStyleSchema.id] =
         AnimatedDefaultTextStyleSchema.schema;
   }
 
   void withAnimatedOpacity() {
-    _builders[JsonAnimatedOpacityBuilder
-        .kType] = const JsonWidgetBuilderContainer(
-      builder: JsonAnimatedOpacityBuilder.fromDynamic,
-      schemaId: AnimatedOpacitySchema.id,
-    );
+    _builders[JsonAnimatedOpacityBuilder.kType] =
+        const JsonWidgetBuilderContainer(
+          builder: JsonAnimatedOpacityBuilder.fromDynamic,
+          schemaId: AnimatedOpacitySchema.id,
+        );
     _schemas[AnimatedOpacitySchema.id] = AnimatedOpacitySchema.schema;
   }
 
   void withAnimatedPadding() {
-    _builders[JsonAnimatedPaddingBuilder
-        .kType] = const JsonWidgetBuilderContainer(
-      builder: JsonAnimatedPaddingBuilder.fromDynamic,
-      schemaId: AnimatedPaddingSchema.id,
-    );
+    _builders[JsonAnimatedPaddingBuilder.kType] =
+        const JsonWidgetBuilderContainer(
+          builder: JsonAnimatedPaddingBuilder.fromDynamic,
+          schemaId: AnimatedPaddingSchema.id,
+        );
     _schemas[AnimatedPaddingSchema.id] = AnimatedPaddingSchema.schema;
   }
 
   void withAnimatedPhysicalModel() {
-    _builders[JsonAnimatedPhysicalModelBuilder
-        .kType] = const JsonWidgetBuilderContainer(
-      builder: JsonAnimatedPhysicalModelBuilder.fromDynamic,
-      schemaId: AnimatedPhysicalModelSchema.id,
-    );
+    _builders[JsonAnimatedPhysicalModelBuilder.kType] =
+        const JsonWidgetBuilderContainer(
+          builder: JsonAnimatedPhysicalModelBuilder.fromDynamic,
+          schemaId: AnimatedPhysicalModelSchema.id,
+        );
     _schemas[AnimatedPhysicalModelSchema.id] =
         AnimatedPhysicalModelSchema.schema;
   }
 
   void withAnimatedPositioned() {
-    _builders[JsonAnimatedPositionedBuilder
-        .kType] = const JsonWidgetBuilderContainer(
-      builder: JsonAnimatedPositionedBuilder.fromDynamic,
-      schemaId: AnimatedPositionedSchema.id,
-    );
+    _builders[JsonAnimatedPositionedBuilder.kType] =
+        const JsonWidgetBuilderContainer(
+          builder: JsonAnimatedPositionedBuilder.fromDynamic,
+          schemaId: AnimatedPositionedSchema.id,
+        );
     _schemas[AnimatedPositionedSchema.id] = AnimatedPositionedSchema.schema;
   }
 
   void withAnimatedPositionedDirectional() {
-    _builders[JsonAnimatedPositionedDirectionalBuilder
-        .kType] = const JsonWidgetBuilderContainer(
-      builder: JsonAnimatedPositionedDirectionalBuilder.fromDynamic,
-      schemaId: AnimatedPositionedDirectionalSchema.id,
-    );
+    _builders[JsonAnimatedPositionedDirectionalBuilder.kType] =
+        const JsonWidgetBuilderContainer(
+          builder: JsonAnimatedPositionedDirectionalBuilder.fromDynamic,
+          schemaId: AnimatedPositionedDirectionalSchema.id,
+        );
     _schemas[AnimatedPositionedDirectionalSchema.id] =
         AnimatedPositionedDirectionalSchema.schema;
   }
@@ -251,20 +251,20 @@ class DefaultRegistrar extends _DefaultRegistrar {
   }
 
   void withAnimatedSwitcher() {
-    _builders[JsonAnimatedSwitcherBuilder
-        .kType] = const JsonWidgetBuilderContainer(
-      builder: JsonAnimatedSwitcherBuilder.fromDynamic,
-      schemaId: AnimatedSwitcherSchema.id,
-    );
+    _builders[JsonAnimatedSwitcherBuilder.kType] =
+        const JsonWidgetBuilderContainer(
+          builder: JsonAnimatedSwitcherBuilder.fromDynamic,
+          schemaId: AnimatedSwitcherSchema.id,
+        );
     _schemas[AnimatedSwitcherSchema.id] = AnimatedSwitcherSchema.schema;
   }
 
   void withAnimatedTheme() {
-    _builders[JsonAnimatedThemeBuilder
-        .kType] = const JsonWidgetBuilderContainer(
-      builder: JsonAnimatedThemeBuilder.fromDynamic,
-      schemaId: AnimatedThemeSchema.id,
-    );
+    _builders[JsonAnimatedThemeBuilder.kType] =
+        const JsonWidgetBuilderContainer(
+          builder: JsonAnimatedThemeBuilder.fromDynamic,
+          schemaId: AnimatedThemeSchema.id,
+        );
     _schemas[AnimatedThemeSchema.id] = AnimatedThemeSchema.schema;
   }
 
@@ -341,11 +341,11 @@ class DefaultRegistrar extends _DefaultRegistrar {
   }
 
   void withCircularProgressIndicator() {
-    _builders[JsonCircularProgressIndicatorBuilder
-        .kType] = const JsonWidgetBuilderContainer(
-      builder: JsonCircularProgressIndicatorBuilder.fromDynamic,
-      schemaId: CircularProgressIndicatorSchema.id,
-    );
+    _builders[JsonCircularProgressIndicatorBuilder.kType] =
+        const JsonWidgetBuilderContainer(
+          builder: JsonCircularProgressIndicatorBuilder.fromDynamic,
+          schemaId: CircularProgressIndicatorSchema.id,
+        );
     _schemas[CircularProgressIndicatorSchema.id] =
         CircularProgressIndicatorSchema.schema;
   }
@@ -415,29 +415,29 @@ class DefaultRegistrar extends _DefaultRegistrar {
   }
 
   void withCupertinoSwitch() {
-    _builders[JsonCupertinoSwitchBuilder
-        .kType] = const JsonWidgetBuilderContainer(
-      builder: JsonCupertinoSwitchBuilder.fromDynamic,
-      schemaId: CupertinoSwitchSchema.id,
-    );
+    _builders[JsonCupertinoSwitchBuilder.kType] =
+        const JsonWidgetBuilderContainer(
+          builder: JsonCupertinoSwitchBuilder.fromDynamic,
+          schemaId: CupertinoSwitchSchema.id,
+        );
     _schemas[CupertinoSwitchSchema.id] = CupertinoSwitchSchema.schema;
   }
 
   void withCustomScrollView() {
-    _builders[JsonCustomScrollViewBuilder
-        .kType] = const JsonWidgetBuilderContainer(
-      builder: JsonCustomScrollViewBuilder.fromDynamic,
-      schemaId: CustomScrollViewSchema.id,
-    );
+    _builders[JsonCustomScrollViewBuilder.kType] =
+        const JsonWidgetBuilderContainer(
+          builder: JsonCustomScrollViewBuilder.fromDynamic,
+          schemaId: CustomScrollViewSchema.id,
+        );
     _schemas[CustomScrollViewSchema.id] = CustomScrollViewSchema.schema;
   }
 
   void withDataTableTheme() {
-    _builders[JsonDataTableThemeBuilder
-        .kType] = const JsonWidgetBuilderContainer(
-      builder: JsonDataTableThemeBuilder.fromDynamic,
-      schemaId: DataTableThemeSchema.id,
-    );
+    _builders[JsonDataTableThemeBuilder.kType] =
+        const JsonWidgetBuilderContainer(
+          builder: JsonDataTableThemeBuilder.fromDynamic,
+          schemaId: DataTableThemeSchema.id,
+        );
     _schemas[DataTableThemeSchema.id] = DataTableThemeSchema.schema;
   }
 
@@ -458,20 +458,20 @@ class DefaultRegistrar extends _DefaultRegistrar {
   }
 
   void withDirectionality() {
-    _builders[JsonDirectionalityBuilder
-        .kType] = const JsonWidgetBuilderContainer(
-      builder: JsonDirectionalityBuilder.fromDynamic,
-      schemaId: DirectionalitySchema.id,
-    );
+    _builders[JsonDirectionalityBuilder.kType] =
+        const JsonWidgetBuilderContainer(
+          builder: JsonDirectionalityBuilder.fromDynamic,
+          schemaId: DirectionalitySchema.id,
+        );
     _schemas[DirectionalitySchema.id] = DirectionalitySchema.schema;
   }
 
   void withElevatedButton() {
-    _builders[JsonElevatedButtonBuilder
-        .kType] = const JsonWidgetBuilderContainer(
-      builder: JsonElevatedButtonBuilder.fromDynamic,
-      schemaId: ElevatedButtonSchema.id,
-    );
+    _builders[JsonElevatedButtonBuilder.kType] =
+        const JsonWidgetBuilderContainer(
+          builder: JsonElevatedButtonBuilder.fromDynamic,
+          schemaId: ElevatedButtonSchema.id,
+        );
     _schemas[ElevatedButtonSchema.id] = ElevatedButtonSchema.schema;
   }
 
@@ -484,11 +484,11 @@ class DefaultRegistrar extends _DefaultRegistrar {
   }
 
   void withExcludeSemantics() {
-    _builders[JsonExcludeSemanticsBuilder
-        .kType] = const JsonWidgetBuilderContainer(
-      builder: JsonExcludeSemanticsBuilder.fromDynamic,
-      schemaId: ExcludeSemanticsSchema.id,
-    );
+    _builders[JsonExcludeSemanticsBuilder.kType] =
+        const JsonWidgetBuilderContainer(
+          builder: JsonExcludeSemanticsBuilder.fromDynamic,
+          schemaId: ExcludeSemanticsSchema.id,
+        );
     _schemas[ExcludeSemanticsSchema.id] = ExcludeSemanticsSchema.schema;
   }
 
@@ -501,11 +501,11 @@ class DefaultRegistrar extends _DefaultRegistrar {
   }
 
   void withExpansionTileTheme() {
-    _builders[JsonExpansionTileThemeBuilder
-        .kType] = const JsonWidgetBuilderContainer(
-      builder: JsonExpansionTileThemeBuilder.fromDynamic,
-      schemaId: ExpansionTileThemeSchema.id,
-    );
+    _builders[JsonExpansionTileThemeBuilder.kType] =
+        const JsonWidgetBuilderContainer(
+          builder: JsonExpansionTileThemeBuilder.fromDynamic,
+          schemaId: ExpansionTileThemeSchema.id,
+        );
     _schemas[ExpansionTileThemeSchema.id] = ExpansionTileThemeSchema.schema;
   }
 
@@ -526,11 +526,11 @@ class DefaultRegistrar extends _DefaultRegistrar {
   }
 
   void withFloatingActionButton() {
-    _builders[JsonFloatingActionButtonBuilder
-        .kType] = const JsonWidgetBuilderContainer(
-      builder: JsonFloatingActionButtonBuilder.fromDynamic,
-      schemaId: FloatingActionButtonSchema.id,
-    );
+    _builders[JsonFloatingActionButtonBuilder.kType] =
+        const JsonWidgetBuilderContainer(
+          builder: JsonFloatingActionButtonBuilder.fromDynamic,
+          schemaId: FloatingActionButtonSchema.id,
+        );
     _schemas[FloatingActionButtonSchema.id] = FloatingActionButtonSchema.schema;
   }
 
@@ -543,30 +543,30 @@ class DefaultRegistrar extends _DefaultRegistrar {
   }
 
   void withFractionallySizedBox() {
-    _builders[JsonFractionallySizedBoxBuilder
-        .kType] = const JsonWidgetBuilderContainer(
-      builder: JsonFractionallySizedBoxBuilder.fromDynamic,
-      schemaId: FractionallySizedBoxSchema.id,
-    );
+    _builders[JsonFractionallySizedBoxBuilder.kType] =
+        const JsonWidgetBuilderContainer(
+          builder: JsonFractionallySizedBoxBuilder.fromDynamic,
+          schemaId: FractionallySizedBoxSchema.id,
+        );
     _schemas[FractionallySizedBoxSchema.id] = FractionallySizedBoxSchema.schema;
   }
 
   void withFractionalTranslation() {
-    _builders[JsonFractionalTranslationBuilder
-        .kType] = const JsonWidgetBuilderContainer(
-      builder: JsonFractionalTranslationBuilder.fromDynamic,
-      schemaId: FractionalTranslationSchema.id,
-    );
+    _builders[JsonFractionalTranslationBuilder.kType] =
+        const JsonWidgetBuilderContainer(
+          builder: JsonFractionalTranslationBuilder.fromDynamic,
+          schemaId: FractionalTranslationSchema.id,
+        );
     _schemas[FractionalTranslationSchema.id] =
         FractionalTranslationSchema.schema;
   }
 
   void withGestureDetector() {
-    _builders[JsonGestureDetectorBuilder
-        .kType] = const JsonWidgetBuilderContainer(
-      builder: JsonGestureDetectorBuilder.fromDynamic,
-      schemaId: GestureDetectorSchema.id,
-    );
+    _builders[JsonGestureDetectorBuilder.kType] =
+        const JsonWidgetBuilderContainer(
+          builder: JsonGestureDetectorBuilder.fromDynamic,
+          schemaId: GestureDetectorSchema.id,
+        );
     _schemas[GestureDetectorSchema.id] = GestureDetectorSchema.schema;
   }
 
@@ -611,11 +611,11 @@ class DefaultRegistrar extends _DefaultRegistrar {
   }
 
   void withIgnorePointer() {
-    _builders[JsonIgnorePointerBuilder
-        .kType] = const JsonWidgetBuilderContainer(
-      builder: JsonIgnorePointerBuilder.fromDynamic,
-      schemaId: IgnorePointerSchema.id,
-    );
+    _builders[JsonIgnorePointerBuilder.kType] =
+        const JsonWidgetBuilderContainer(
+          builder: JsonIgnorePointerBuilder.fromDynamic,
+          schemaId: IgnorePointerSchema.id,
+        );
     _schemas[IgnorePointerSchema.id] = IgnorePointerSchema.schema;
   }
 
@@ -644,29 +644,29 @@ class DefaultRegistrar extends _DefaultRegistrar {
   }
 
   void withInteractiveViewer() {
-    _builders[JsonInteractiveViewerBuilder
-        .kType] = const JsonWidgetBuilderContainer(
-      builder: JsonInteractiveViewerBuilder.fromDynamic,
-      schemaId: InteractiveViewerSchema.id,
-    );
+    _builders[JsonInteractiveViewerBuilder.kType] =
+        const JsonWidgetBuilderContainer(
+          builder: JsonInteractiveViewerBuilder.fromDynamic,
+          schemaId: InteractiveViewerSchema.id,
+        );
     _schemas[InteractiveViewerSchema.id] = InteractiveViewerSchema.schema;
   }
 
   void withIntrinsicHeight() {
-    _builders[JsonIntrinsicHeightBuilder
-        .kType] = const JsonWidgetBuilderContainer(
-      builder: JsonIntrinsicHeightBuilder.fromDynamic,
-      schemaId: IntrinsicHeightSchema.id,
-    );
+    _builders[JsonIntrinsicHeightBuilder.kType] =
+        const JsonWidgetBuilderContainer(
+          builder: JsonIntrinsicHeightBuilder.fromDynamic,
+          schemaId: IntrinsicHeightSchema.id,
+        );
     _schemas[IntrinsicHeightSchema.id] = IntrinsicHeightSchema.schema;
   }
 
   void withIntrinsicWidth() {
-    _builders[JsonIntrinsicWidthBuilder
-        .kType] = const JsonWidgetBuilderContainer(
-      builder: JsonIntrinsicWidthBuilder.fromDynamic,
-      schemaId: IntrinsicWidthSchema.id,
-    );
+    _builders[JsonIntrinsicWidthBuilder.kType] =
+        const JsonWidgetBuilderContainer(
+          builder: JsonIntrinsicWidthBuilder.fromDynamic,
+          schemaId: IntrinsicWidthSchema.id,
+        );
     _schemas[IntrinsicWidthSchema.id] = IntrinsicWidthSchema.schema;
   }
 
@@ -679,11 +679,11 @@ class DefaultRegistrar extends _DefaultRegistrar {
   }
 
   void withLayoutBuilder() {
-    _builders[JsonLayoutBuilderBuilder
-        .kType] = const JsonWidgetBuilderContainer(
-      builder: JsonLayoutBuilderBuilder.fromDynamic,
-      schemaId: LayoutBuilderSchema.id,
-    );
+    _builders[JsonLayoutBuilderBuilder.kType] =
+        const JsonWidgetBuilderContainer(
+          builder: JsonLayoutBuilderBuilder.fromDynamic,
+          schemaId: LayoutBuilderSchema.id,
+        );
     _schemas[LayoutBuilderSchema.id] = LayoutBuilderSchema.schema;
   }
 
@@ -696,11 +696,11 @@ class DefaultRegistrar extends _DefaultRegistrar {
   }
 
   void withLinearProgressIndicator() {
-    _builders[JsonLinearProgressIndicatorBuilder
-        .kType] = const JsonWidgetBuilderContainer(
-      builder: JsonLinearProgressIndicatorBuilder.fromDynamic,
-      schemaId: LinearProgressIndicatorSchema.id,
-    );
+    _builders[JsonLinearProgressIndicatorBuilder.kType] =
+        const JsonWidgetBuilderContainer(
+          builder: JsonLinearProgressIndicatorBuilder.fromDynamic,
+          schemaId: LinearProgressIndicatorSchema.id,
+        );
     _schemas[LinearProgressIndicatorSchema.id] =
         LinearProgressIndicatorSchema.schema;
   }
@@ -714,11 +714,11 @@ class DefaultRegistrar extends _DefaultRegistrar {
   }
 
   void withListTileTheme() {
-    _builders[JsonListTileThemeBuilder
-        .kType] = const JsonWidgetBuilderContainer(
-      builder: JsonListTileThemeBuilder.fromDynamic,
-      schemaId: ListTileThemeSchema.id,
-    );
+    _builders[JsonListTileThemeBuilder.kType] =
+        const JsonWidgetBuilderContainer(
+          builder: JsonListTileThemeBuilder.fromDynamic,
+          schemaId: ListTileThemeSchema.id,
+        );
     _schemas[ListTileThemeSchema.id] = ListTileThemeSchema.schema;
   }
 
@@ -755,20 +755,20 @@ class DefaultRegistrar extends _DefaultRegistrar {
   }
 
   void withMergeSemantics() {
-    _builders[JsonMergeSemanticsBuilder
-        .kType] = const JsonWidgetBuilderContainer(
-      builder: JsonMergeSemanticsBuilder.fromDynamic,
-      schemaId: MergeSemanticsSchema.id,
-    );
+    _builders[JsonMergeSemanticsBuilder.kType] =
+        const JsonWidgetBuilderContainer(
+          builder: JsonMergeSemanticsBuilder.fromDynamic,
+          schemaId: MergeSemanticsSchema.id,
+        );
     _schemas[MergeSemanticsSchema.id] = MergeSemanticsSchema.schema;
   }
 
   void withNavigationBarTheme() {
-    _builders[JsonNavigationBarThemeBuilder
-        .kType] = const JsonWidgetBuilderContainer(
-      builder: JsonNavigationBarThemeBuilder.fromDynamic,
-      schemaId: NavigationBarThemeSchema.id,
-    );
+    _builders[JsonNavigationBarThemeBuilder.kType] =
+        const JsonWidgetBuilderContainer(
+          builder: JsonNavigationBarThemeBuilder.fromDynamic,
+          schemaId: NavigationBarThemeSchema.id,
+        );
     _schemas[NavigationBarThemeSchema.id] = NavigationBarThemeSchema.schema;
   }
 
@@ -805,11 +805,11 @@ class DefaultRegistrar extends _DefaultRegistrar {
   }
 
   void withOutlinedButton() {
-    _builders[JsonOutlinedButtonBuilder
-        .kType] = const JsonWidgetBuilderContainer(
-      builder: JsonOutlinedButtonBuilder.fromDynamic,
-      schemaId: OutlinedButtonSchema.id,
-    );
+    _builders[JsonOutlinedButtonBuilder.kType] =
+        const JsonWidgetBuilderContainer(
+          builder: JsonOutlinedButtonBuilder.fromDynamic,
+          schemaId: OutlinedButtonSchema.id,
+        );
     _schemas[OutlinedButtonSchema.id] = OutlinedButtonSchema.schema;
   }
 
@@ -846,11 +846,11 @@ class DefaultRegistrar extends _DefaultRegistrar {
   }
 
   void withPopupMenuButton() {
-    _builders[JsonPopupMenuButtonBuilder
-        .kType] = const JsonWidgetBuilderContainer(
-      builder: JsonPopupMenuButtonBuilder.fromDynamic,
-      schemaId: PopupMenuButtonSchema.id,
-    );
+    _builders[JsonPopupMenuButtonBuilder.kType] =
+        const JsonWidgetBuilderContainer(
+          builder: JsonPopupMenuButtonBuilder.fromDynamic,
+          schemaId: PopupMenuButtonSchema.id,
+        );
     _schemas[PopupMenuButtonSchema.id] = PopupMenuButtonSchema.schema;
   }
 
@@ -863,11 +863,11 @@ class DefaultRegistrar extends _DefaultRegistrar {
   }
 
   void withPrimaryScrollController() {
-    _builders[JsonPrimaryScrollControllerBuilder
-        .kType] = const JsonWidgetBuilderContainer(
-      builder: JsonPrimaryScrollControllerBuilder.fromDynamic,
-      schemaId: PrimaryScrollControllerSchema.id,
-    );
+    _builders[JsonPrimaryScrollControllerBuilder.kType] =
+        const JsonWidgetBuilderContainer(
+          builder: JsonPrimaryScrollControllerBuilder.fromDynamic,
+          schemaId: PrimaryScrollControllerSchema.id,
+        );
     _schemas[PrimaryScrollControllerSchema.id] =
         PrimaryScrollControllerSchema.schema;
   }
@@ -929,11 +929,11 @@ class DefaultRegistrar extends _DefaultRegistrar {
   }
 
   void withScrollConfiguration() {
-    _builders[JsonScrollConfigurationBuilder
-        .kType] = const JsonWidgetBuilderContainer(
-      builder: JsonScrollConfigurationBuilder.fromDynamic,
-      schemaId: ScrollConfigurationSchema.id,
-    );
+    _builders[JsonScrollConfigurationBuilder.kType] =
+        const JsonWidgetBuilderContainer(
+          builder: JsonScrollConfigurationBuilder.fromDynamic,
+          schemaId: ScrollConfigurationSchema.id,
+        );
     _schemas[ScrollConfigurationSchema.id] = ScrollConfigurationSchema.schema;
   }
 
@@ -946,20 +946,20 @@ class DefaultRegistrar extends _DefaultRegistrar {
   }
 
   void withSetDefaultValue() {
-    _builders[JsonSetDefaultValueBuilder
-        .kType] = const JsonWidgetBuilderContainer(
-      builder: JsonSetDefaultValueBuilder.fromDynamic,
-      schemaId: SetDefaultValueSchema.id,
-    );
+    _builders[JsonSetDefaultValueBuilder.kType] =
+        const JsonWidgetBuilderContainer(
+          builder: JsonSetDefaultValueBuilder.fromDynamic,
+          schemaId: SetDefaultValueSchema.id,
+        );
     _schemas[SetDefaultValueSchema.id] = SetDefaultValueSchema.schema;
   }
 
   void withSetScrollController() {
-    _builders[JsonSetScrollControllerBuilder
-        .kType] = const JsonWidgetBuilderContainer(
-      builder: JsonSetScrollControllerBuilder.fromDynamic,
-      schemaId: SetScrollControllerSchema.id,
-    );
+    _builders[JsonSetScrollControllerBuilder.kType] =
+        const JsonWidgetBuilderContainer(
+          builder: JsonSetScrollControllerBuilder.fromDynamic,
+          schemaId: SetScrollControllerSchema.id,
+        );
     _schemas[SetScrollControllerSchema.id] = SetScrollControllerSchema.schema;
   }
 
@@ -980,11 +980,11 @@ class DefaultRegistrar extends _DefaultRegistrar {
   }
 
   void withSingleChildScrollView() {
-    _builders[JsonSingleChildScrollViewBuilder
-        .kType] = const JsonWidgetBuilderContainer(
-      builder: JsonSingleChildScrollViewBuilder.fromDynamic,
-      schemaId: SingleChildScrollViewSchema.id,
-    );
+    _builders[JsonSingleChildScrollViewBuilder.kType] =
+        const JsonWidgetBuilderContainer(
+          builder: JsonSingleChildScrollViewBuilder.fromDynamic,
+          schemaId: SingleChildScrollViewSchema.id,
+        );
     _schemas[SingleChildScrollViewSchema.id] =
         SingleChildScrollViewSchema.schema;
   }
@@ -1014,20 +1014,20 @@ class DefaultRegistrar extends _DefaultRegistrar {
   }
 
   void withSliverPadding() {
-    _builders[JsonSliverPaddingBuilder
-        .kType] = const JsonWidgetBuilderContainer(
-      builder: JsonSliverPaddingBuilder.fromDynamic,
-      schemaId: SliverPaddingSchema.id,
-    );
+    _builders[JsonSliverPaddingBuilder.kType] =
+        const JsonWidgetBuilderContainer(
+          builder: JsonSliverPaddingBuilder.fromDynamic,
+          schemaId: SliverPaddingSchema.id,
+        );
     _schemas[SliverPaddingSchema.id] = SliverPaddingSchema.schema;
   }
 
   void withSliverToBoxAdapter() {
-    _builders[JsonSliverToBoxAdapterBuilder
-        .kType] = const JsonWidgetBuilderContainer(
-      builder: JsonSliverToBoxAdapterBuilder.fromDynamic,
-      schemaId: SliverToBoxAdapterSchema.id,
-    );
+    _builders[JsonSliverToBoxAdapterBuilder.kType] =
+        const JsonWidgetBuilderContainer(
+          builder: JsonSliverToBoxAdapterBuilder.fromDynamic,
+          schemaId: SliverToBoxAdapterSchema.id,
+        );
     _schemas[SliverToBoxAdapterSchema.id] = SliverToBoxAdapterSchema.schema;
   }
 
@@ -1072,11 +1072,11 @@ class DefaultRegistrar extends _DefaultRegistrar {
   }
 
   void withTextFormField() {
-    _builders[JsonTextFormFieldBuilder
-        .kType] = const JsonWidgetBuilderContainer(
-      builder: JsonTextFormFieldBuilder.fromDynamic,
-      schemaId: TextFormFieldSchema.id,
-    );
+    _builders[JsonTextFormFieldBuilder.kType] =
+        const JsonWidgetBuilderContainer(
+          builder: JsonTextFormFieldBuilder.fromDynamic,
+          schemaId: TextFormFieldSchema.id,
+        );
     _schemas[TextFormFieldSchema.id] = TextFormFieldSchema.schema;
   }
 
@@ -1097,11 +1097,11 @@ class DefaultRegistrar extends _DefaultRegistrar {
   }
 
   void withTweenAnimationBuilder() {
-    _builders[JsonTweenAnimationBuilderBuilder
-        .kType] = const JsonWidgetBuilderContainer(
-      builder: JsonTweenAnimationBuilderBuilder.fromDynamic,
-      schemaId: TweenAnimationBuilderSchema.id,
-    );
+    _builders[JsonTweenAnimationBuilderBuilder.kType] =
+        const JsonWidgetBuilderContainer(
+          builder: JsonTweenAnimationBuilderBuilder.fromDynamic,
+          schemaId: TweenAnimationBuilderSchema.id,
+        );
     _schemas[TweenAnimationBuilderSchema.id] =
         TweenAnimationBuilderSchema.schema;
   }
@@ -1124,11 +1124,11 @@ class DefaultRegistrar extends _DefaultRegistrar {
 
   @override
   void withDropdownButtonFormField() {
-    _builders[JsonDropdownButtonFormFieldBuilder
-        .kType] = const JsonWidgetBuilderContainer(
-      builder: JsonDropdownButtonFormFieldBuilder.fromDynamic,
-      schemaId: DropdownButtonFormFieldSchema.id,
-    );
+    _builders[JsonDropdownButtonFormFieldBuilder.kType] =
+        const JsonWidgetBuilderContainer(
+          builder: JsonDropdownButtonFormFieldBuilder.fromDynamic,
+          schemaId: DropdownButtonFormFieldSchema.id,
+        );
     _schemas[DropdownButtonFormFieldSchema.id] =
         DropdownButtonFormFieldSchema.schema;
   }

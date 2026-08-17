@@ -85,21 +85,20 @@ class JsonAlign extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonAlignBuilder(
-               args: JsonAlignBuilderModel.fromDynamic(
-                 {
-                   'alignment': alignment,
-                   'heightFactor': heightFactor,
-                   'widthFactor': widthFactor,
-                   'child': child,
+         jsonWidgetBuilder: () => JsonAlignBuilder(
+           args: JsonAlignBuilderModel.fromDynamic(
+             {
+               'alignment': alignment,
+               'heightFactor': heightFactor,
+               'widthFactor': widthFactor,
+               'child': child,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonAlignBuilder.kType,
        );
 
@@ -255,10 +254,9 @@ class JsonAlignBuilderModel extends JsonWidgetBuilderModel {
   @override
   Map<String, dynamic> toJson() {
     return JsonClass.removeNull({
-      'alignment':
-          Alignment.center == alignment
-              ? null
-              : ThemeEncoder.encodeAlignmentGeometry(alignment),
+      'alignment': Alignment.center == alignment
+          ? null
+          : ThemeEncoder.encodeAlignmentGeometry(alignment),
       'heightFactor': heightFactor,
       'widthFactor': widthFactor,
       'child': child?.toJson(),
@@ -284,6 +282,5 @@ class AlignSchema {
       'widthFactor': SchemaHelper.numberSchema,
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': [],
   };
 }

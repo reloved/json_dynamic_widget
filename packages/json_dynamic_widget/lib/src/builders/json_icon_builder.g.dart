@@ -112,30 +112,29 @@ class JsonIcon extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonIconBuilder(
-               args: JsonIconBuilderModel.fromDynamic(
-                 {
-                   'applyTextScaling': applyTextScaling,
-                   'blendMode': blendMode,
-                   'color': color,
-                   'fill': fill,
-                   'fontWeight': fontWeight,
-                   'grade': grade,
-                   'icon': icon,
-                   'opticalSize': opticalSize,
-                   'semanticLabel': semanticLabel,
-                   'shadows': shadows,
-                   'size': size,
-                   'textDirection': textDirection,
-                   'weight': weight,
+         jsonWidgetBuilder: () => JsonIconBuilder(
+           args: JsonIconBuilderModel.fromDynamic(
+             {
+               'applyTextScaling': applyTextScaling,
+               'blendMode': blendMode,
+               'color': color,
+               'fill': fill,
+               'fontWeight': fontWeight,
+               'grade': grade,
+               'icon': icon,
+               'opticalSize': opticalSize,
+               'semanticLabel': semanticLabel,
+               'shadows': shadows,
+               'size': size,
+               'textDirection': textDirection,
+               'weight': weight,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonIconBuilder.kType,
        );
 
@@ -673,6 +672,5 @@ class WrappedIconSchema {
       'textDirection': SchemaHelper.objectSchema(TextDirectionSchema.id),
       'weight': SchemaHelper.numberSchema,
     },
-    'required': ['icon'],
   };
 }

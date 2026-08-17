@@ -107,28 +107,27 @@ class JsonAnimatedDefaultTextStyle extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonAnimatedDefaultTextStyleBuilder(
-               args: JsonAnimatedDefaultTextStyleBuilderModel.fromDynamic(
-                 {
-                   'curve': curve,
-                   'duration': duration,
-                   'maxLines': maxLines,
-                   'onEnd': onEnd,
-                   'overflow': overflow,
-                   'softWrap': softWrap,
-                   'style': style,
-                   'textAlign': textAlign,
-                   'textHeightBehavior': textHeightBehavior,
-                   'textWidthBasis': textWidthBasis,
-                   'child': child,
+         jsonWidgetBuilder: () => JsonAnimatedDefaultTextStyleBuilder(
+           args: JsonAnimatedDefaultTextStyleBuilderModel.fromDynamic(
+             {
+               'curve': curve,
+               'duration': duration,
+               'maxLines': maxLines,
+               'onEnd': onEnd,
+               'overflow': overflow,
+               'softWrap': softWrap,
+               'style': style,
+               'textAlign': textAlign,
+               'textHeightBehavior': textHeightBehavior,
+               'textWidthBasis': textWidthBasis,
+               'child': child,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonAnimatedDefaultTextStyleBuilder.kType,
        );
 
@@ -396,20 +395,18 @@ class JsonAnimatedDefaultTextStyleBuilderModel extends JsonWidgetBuilderModel {
       'duration': duration.inMilliseconds,
       'maxLines': maxLines,
       'onEnd': onEnd,
-      'overflow':
-          TextOverflow.clip == overflow
-              ? null
-              : ThemeEncoder.encodeTextOverflow(overflow),
+      'overflow': TextOverflow.clip == overflow
+          ? null
+          : ThemeEncoder.encodeTextOverflow(overflow),
       'softWrap': true == softWrap ? null : softWrap,
       'style': ThemeEncoder.encodeTextStyle(style),
       'textAlign': ThemeEncoder.encodeTextAlign(textAlign),
       'textHeightBehavior': ThemeEncoder.encodeTextHeightBehavior(
         textHeightBehavior,
       ),
-      'textWidthBasis':
-          TextWidthBasis.parent == textWidthBasis
-              ? null
-              : ThemeEncoder.encodeTextWidthBasis(textWidthBasis),
+      'textWidthBasis': TextWidthBasis.parent == textWidthBasis
+          ? null
+          : ThemeEncoder.encodeTextWidthBasis(textWidthBasis),
       'child': child.toJson(),
 
       ...args,
@@ -442,6 +439,5 @@ class AnimatedDefaultTextStyleSchema {
       'textWidthBasis': SchemaHelper.objectSchema(TextWidthBasisSchema.id),
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': ['duration', 'style', 'child'],
   };
 }

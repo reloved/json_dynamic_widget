@@ -74,14 +74,13 @@ class JsonIconTheme extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonIconThemeBuilder(
-               args: JsonIconThemeBuilderModel.fromDynamic(
-                 {'data': data, 'child': child, ...args},
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+         jsonWidgetBuilder: () => JsonIconThemeBuilder(
+           args: JsonIconThemeBuilderModel.fromDynamic(
+             {'data': data, 'child': child, ...args},
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonIconThemeBuilder.kType,
        );
 
@@ -200,6 +199,5 @@ class IconThemeSchema {
       'data': SchemaHelper.objectSchema(IconThemeDataSchema.id),
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': ['data', 'child'],
   };
 }

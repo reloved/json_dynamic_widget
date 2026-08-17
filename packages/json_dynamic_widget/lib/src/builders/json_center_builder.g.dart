@@ -82,20 +82,19 @@ class JsonCenter extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonCenterBuilder(
-               args: JsonCenterBuilderModel.fromDynamic(
-                 {
-                   'heightFactor': heightFactor,
-                   'widthFactor': widthFactor,
-                   'child': child,
+         jsonWidgetBuilder: () => JsonCenterBuilder(
+           args: JsonCenterBuilderModel.fromDynamic(
+             {
+               'heightFactor': heightFactor,
+               'widthFactor': widthFactor,
+               'child': child,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonCenterBuilder.kType,
        );
 
@@ -209,6 +208,5 @@ class CenterSchema {
       'widthFactor': SchemaHelper.numberSchema,
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': [],
   };
 }

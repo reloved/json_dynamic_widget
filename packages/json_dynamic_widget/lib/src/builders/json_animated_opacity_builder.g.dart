@@ -91,23 +91,22 @@ class JsonAnimatedOpacity extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonAnimatedOpacityBuilder(
-               args: JsonAnimatedOpacityBuilderModel.fromDynamic(
-                 {
-                   'alwaysIncludeSemantics': alwaysIncludeSemantics,
-                   'curve': curve,
-                   'duration': duration,
-                   'onEnd': onEnd,
-                   'opacity': opacity,
-                   'child': child,
+         jsonWidgetBuilder: () => JsonAnimatedOpacityBuilder(
+           args: JsonAnimatedOpacityBuilderModel.fromDynamic(
+             {
+               'alwaysIncludeSemantics': alwaysIncludeSemantics,
+               'curve': curve,
+               'duration': duration,
+               'onEnd': onEnd,
+               'opacity': opacity,
+               'child': child,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonAnimatedOpacityBuilder.kType,
        );
 
@@ -272,8 +271,9 @@ class JsonAnimatedOpacityBuilderModel extends JsonWidgetBuilderModel {
   @override
   Map<String, dynamic> toJson() {
     return JsonClass.removeNull({
-      'alwaysIncludeSemantics':
-          false == alwaysIncludeSemantics ? null : alwaysIncludeSemantics,
+      'alwaysIncludeSemantics': false == alwaysIncludeSemantics
+          ? null
+          : alwaysIncludeSemantics,
       'curve': Curves.linear == curve ? null : CurvesValues.encode(curve),
       'duration': duration.inMilliseconds,
       'onEnd': onEnd,
@@ -303,6 +303,5 @@ class AnimatedOpacitySchema {
       'opacity': SchemaHelper.numberSchema,
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': ['duration', 'opacity'],
   };
 }

@@ -110,29 +110,28 @@ class JsonAnimatedPhysicalModel extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonAnimatedPhysicalModelBuilder(
-               args: JsonAnimatedPhysicalModelBuilderModel.fromDynamic(
-                 {
-                   'animateColor': animateColor,
-                   'animateShadowColor': animateShadowColor,
-                   'borderRadius': borderRadius,
-                   'clipBehavior': clipBehavior,
-                   'color': color,
-                   'curve': curve,
-                   'duration': duration,
-                   'elevation': elevation,
-                   'onEnd': onEnd,
-                   'shadowColor': shadowColor,
-                   'shape': shape,
-                   'child': child,
+         jsonWidgetBuilder: () => JsonAnimatedPhysicalModelBuilder(
+           args: JsonAnimatedPhysicalModelBuilderModel.fromDynamic(
+             {
+               'animateColor': animateColor,
+               'animateShadowColor': animateShadowColor,
+               'borderRadius': borderRadius,
+               'clipBehavior': clipBehavior,
+               'color': color,
+               'curve': curve,
+               'duration': duration,
+               'elevation': elevation,
+               'onEnd': onEnd,
+               'shadowColor': shadowColor,
+               'shape': shape,
+               'child': child,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonAnimatedPhysicalModelBuilder.kType,
        );
 
@@ -412,23 +411,22 @@ class JsonAnimatedPhysicalModelBuilderModel extends JsonWidgetBuilderModel {
   Map<String, dynamic> toJson() {
     return JsonClass.removeNull({
       'animateColor': true == animateColor ? null : animateColor,
-      'animateShadowColor':
-          true == animateShadowColor ? null : animateShadowColor,
+      'animateShadowColor': true == animateShadowColor
+          ? null
+          : animateShadowColor,
       'borderRadius': ThemeEncoder.encodeBorderRadius(borderRadius),
-      'clipBehavior':
-          Clip.none == clipBehavior
-              ? null
-              : ThemeEncoder.encodeClip(clipBehavior),
+      'clipBehavior': Clip.none == clipBehavior
+          ? null
+          : ThemeEncoder.encodeClip(clipBehavior),
       'color': ThemeEncoder.encodeColor(color),
       'curve': Curves.linear == curve ? null : CurvesValues.encode(curve),
       'duration': duration.inMilliseconds,
       'elevation': 0.0 == elevation ? null : elevation,
       'onEnd': onEnd,
       'shadowColor': ThemeEncoder.encodeColor(shadowColor),
-      'shape':
-          BoxShape.rectangle == shape
-              ? null
-              : ThemeEncoder.encodeBoxShape(shape),
+      'shape': BoxShape.rectangle == shape
+          ? null
+          : ThemeEncoder.encodeBoxShape(shape),
       'child': child.toJson(),
 
       ...args,
@@ -460,6 +458,5 @@ class AnimatedPhysicalModelSchema {
       'shape': SchemaHelper.objectSchema(BoxShapeSchema.id),
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': ['color', 'duration', 'shadowColor', 'child'],
   };
 }

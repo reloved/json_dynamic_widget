@@ -77,14 +77,13 @@ class JsonLayoutBuilder extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonLayoutBuilderBuilder(
-               args: JsonLayoutBuilderBuilderModel.fromDynamic(
-                 {'builder': builder, 'child': child, ...args},
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+         jsonWidgetBuilder: () => JsonLayoutBuilderBuilder(
+           args: JsonLayoutBuilderBuilderModel.fromDynamic(
+             {'builder': builder, 'child': child, ...args},
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonLayoutBuilderBuilder.kType,
        );
 
@@ -180,6 +179,5 @@ class LayoutBuilderSchema {
       'builder': SchemaHelper.anySchema,
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': ['builder'],
   };
 }

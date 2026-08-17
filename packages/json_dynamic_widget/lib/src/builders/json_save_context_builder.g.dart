@@ -76,14 +76,13 @@ class JsonSaveContext extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonSaveContextBuilder(
-               args: JsonSaveContextBuilderModel.fromDynamic(
-                 {'key': varName, 'child': child, ...args},
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+         jsonWidgetBuilder: () => JsonSaveContextBuilder(
+           args: JsonSaveContextBuilderModel.fromDynamic(
+             {'key': varName, 'child': child, ...args},
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonSaveContextBuilder.kType,
        );
 
@@ -179,6 +178,5 @@ class SaveContextSchema {
       'key': SchemaHelper.stringSchema,
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': ['key'],
   };
 }

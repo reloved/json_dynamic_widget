@@ -83,20 +83,19 @@ class JsonFractionalTranslation extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonFractionalTranslationBuilder(
-               args: JsonFractionalTranslationBuilderModel.fromDynamic(
-                 {
-                   'transformHitTests': transformHitTests,
-                   'translation': translation,
-                   'child': child,
+         jsonWidgetBuilder: () => JsonFractionalTranslationBuilder(
+           args: JsonFractionalTranslationBuilderModel.fromDynamic(
+             {
+               'transformHitTests': transformHitTests,
+               'translation': translation,
+               'child': child,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonFractionalTranslationBuilder.kType,
        );
 
@@ -231,6 +230,5 @@ class FractionalTranslationSchema {
       'translation': SchemaHelper.objectSchema(OffsetSchema.id),
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': ['translation'],
   };
 }

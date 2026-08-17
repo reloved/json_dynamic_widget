@@ -74,14 +74,13 @@ class JsonTheme extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonThemeBuilder(
-               args: JsonThemeBuilderModel.fromDynamic(
-                 {'data': data, 'child': child, ...args},
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+         jsonWidgetBuilder: () => JsonThemeBuilder(
+           args: JsonThemeBuilderModel.fromDynamic(
+             {'data': data, 'child': child, ...args},
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonThemeBuilder.kType,
        );
 
@@ -208,6 +207,5 @@ class ThemeSchema {
       'data': SchemaHelper.objectSchema(ThemeDataSchema.id),
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': ['data', 'child'],
   };
 }

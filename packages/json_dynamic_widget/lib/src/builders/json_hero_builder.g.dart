@@ -91,23 +91,22 @@ class JsonHero extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonHeroBuilder(
-               args: JsonHeroBuilderModel.fromDynamic(
-                 {
-                   'createRectTween': createRectTween,
-                   'flightShuttleBuilder': flightShuttleBuilder,
-                   'placeholderBuilder': placeholderBuilder,
-                   'tag': tag,
-                   'transitionOnUserGestures': transitionOnUserGestures,
-                   'child': child,
+         jsonWidgetBuilder: () => JsonHeroBuilder(
+           args: JsonHeroBuilderModel.fromDynamic(
+             {
+               'createRectTween': createRectTween,
+               'flightShuttleBuilder': flightShuttleBuilder,
+               'placeholderBuilder': placeholderBuilder,
+               'tag': tag,
+               'transitionOnUserGestures': transitionOnUserGestures,
+               'child': child,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonHeroBuilder.kType,
        );
 
@@ -383,8 +382,9 @@ class JsonHeroBuilderModel extends JsonWidgetBuilderModel {
       'flightShuttleBuilder': flightShuttleBuilder,
       'placeholderBuilder': placeholderBuilder,
       'tag': '(default)' == tag ? null : tag,
-      'transitionOnUserGestures':
-          false == transitionOnUserGestures ? null : transitionOnUserGestures,
+      'transitionOnUserGestures': false == transitionOnUserGestures
+          ? null
+          : transitionOnUserGestures,
       'child': child.toJson(),
 
       ...args,
@@ -410,6 +410,5 @@ class HeroSchema {
       'transitionOnUserGestures': SchemaHelper.boolSchema,
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': ['tag', 'child'],
   };
 }

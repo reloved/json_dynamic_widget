@@ -85,21 +85,20 @@ class JsonClipRRect extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonClipRRectBuilder(
-               args: JsonClipRRectBuilderModel.fromDynamic(
-                 {
-                   'borderRadius': borderRadius,
-                   'clipBehavior': clipBehavior,
-                   'clipper': clipper,
-                   'child': child,
+         jsonWidgetBuilder: () => JsonClipRRectBuilder(
+           args: JsonClipRRectBuilderModel.fromDynamic(
+             {
+               'borderRadius': borderRadius,
+               'clipBehavior': clipBehavior,
+               'clipper': clipper,
+               'child': child,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonClipRRectBuilder.kType,
        );
 
@@ -237,10 +236,9 @@ class JsonClipRRectBuilderModel extends JsonWidgetBuilderModel {
   Map<String, dynamic> toJson() {
     return JsonClass.removeNull({
       'borderRadius': BorderRadius.zero == borderRadius ? null : borderRadius,
-      'clipBehavior':
-          Clip.antiAlias == clipBehavior
-              ? null
-              : ThemeEncoder.encodeClip(clipBehavior),
+      'clipBehavior': Clip.antiAlias == clipBehavior
+          ? null
+          : ThemeEncoder.encodeClip(clipBehavior),
       'clipper': clipper,
       'child': child?.toJson(),
 
@@ -265,6 +263,5 @@ class ClipRRectSchema {
       'clipper': SchemaHelper.anySchema,
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': [],
   };
 }

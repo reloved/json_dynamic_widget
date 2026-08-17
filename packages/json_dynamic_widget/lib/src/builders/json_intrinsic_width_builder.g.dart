@@ -82,20 +82,19 @@ class JsonIntrinsicWidth extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonIntrinsicWidthBuilder(
-               args: JsonIntrinsicWidthBuilderModel.fromDynamic(
-                 {
-                   'stepHeight': stepHeight,
-                   'stepWidth': stepWidth,
-                   'child': child,
+         jsonWidgetBuilder: () => JsonIntrinsicWidthBuilder(
+           args: JsonIntrinsicWidthBuilderModel.fromDynamic(
+             {
+               'stepHeight': stepHeight,
+               'stepWidth': stepWidth,
+               'child': child,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonIntrinsicWidthBuilder.kType,
        );
 
@@ -247,6 +246,5 @@ class IntrinsicWidthSchema {
       'stepWidth': SchemaHelper.numberSchema,
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': [],
   };
 }

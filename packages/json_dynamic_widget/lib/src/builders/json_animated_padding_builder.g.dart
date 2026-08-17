@@ -88,22 +88,21 @@ class JsonAnimatedPadding extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonAnimatedPaddingBuilder(
-               args: JsonAnimatedPaddingBuilderModel.fromDynamic(
-                 {
-                   'curve': curve,
-                   'duration': duration,
-                   'onEnd': onEnd,
-                   'padding': padding,
-                   'child': child,
+         jsonWidgetBuilder: () => JsonAnimatedPaddingBuilder(
+           args: JsonAnimatedPaddingBuilderModel.fromDynamic(
+             {
+               'curve': curve,
+               'duration': duration,
+               'onEnd': onEnd,
+               'padding': padding,
+               'child': child,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonAnimatedPaddingBuilder.kType,
        );
 
@@ -265,6 +264,5 @@ class AnimatedPaddingSchema {
       'padding': SchemaHelper.objectSchema(EdgeInsetsGeometrySchema.id),
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': ['duration', 'padding'],
   };
 }

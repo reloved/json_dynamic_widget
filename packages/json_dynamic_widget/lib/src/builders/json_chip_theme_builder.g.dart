@@ -74,14 +74,13 @@ class JsonChipTheme extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonChipThemeBuilder(
-               args: JsonChipThemeBuilderModel.fromDynamic(
-                 {'data': data, 'child': child, ...args},
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+         jsonWidgetBuilder: () => JsonChipThemeBuilder(
+           args: JsonChipThemeBuilderModel.fromDynamic(
+             {'data': data, 'child': child, ...args},
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonChipThemeBuilder.kType,
        );
 
@@ -202,6 +201,5 @@ class ChipThemeSchema {
       'data': SchemaHelper.objectSchema(ChipThemeDataSchema.id),
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': ['data', 'child'],
   };
 }

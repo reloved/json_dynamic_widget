@@ -118,32 +118,31 @@ class JsonDialogTheme extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonDialogThemeBuilder(
-               args: JsonDialogThemeBuilderModel.fromDynamic(
-                 {
-                   'actionsPadding': actionsPadding,
-                   'alignment': alignment,
-                   'backgroundColor': backgroundColor,
-                   'barrierColor': barrierColor,
-                   'clipBehavior': clipBehavior,
-                   'contentTextStyle': contentTextStyle,
-                   'data': data,
-                   'elevation': elevation,
-                   'iconColor': iconColor,
-                   'insetPadding': insetPadding,
-                   'shadowColor': shadowColor,
-                   'shape': shape,
-                   'surfaceTintColor': surfaceTintColor,
-                   'titleTextStyle': titleTextStyle,
-                   'child': child,
+         jsonWidgetBuilder: () => JsonDialogThemeBuilder(
+           args: JsonDialogThemeBuilderModel.fromDynamic(
+             {
+               'actionsPadding': actionsPadding,
+               'alignment': alignment,
+               'backgroundColor': backgroundColor,
+               'barrierColor': barrierColor,
+               'clipBehavior': clipBehavior,
+               'contentTextStyle': contentTextStyle,
+               'data': data,
+               'elevation': elevation,
+               'iconColor': iconColor,
+               'insetPadding': insetPadding,
+               'shadowColor': shadowColor,
+               'shape': shape,
+               'surfaceTintColor': surfaceTintColor,
+               'titleTextStyle': titleTextStyle,
+               'child': child,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonDialogThemeBuilder.kType,
        );
 
@@ -440,6 +439,5 @@ class DialogThemeSchema {
       'titleTextStyle': SchemaHelper.objectSchema(TextStyleSchema.id),
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': [],
   };
 }

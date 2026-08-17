@@ -105,27 +105,26 @@ class JsonAnimatedPositionedDirectional extends JsonWidgetData {
                args: args,
                registry: registry,
              ),
-         jsonWidgetBuilder:
-             () => JsonAnimatedPositionedDirectionalBuilder(
-               args: JsonAnimatedPositionedDirectionalBuilderModel.fromDynamic(
-                 {
-                   'bottom': bottom,
-                   'curve': curve,
-                   'duration': duration,
-                   'end': end,
-                   'height': height,
-                   'onEnd': onEnd,
-                   'start': start,
-                   'top': top,
-                   'width': width,
-                   'child': child,
+         jsonWidgetBuilder: () => JsonAnimatedPositionedDirectionalBuilder(
+           args: JsonAnimatedPositionedDirectionalBuilderModel.fromDynamic(
+             {
+               'bottom': bottom,
+               'curve': curve,
+               'duration': duration,
+               'end': end,
+               'height': height,
+               'onEnd': onEnd,
+               'start': start,
+               'top': top,
+               'width': width,
+               'child': child,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonAnimatedPositionedDirectionalBuilder.kType,
        );
 
@@ -380,6 +379,5 @@ class AnimatedPositionedDirectionalSchema {
       'width': SchemaHelper.numberSchema,
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': ['duration', 'child'],
   };
 }

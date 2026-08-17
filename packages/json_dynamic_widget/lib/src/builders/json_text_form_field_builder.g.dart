@@ -276,83 +276,80 @@ class JsonTextFormField extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonTextFormFieldBuilder(
-               args: JsonTextFormFieldBuilderModel.fromDynamic(
-                 {
-                   'autocorrect': autocorrect,
-                   'autofillHints': autofillHints,
-                   'autofocus': autofocus,
-                   'autovalidateMode': autovalidateMode,
-                   'buildCounter': buildCounter,
-                   'canRequestFocus': canRequestFocus,
-                   'clipBehavior': clipBehavior,
-                   'contentInsertionConfiguration':
-                       contentInsertionConfiguration,
-                   'contextMenuBuilder': contextMenuBuilder,
-                   'controller': controller,
-                   'cursorColor': cursorColor,
-                   'cursorHeight': cursorHeight,
-                   'cursorOpacityAnimates': cursorOpacityAnimates,
-                   'cursorRadius': cursorRadius,
-                   'cursorWidth': cursorWidth,
-                   'decoration': decoration,
-                   'dragStartBehavior': dragStartBehavior,
-                   'enableIMEPersonalizedLearning':
-                       enableIMEPersonalizedLearning,
-                   'enableInteractiveSelection': enableInteractiveSelection,
-                   'enableSuggestions': enableSuggestions,
-                   'enabled': enabled,
-                   'expands': expands,
-                   'focusNode': focusNode,
-                   'initialValue': initialValue,
-                   'inputFormatters': inputFormatters,
-                   'keyboardAppearance': keyboardAppearance,
-                   'keyboardType': keyboardType,
-                   'magnifierConfiguration': magnifierConfiguration,
-                   'maxLength': maxLength,
-                   'maxLengthEnforcement': maxLengthEnforcement,
-                   'maxLines': maxLines,
-                   'minLines': minLines,
-                   'mouseCursor': mouseCursor,
-                   'obscureText': obscureText,
-                   'obscuringCharacter': obscuringCharacter,
-                   'onAppPrivateCommand': onAppPrivateCommand,
-                   'onChanged': onChanged,
-                   'onEditingComplete': onEditingComplete,
-                   'onFieldSubmitted': onFieldSubmitted,
-                   'onSaved': onSaved,
-                   'onTap': onTap,
-                   'onTapOutside': onTapOutside,
-                   'readOnly': readOnly,
-                   'restorationId': restorationId,
-                   'scrollController': scrollController,
-                   'scrollPadding': scrollPadding,
-                   'scrollPhysics': scrollPhysics,
-                   'selectionControls': selectionControls,
-                   'selectionHeightStyle': selectionHeightStyle,
-                   'selectionWidthStyle': selectionWidthStyle,
-                   'showCursor': showCursor,
-                   'smartDashesType': smartDashesType,
-                   'smartQuotesType': smartQuotesType,
-                   'spellCheckConfiguration': spellCheckConfiguration,
-                   'strutStyle': strutStyle,
-                   'style': style,
-                   'stylusHandwritingEnabled': stylusHandwritingEnabled,
-                   'textAlign': textAlign,
-                   'textAlignVertical': textAlignVertical,
-                   'textCapitalization': textCapitalization,
-                   'textDirection': textDirection,
-                   'textInputAction': textInputAction,
-                   'undoController': undoController,
-                   'validators': validators,
+         jsonWidgetBuilder: () => JsonTextFormFieldBuilder(
+           args: JsonTextFormFieldBuilderModel.fromDynamic(
+             {
+               'autocorrect': autocorrect,
+               'autofillHints': autofillHints,
+               'autofocus': autofocus,
+               'autovalidateMode': autovalidateMode,
+               'buildCounter': buildCounter,
+               'canRequestFocus': canRequestFocus,
+               'clipBehavior': clipBehavior,
+               'contentInsertionConfiguration': contentInsertionConfiguration,
+               'contextMenuBuilder': contextMenuBuilder,
+               'controller': controller,
+               'cursorColor': cursorColor,
+               'cursorHeight': cursorHeight,
+               'cursorOpacityAnimates': cursorOpacityAnimates,
+               'cursorRadius': cursorRadius,
+               'cursorWidth': cursorWidth,
+               'decoration': decoration,
+               'dragStartBehavior': dragStartBehavior,
+               'enableIMEPersonalizedLearning': enableIMEPersonalizedLearning,
+               'enableInteractiveSelection': enableInteractiveSelection,
+               'enableSuggestions': enableSuggestions,
+               'enabled': enabled,
+               'expands': expands,
+               'focusNode': focusNode,
+               'initialValue': initialValue,
+               'inputFormatters': inputFormatters,
+               'keyboardAppearance': keyboardAppearance,
+               'keyboardType': keyboardType,
+               'magnifierConfiguration': magnifierConfiguration,
+               'maxLength': maxLength,
+               'maxLengthEnforcement': maxLengthEnforcement,
+               'maxLines': maxLines,
+               'minLines': minLines,
+               'mouseCursor': mouseCursor,
+               'obscureText': obscureText,
+               'obscuringCharacter': obscuringCharacter,
+               'onAppPrivateCommand': onAppPrivateCommand,
+               'onChanged': onChanged,
+               'onEditingComplete': onEditingComplete,
+               'onFieldSubmitted': onFieldSubmitted,
+               'onSaved': onSaved,
+               'onTap': onTap,
+               'onTapOutside': onTapOutside,
+               'readOnly': readOnly,
+               'restorationId': restorationId,
+               'scrollController': scrollController,
+               'scrollPadding': scrollPadding,
+               'scrollPhysics': scrollPhysics,
+               'selectionControls': selectionControls,
+               'selectionHeightStyle': selectionHeightStyle,
+               'selectionWidthStyle': selectionWidthStyle,
+               'showCursor': showCursor,
+               'smartDashesType': smartDashesType,
+               'smartQuotesType': smartQuotesType,
+               'spellCheckConfiguration': spellCheckConfiguration,
+               'strutStyle': strutStyle,
+               'style': style,
+               'stylusHandwritingEnabled': stylusHandwritingEnabled,
+               'textAlign': textAlign,
+               'textAlignVertical': textAlignVertical,
+               'textCapitalization': textCapitalization,
+               'textDirection': textDirection,
+               'textInputAction': textInputAction,
+               'undoController': undoController,
+               'validators': validators,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonTextFormFieldBuilder.kType,
        );
 
@@ -1012,10 +1009,9 @@ class JsonTextFormFieldBuilderModel extends JsonWidgetBuilderModel {
       'autovalidateMode': ThemeEncoder.encodeAutovalidateMode(autovalidateMode),
       'buildCounter': buildCounter,
       'canRequestFocus': true == canRequestFocus ? null : canRequestFocus,
-      'clipBehavior':
-          Clip.hardEdge == clipBehavior
-              ? null
-              : ThemeEncoder.encodeClip(clipBehavior),
+      'clipBehavior': Clip.hardEdge == clipBehavior
+          ? null
+          : ThemeEncoder.encodeClip(clipBehavior),
       'contentInsertionConfiguration': contentInsertionConfiguration,
       'contextMenuBuilder': contextMenuBuilder,
       'controller': controller,
@@ -1025,14 +1021,12 @@ class JsonTextFormFieldBuilderModel extends JsonWidgetBuilderModel {
       'cursorRadius': ThemeEncoder.encodeRadius(cursorRadius),
       'cursorWidth': 2.0 == cursorWidth ? null : cursorWidth,
       'decoration': decoration,
-      'dragStartBehavior':
-          DragStartBehavior.start == dragStartBehavior
-              ? null
-              : ThemeEncoder.encodeDragStartBehavior(dragStartBehavior),
-      'enableIMEPersonalizedLearning':
-          true == enableIMEPersonalizedLearning
-              ? null
-              : enableIMEPersonalizedLearning,
+      'dragStartBehavior': DragStartBehavior.start == dragStartBehavior
+          ? null
+          : ThemeEncoder.encodeDragStartBehavior(dragStartBehavior),
+      'enableIMEPersonalizedLearning': true == enableIMEPersonalizedLearning
+          ? null
+          : enableIMEPersonalizedLearning,
       'enableInteractiveSelection': enableInteractiveSelection,
       'enableSuggestions': true == enableSuggestions ? null : enableSuggestions,
       'enabled': enabled,
@@ -1051,8 +1045,9 @@ class JsonTextFormFieldBuilderModel extends JsonWidgetBuilderModel {
       'minLines': minLines,
       'mouseCursor': ThemeEncoder.encodeMouseCursor(mouseCursor),
       'obscureText': false == obscureText ? null : obscureText,
-      'obscuringCharacter':
-          '•' == obscuringCharacter ? null : obscuringCharacter,
+      'obscuringCharacter': '•' == obscuringCharacter
+          ? null
+          : obscuringCharacter,
       'onAppPrivateCommand': onAppPrivateCommand,
       'onChanged': onChanged,
       'onEditingComplete': onEditingComplete,
@@ -1063,39 +1058,35 @@ class JsonTextFormFieldBuilderModel extends JsonWidgetBuilderModel {
       'readOnly': false == readOnly ? null : readOnly,
       'restorationId': restorationId,
       'scrollController': scrollController,
-      'scrollPadding':
-          const EdgeInsets.all(20.0) == scrollPadding
-              ? null
-              : ThemeEncoder.encodeEdgeInsets(scrollPadding),
+      'scrollPadding': const EdgeInsets.all(20.0) == scrollPadding
+          ? null
+          : ThemeEncoder.encodeEdgeInsets(scrollPadding),
       'scrollPhysics': ThemeEncoder.encodeScrollPhysics(scrollPhysics),
       'selectionControls': selectionControls,
-      'selectionHeightStyle':
-          BoxHeightStyle.tight == selectionHeightStyle
-              ? null
-              : ThemeEncoder.encodeBoxHeightStyle(selectionHeightStyle),
-      'selectionWidthStyle':
-          BoxWidthStyle.tight == selectionWidthStyle
-              ? null
-              : ThemeEncoder.encodeBoxWidthStyle(selectionWidthStyle),
+      'selectionHeightStyle': BoxHeightStyle.tight == selectionHeightStyle
+          ? null
+          : ThemeEncoder.encodeBoxHeightStyle(selectionHeightStyle),
+      'selectionWidthStyle': BoxWidthStyle.tight == selectionWidthStyle
+          ? null
+          : ThemeEncoder.encodeBoxWidthStyle(selectionWidthStyle),
       'showCursor': showCursor,
       'smartDashesType': ThemeEncoder.encodeSmartDashesType(smartDashesType),
       'smartQuotesType': ThemeEncoder.encodeSmartQuotesType(smartQuotesType),
       'spellCheckConfiguration': spellCheckConfiguration,
       'strutStyle': ThemeEncoder.encodeStrutStyle(strutStyle),
       'style': ThemeEncoder.encodeTextStyle(style),
-      'stylusHandwritingEnabled':
-          true == stylusHandwritingEnabled ? null : stylusHandwritingEnabled,
-      'textAlign':
-          TextAlign.start == textAlign
-              ? null
-              : ThemeEncoder.encodeTextAlign(textAlign),
+      'stylusHandwritingEnabled': true == stylusHandwritingEnabled
+          ? null
+          : stylusHandwritingEnabled,
+      'textAlign': TextAlign.start == textAlign
+          ? null
+          : ThemeEncoder.encodeTextAlign(textAlign),
       'textAlignVertical': ThemeEncoder.encodeTextAlignVertical(
         textAlignVertical,
       ),
-      'textCapitalization':
-          TextCapitalization.none == textCapitalization
-              ? null
-              : ThemeEncoder.encodeTextCapitalization(textCapitalization),
+      'textCapitalization': TextCapitalization.none == textCapitalization
+          ? null
+          : ThemeEncoder.encodeTextCapitalization(textCapitalization),
       'textDirection': ThemeEncoder.encodeTextDirection(textDirection),
       'textInputAction': ThemeEncoder.encodeTextInputAction(textInputAction),
       'undoController': undoController,
@@ -1192,6 +1183,5 @@ class TextFormFieldSchema {
       'undoController': SchemaHelper.anySchema,
       'validators': SchemaHelper.anySchema,
     },
-    'required': ['controller'],
   };
 }

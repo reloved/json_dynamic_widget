@@ -69,14 +69,13 @@ class JsonErrorWidget extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonErrorWidgetBuilder(
-               args: JsonErrorWidgetBuilderModel.fromDynamic(
-                 {'exception': exception, ...args},
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+         jsonWidgetBuilder: () => JsonErrorWidgetBuilder(
+           args: JsonErrorWidgetBuilderModel.fromDynamic(
+             {'exception': exception, ...args},
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonErrorWidgetBuilder.kType,
        );
 
@@ -155,6 +154,5 @@ class ErrorWidgetSchema {
     'type': 'object',
     'additionalProperties': false,
     'properties': {'exception': SchemaHelper.anySchema},
-    'required': ['exception'],
   };
 }

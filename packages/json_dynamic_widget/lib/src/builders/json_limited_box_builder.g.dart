@@ -82,20 +82,19 @@ class JsonLimitedBox extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonLimitedBoxBuilder(
-               args: JsonLimitedBoxBuilderModel.fromDynamic(
-                 {
-                   'maxHeight': maxHeight,
-                   'maxWidth': maxWidth,
-                   'child': child,
+         jsonWidgetBuilder: () => JsonLimitedBoxBuilder(
+           args: JsonLimitedBoxBuilderModel.fromDynamic(
+             {
+               'maxHeight': maxHeight,
+               'maxWidth': maxWidth,
+               'child': child,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonLimitedBoxBuilder.kType,
        );
 
@@ -227,6 +226,5 @@ class LimitedBoxSchema {
       'maxWidth': SchemaHelper.numberSchema,
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': [],
   };
 }

@@ -82,20 +82,19 @@ class JsonClipPath extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonClipPathBuilder(
-               args: JsonClipPathBuilderModel.fromDynamic(
-                 {
-                   'clipBehavior': clipBehavior,
-                   'clipper': clipper,
-                   'child': child,
+         jsonWidgetBuilder: () => JsonClipPathBuilder(
+           args: JsonClipPathBuilderModel.fromDynamic(
+             {
+               'clipBehavior': clipBehavior,
+               'clipper': clipper,
+               'child': child,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonClipPathBuilder.kType,
        );
 
@@ -212,10 +211,9 @@ class JsonClipPathBuilderModel extends JsonWidgetBuilderModel {
   @override
   Map<String, dynamic> toJson() {
     return JsonClass.removeNull({
-      'clipBehavior':
-          Clip.antiAlias == clipBehavior
-              ? null
-              : ThemeEncoder.encodeClip(clipBehavior),
+      'clipBehavior': Clip.antiAlias == clipBehavior
+          ? null
+          : ThemeEncoder.encodeClip(clipBehavior),
       'clipper': clipper,
       'child': child?.toJson(),
 
@@ -239,6 +237,5 @@ class ClipPathSchema {
       'clipper': SchemaHelper.anySchema,
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': [],
   };
 }

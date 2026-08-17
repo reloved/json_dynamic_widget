@@ -82,20 +82,19 @@ class JsonClipOval extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonClipOvalBuilder(
-               args: JsonClipOvalBuilderModel.fromDynamic(
-                 {
-                   'clipBehavior': clipBehavior,
-                   'clipper': clipper,
-                   'child': child,
+         jsonWidgetBuilder: () => JsonClipOvalBuilder(
+           args: JsonClipOvalBuilderModel.fromDynamic(
+             {
+               'clipBehavior': clipBehavior,
+               'clipper': clipper,
+               'child': child,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonClipOvalBuilder.kType,
        );
 
@@ -218,10 +217,9 @@ class JsonClipOvalBuilderModel extends JsonWidgetBuilderModel {
   @override
   Map<String, dynamic> toJson() {
     return JsonClass.removeNull({
-      'clipBehavior':
-          Clip.antiAlias == clipBehavior
-              ? null
-              : ThemeEncoder.encodeClip(clipBehavior),
+      'clipBehavior': Clip.antiAlias == clipBehavior
+          ? null
+          : ThemeEncoder.encodeClip(clipBehavior),
       'clipper': clipper,
       'child': child?.toJson(),
 
@@ -245,6 +243,5 @@ class ClipOvalSchema {
       'clipper': SchemaHelper.anySchema,
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': [],
   };
 }

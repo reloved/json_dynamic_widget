@@ -117,31 +117,30 @@ class JsonRichText extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonRichTextBuilder(
-               args: JsonRichTextBuilderModel.fromDynamic(
-                 {
-                   'locale': locale,
-                   'maxLines': maxLines,
-                   'overflow': overflow,
-                   'selectionColor': selectionColor,
-                   'selectionRegistrar': selectionRegistrar,
-                   'softWrap': softWrap,
-                   'strutStyle': strutStyle,
-                   'text': text,
-                   'textAlign': textAlign,
-                   'textDirection': textDirection,
-                   'textHeightBehavior': textHeightBehavior,
-                   'textScaleFactor': textScaleFactor,
-                   'textScaler': textScaler,
-                   'textWidthBasis': textWidthBasis,
+         jsonWidgetBuilder: () => JsonRichTextBuilder(
+           args: JsonRichTextBuilderModel.fromDynamic(
+             {
+               'locale': locale,
+               'maxLines': maxLines,
+               'overflow': overflow,
+               'selectionColor': selectionColor,
+               'selectionRegistrar': selectionRegistrar,
+               'softWrap': softWrap,
+               'strutStyle': strutStyle,
+               'text': text,
+               'textAlign': textAlign,
+               'textDirection': textDirection,
+               'textHeightBehavior': textHeightBehavior,
+               'textScaleFactor': textScaleFactor,
+               'textScaler': textScaler,
+               'textWidthBasis': textWidthBasis,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonRichTextBuilder.kType,
        );
 
@@ -487,32 +486,28 @@ class JsonRichTextBuilderModel extends JsonWidgetBuilderModel {
     return JsonClass.removeNull({
       'locale': ThemeEncoder.encodeLocale(locale),
       'maxLines': maxLines,
-      'overflow':
-          TextOverflow.clip == overflow
-              ? null
-              : ThemeEncoder.encodeTextOverflow(overflow),
+      'overflow': TextOverflow.clip == overflow
+          ? null
+          : ThemeEncoder.encodeTextOverflow(overflow),
       'selectionColor': ThemeEncoder.encodeColor(selectionColor),
       'selectionRegistrar': selectionRegistrar,
       'softWrap': true == softWrap ? null : softWrap,
       'strutStyle': ThemeEncoder.encodeStrutStyle(strutStyle),
       'text': text,
-      'textAlign':
-          TextAlign.start == textAlign
-              ? null
-              : ThemeEncoder.encodeTextAlign(textAlign),
+      'textAlign': TextAlign.start == textAlign
+          ? null
+          : ThemeEncoder.encodeTextAlign(textAlign),
       'textDirection': ThemeEncoder.encodeTextDirection(textDirection),
       'textHeightBehavior': ThemeEncoder.encodeTextHeightBehavior(
         textHeightBehavior,
       ),
       'textScaleFactor': 1.0 == textScaleFactor ? null : textScaleFactor,
-      'textScaler':
-          TextScaler.noScaling == textScaler
-              ? null
-              : ThemeEncoder.encodeTextScaler(textScaler),
-      'textWidthBasis':
-          TextWidthBasis.parent == textWidthBasis
-              ? null
-              : ThemeEncoder.encodeTextWidthBasis(textWidthBasis),
+      'textScaler': TextScaler.noScaling == textScaler
+          ? null
+          : ThemeEncoder.encodeTextScaler(textScaler),
+      'textWidthBasis': TextWidthBasis.parent == textWidthBasis
+          ? null
+          : ThemeEncoder.encodeTextWidthBasis(textWidthBasis),
 
       ...args,
     });
@@ -547,6 +542,5 @@ class RichTextSchema {
       'textScaler': SchemaHelper.objectSchema(TextScalerSchema.id),
       'textWidthBasis': SchemaHelper.objectSchema(TextWidthBasisSchema.id),
     },
-    'required': ['text'],
   };
 }

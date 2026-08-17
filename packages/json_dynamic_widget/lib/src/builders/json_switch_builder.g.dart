@@ -157,45 +157,44 @@ class JsonSwitch extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonSwitchBuilder(
-               args: JsonSwitchBuilderModel.fromDynamic(
-                 {
-                   'activeColor': activeColor,
-                   'activeThumbImage': activeThumbImage,
-                   'activeTrackColor': activeTrackColor,
-                   'autofocus': autofocus,
-                   'autovalidateMode': autovalidateMode,
-                   'dragStartBehavior': dragStartBehavior,
-                   'enabled': enabled,
-                   'focusColor': focusColor,
-                   'focusNode': focusNode,
-                   'hoverColor': hoverColor,
-                   'inactiveThumbColor': inactiveThumbColor,
-                   'inactiveThumbImage': inactiveThumbImage,
-                   'inactiveTrackColor': inactiveTrackColor,
-                   'label': label,
-                   'materialTapTargetSize': materialTapTargetSize,
-                   'mouseCursor': mouseCursor,
-                   'onActiveThumbImageError': onActiveThumbImageError,
-                   'onChanged': onChanged,
-                   'onInactiveThumbImageError': onInactiveThumbImageError,
-                   'onSaved': onSaved,
-                   'overlayColor': overlayColor,
-                   'splashRadius': splashRadius,
-                   'thumbColor': thumbColor,
-                   'thumbIcon': thumbIcon,
-                   'trackColor': trackColor,
-                   'validator': validator,
-                   'value': value,
-                   'visualDensity': visualDensity,
+         jsonWidgetBuilder: () => JsonSwitchBuilder(
+           args: JsonSwitchBuilderModel.fromDynamic(
+             {
+               'activeColor': activeColor,
+               'activeThumbImage': activeThumbImage,
+               'activeTrackColor': activeTrackColor,
+               'autofocus': autofocus,
+               'autovalidateMode': autovalidateMode,
+               'dragStartBehavior': dragStartBehavior,
+               'enabled': enabled,
+               'focusColor': focusColor,
+               'focusNode': focusNode,
+               'hoverColor': hoverColor,
+               'inactiveThumbColor': inactiveThumbColor,
+               'inactiveThumbImage': inactiveThumbImage,
+               'inactiveTrackColor': inactiveTrackColor,
+               'label': label,
+               'materialTapTargetSize': materialTapTargetSize,
+               'mouseCursor': mouseCursor,
+               'onActiveThumbImageError': onActiveThumbImageError,
+               'onChanged': onChanged,
+               'onInactiveThumbImageError': onInactiveThumbImageError,
+               'onSaved': onSaved,
+               'overlayColor': overlayColor,
+               'splashRadius': splashRadius,
+               'thumbColor': thumbColor,
+               'thumbIcon': thumbIcon,
+               'trackColor': trackColor,
+               'validator': validator,
+               'value': value,
+               'visualDensity': visualDensity,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonSwitchBuilder.kType,
        );
 
@@ -505,10 +504,9 @@ class JsonSwitchBuilderModel extends JsonWidgetBuilderModel {
       'activeTrackColor': ThemeEncoder.encodeColor(activeTrackColor),
       'autofocus': false == autofocus ? null : autofocus,
       'autovalidateMode': ThemeEncoder.encodeAutovalidateMode(autovalidateMode),
-      'dragStartBehavior':
-          DragStartBehavior.start == dragStartBehavior
-              ? null
-              : ThemeEncoder.encodeDragStartBehavior(dragStartBehavior),
+      'dragStartBehavior': DragStartBehavior.start == dragStartBehavior
+          ? null
+          : ThemeEncoder.encodeDragStartBehavior(dragStartBehavior),
       'enabled': true == enabled ? null : enabled,
       'focusColor': ThemeEncoder.encodeColor(focusColor),
       'focusNode': focusNode,
@@ -583,6 +581,5 @@ class SwitchSchema {
       'value': SchemaHelper.boolSchema,
       'visualDensity': SchemaHelper.objectSchema(VisualDensitySchema.id),
     },
-    'required': [],
   };
 }

@@ -98,25 +98,24 @@ class JsonSliverGrid extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonSliverGridBuilder(
-               args: JsonSliverGridBuilderModel.fromDynamic(
-                 {
-                   'addAutomaticKeepAlives': addAutomaticKeepAlives,
-                   'addRepaintBoundaries': addRepaintBoundaries,
-                   'addSemanticIndexes': addSemanticIndexes,
-                   'findChildIndexCallback': findChildIndexCallback,
-                   'gridDelegate': gridDelegate,
-                   'semanticIndexCallback': semanticIndexCallback,
-                   'semanticIndexOffset': semanticIndexOffset,
-                   'children': children,
+         jsonWidgetBuilder: () => JsonSliverGridBuilder(
+           args: JsonSliverGridBuilderModel.fromDynamic(
+             {
+               'addAutomaticKeepAlives': addAutomaticKeepAlives,
+               'addRepaintBoundaries': addRepaintBoundaries,
+               'addSemanticIndexes': addSemanticIndexes,
+               'findChildIndexCallback': findChildIndexCallback,
+               'gridDelegate': gridDelegate,
+               'semanticIndexCallback': semanticIndexCallback,
+               'semanticIndexOffset': semanticIndexOffset,
+               'children': children,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonSliverGridBuilder.kType,
        );
 
@@ -249,8 +248,9 @@ class JsonSliverGridBuilderModel extends JsonWidgetBuilderModel {
       'findChildIndexCallback': findChildIndexCallback,
       'gridDelegate': gridDelegate,
       'semanticIndexCallback': semanticIndexCallback,
-      'semanticIndexOffset':
-          0 == semanticIndexOffset ? null : semanticIndexOffset,
+      'semanticIndexOffset': 0 == semanticIndexOffset
+          ? null
+          : semanticIndexOffset,
       'children': JsonClass.maybeToJsonList(children),
 
       ...args,
@@ -278,10 +278,5 @@ class SliverGridSchema {
       'semanticIndexOffset': SchemaHelper.numberSchema,
       'children': SchemaHelper.arraySchema(JsonWidgetDataSchema.id),
     },
-    'required': [
-      'addAutomaticKeepAlives',
-      'addRepaintBoundaries',
-      'addSemanticIndexes',
-    ],
   };
 }

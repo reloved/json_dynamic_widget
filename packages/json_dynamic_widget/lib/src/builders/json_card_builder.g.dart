@@ -103,27 +103,26 @@ class JsonCard extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonCardBuilder(
-               args: JsonCardBuilderModel.fromDynamic(
-                 {
-                   'borderOnForeground': borderOnForeground,
-                   'clipBehavior': clipBehavior,
-                   'color': color,
-                   'elevation': elevation,
-                   'margin': margin,
-                   'semanticContainer': semanticContainer,
-                   'shadowColor': shadowColor,
-                   'shape': shape,
-                   'surfaceTintColor': surfaceTintColor,
-                   'child': child,
+         jsonWidgetBuilder: () => JsonCardBuilder(
+           args: JsonCardBuilderModel.fromDynamic(
+             {
+               'borderOnForeground': borderOnForeground,
+               'clipBehavior': clipBehavior,
+               'color': color,
+               'elevation': elevation,
+               'margin': margin,
+               'semanticContainer': semanticContainer,
+               'shadowColor': shadowColor,
+               'shape': shape,
+               'surfaceTintColor': surfaceTintColor,
+               'child': child,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonCardBuilder.kType,
        );
 
@@ -463,8 +462,9 @@ class JsonCardBuilderModel extends JsonWidgetBuilderModel {
   @override
   Map<String, dynamic> toJson() {
     return JsonClass.removeNull({
-      'borderOnForeground':
-          true == borderOnForeground ? null : borderOnForeground,
+      'borderOnForeground': true == borderOnForeground
+          ? null
+          : borderOnForeground,
       'clipBehavior': ThemeEncoder.encodeClip(clipBehavior),
       'color': ThemeEncoder.encodeColor(color),
       'elevation': elevation,
@@ -502,6 +502,5 @@ class CardSchema {
       'surfaceTintColor': SchemaHelper.objectSchema(ColorSchema.id),
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': [],
   };
 }

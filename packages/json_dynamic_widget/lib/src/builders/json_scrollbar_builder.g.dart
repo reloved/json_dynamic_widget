@@ -100,26 +100,25 @@ class JsonScrollbar extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonScrollbarBuilder(
-               args: JsonScrollbarBuilderModel.fromDynamic(
-                 {
-                   'controller': controller,
-                   'interactive': interactive,
-                   'notificationPredicate': notificationPredicate,
-                   'radius': radius,
-                   'scrollbarOrientation': scrollbarOrientation,
-                   'thickness': thickness,
-                   'thumbVisibility': thumbVisibility,
-                   'trackVisibility': trackVisibility,
-                   'child': child,
+         jsonWidgetBuilder: () => JsonScrollbarBuilder(
+           args: JsonScrollbarBuilderModel.fromDynamic(
+             {
+               'controller': controller,
+               'interactive': interactive,
+               'notificationPredicate': notificationPredicate,
+               'radius': radius,
+               'scrollbarOrientation': scrollbarOrientation,
+               'thickness': thickness,
+               'thumbVisibility': thumbVisibility,
+               'trackVisibility': trackVisibility,
+               'child': child,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonScrollbarBuilder.kType,
        );
 
@@ -401,6 +400,5 @@ class ScrollbarSchema {
       'trackVisibility': SchemaHelper.boolSchema,
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': ['child'],
   };
 }

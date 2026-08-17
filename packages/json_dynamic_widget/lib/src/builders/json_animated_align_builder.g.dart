@@ -94,24 +94,23 @@ class JsonAnimatedAlign extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonAnimatedAlignBuilder(
-               args: JsonAnimatedAlignBuilderModel.fromDynamic(
-                 {
-                   'alignment': alignment,
-                   'curve': curve,
-                   'duration': duration,
-                   'heightFactor': heightFactor,
-                   'onEnd': onEnd,
-                   'widthFactor': widthFactor,
-                   'child': child,
+         jsonWidgetBuilder: () => JsonAnimatedAlignBuilder(
+           args: JsonAnimatedAlignBuilderModel.fromDynamic(
+             {
+               'alignment': alignment,
+               'curve': curve,
+               'duration': duration,
+               'heightFactor': heightFactor,
+               'onEnd': onEnd,
+               'widthFactor': widthFactor,
+               'child': child,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonAnimatedAlignBuilder.kType,
        );
 
@@ -343,6 +342,5 @@ class AnimatedAlignSchema {
       'widthFactor': SchemaHelper.numberSchema,
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': ['alignment', 'duration'],
   };
 }

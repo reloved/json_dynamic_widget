@@ -94,24 +94,23 @@ class JsonAnimatedSize extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonAnimatedSizeBuilder(
-               args: JsonAnimatedSizeBuilderModel.fromDynamic(
-                 {
-                   'alignment': alignment,
-                   'clipBehavior': clipBehavior,
-                   'curve': curve,
-                   'duration': duration,
-                   'onEnd': onEnd,
-                   'reverseDuration': reverseDuration,
-                   'child': child,
+         jsonWidgetBuilder: () => JsonAnimatedSizeBuilder(
+           args: JsonAnimatedSizeBuilderModel.fromDynamic(
+             {
+               'alignment': alignment,
+               'clipBehavior': clipBehavior,
+               'curve': curve,
+               'duration': duration,
+               'onEnd': onEnd,
+               'reverseDuration': reverseDuration,
+               'child': child,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonAnimatedSizeBuilder.kType,
        );
 
@@ -342,14 +341,12 @@ class JsonAnimatedSizeBuilderModel extends JsonWidgetBuilderModel {
   @override
   Map<String, dynamic> toJson() {
     return JsonClass.removeNull({
-      'alignment':
-          Alignment.center == alignment
-              ? null
-              : ThemeEncoder.encodeAlignmentGeometry(alignment),
-      'clipBehavior':
-          Clip.hardEdge == clipBehavior
-              ? null
-              : ThemeEncoder.encodeClip(clipBehavior),
+      'alignment': Alignment.center == alignment
+          ? null
+          : ThemeEncoder.encodeAlignmentGeometry(alignment),
+      'clipBehavior': Clip.hardEdge == clipBehavior
+          ? null
+          : ThemeEncoder.encodeClip(clipBehavior),
       'curve': Curves.linear == curve ? null : CurvesValues.encode(curve),
       'duration': duration.inMilliseconds,
       'onEnd': onEnd,
@@ -380,6 +377,5 @@ class AnimatedSizeSchema {
       'reverseDuration': SchemaHelper.anySchema,
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': ['duration'],
   };
 }

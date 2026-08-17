@@ -88,22 +88,21 @@ class JsonPlaceholder extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonPlaceholderBuilder(
-               args: JsonPlaceholderBuilderModel.fromDynamic(
-                 {
-                   'color': color,
-                   'fallbackHeight': fallbackHeight,
-                   'fallbackWidth': fallbackWidth,
-                   'strokeWidth': strokeWidth,
-                   'child': child,
+         jsonWidgetBuilder: () => JsonPlaceholderBuilder(
+           args: JsonPlaceholderBuilderModel.fromDynamic(
+             {
+               'color': color,
+               'fallbackHeight': fallbackHeight,
+               'fallbackWidth': fallbackWidth,
+               'strokeWidth': strokeWidth,
+               'child': child,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonPlaceholderBuilder.kType,
        );
 
@@ -267,10 +266,9 @@ class JsonPlaceholderBuilderModel extends JsonWidgetBuilderModel {
   @override
   Map<String, dynamic> toJson() {
     return JsonClass.removeNull({
-      'color':
-          const Color(0xFF455A64) == color
-              ? null
-              : ThemeEncoder.encodeColor(color),
+      'color': const Color(0xFF455A64) == color
+          ? null
+          : ThemeEncoder.encodeColor(color),
       'fallbackHeight': 400.0 == fallbackHeight ? null : fallbackHeight,
       'fallbackWidth': 400.0 == fallbackWidth ? null : fallbackWidth,
       'strokeWidth': 2.0 == strokeWidth ? null : strokeWidth,
@@ -298,6 +296,5 @@ class PlaceholderSchema {
       'strokeWidth': SchemaHelper.numberSchema,
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': [],
   };
 }

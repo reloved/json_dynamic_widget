@@ -74,14 +74,13 @@ class JsonExcludeSemantics extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonExcludeSemanticsBuilder(
-               args: JsonExcludeSemanticsBuilderModel.fromDynamic(
-                 {'excluding': excluding, 'child': child, ...args},
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+         jsonWidgetBuilder: () => JsonExcludeSemanticsBuilder(
+           args: JsonExcludeSemanticsBuilderModel.fromDynamic(
+             {'excluding': excluding, 'child': child, ...args},
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonExcludeSemanticsBuilder.kType,
        );
 
@@ -183,6 +182,5 @@ class ExcludeSemanticsSchema {
       'excluding': SchemaHelper.boolSchema,
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': [],
   };
 }

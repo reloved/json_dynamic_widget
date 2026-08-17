@@ -72,14 +72,13 @@ class JsonMergeSemantics extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonMergeSemanticsBuilder(
-               args: JsonMergeSemanticsBuilderModel.fromDynamic(
-                 {'child': child, ...args},
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+         jsonWidgetBuilder: () => JsonMergeSemanticsBuilder(
+           args: JsonMergeSemanticsBuilderModel.fromDynamic(
+             {'child': child, ...args},
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonMergeSemanticsBuilder.kType,
        );
 
@@ -160,6 +159,5 @@ class MergeSemanticsSchema {
     'type': 'object',
     'additionalProperties': false,
     'properties': {'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id)},
-    'required': [],
   };
 }

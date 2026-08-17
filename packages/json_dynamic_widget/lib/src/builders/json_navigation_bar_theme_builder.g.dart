@@ -74,14 +74,13 @@ class JsonNavigationBarTheme extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonNavigationBarThemeBuilder(
-               args: JsonNavigationBarThemeBuilderModel.fromDynamic(
-                 {'data': data, 'child': child, ...args},
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+         jsonWidgetBuilder: () => JsonNavigationBarThemeBuilder(
+           args: JsonNavigationBarThemeBuilderModel.fromDynamic(
+             {'data': data, 'child': child, ...args},
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonNavigationBarThemeBuilder.kType,
        );
 
@@ -203,6 +202,5 @@ class NavigationBarThemeSchema {
       'data': SchemaHelper.objectSchema(NavigationBarThemeDataSchema.id),
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': ['data', 'child'],
   };
 }

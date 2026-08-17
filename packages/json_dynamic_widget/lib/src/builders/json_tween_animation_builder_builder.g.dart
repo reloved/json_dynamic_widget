@@ -94,23 +94,22 @@ class JsonTweenAnimationBuilder extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonTweenAnimationBuilderBuilder(
-               args: JsonTweenAnimationBuilderBuilderModel.fromDynamic(
-                 {
-                   'builder': builder,
-                   'curve': curve,
-                   'duration': duration,
-                   'onEnd': onEnd,
-                   'tween': tween,
-                   'child': child,
+         jsonWidgetBuilder: () => JsonTweenAnimationBuilderBuilder(
+           args: JsonTweenAnimationBuilderBuilderModel.fromDynamic(
+             {
+               'builder': builder,
+               'curve': curve,
+               'duration': duration,
+               'onEnd': onEnd,
+               'tween': tween,
+               'child': child,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonTweenAnimationBuilderBuilder.kType,
        );
 
@@ -358,6 +357,5 @@ class TweenAnimationBuilderSchema {
       'tween': SchemaHelper.anySchema,
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': ['builder', 'duration', 'tween'],
   };
 }

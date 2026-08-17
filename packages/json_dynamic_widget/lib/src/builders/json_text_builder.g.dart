@@ -123,33 +123,32 @@ class JsonText extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonTextBuilder(
-               args: JsonTextBuilderModel.fromDynamic(
-                 {
-                   'text': data,
-                   'locale': locale,
-                   'maxLines': maxLines,
-                   'overflow': overflow,
-                   'selectionColor': selectionColor,
-                   'semanticsIdentifier': semanticsIdentifier,
-                   'semanticsLabel': semanticsLabel,
-                   'softWrap': softWrap,
-                   'strutStyle': strutStyle,
-                   'style': style,
-                   'textAlign': textAlign,
-                   'textDirection': textDirection,
-                   'textHeightBehavior': textHeightBehavior,
-                   'textScaleFactor': textScaleFactor,
-                   'textScaler': textScaler,
-                   'textWidthBasis': textWidthBasis,
+         jsonWidgetBuilder: () => JsonTextBuilder(
+           args: JsonTextBuilderModel.fromDynamic(
+             {
+               'text': data,
+               'locale': locale,
+               'maxLines': maxLines,
+               'overflow': overflow,
+               'selectionColor': selectionColor,
+               'semanticsIdentifier': semanticsIdentifier,
+               'semanticsLabel': semanticsLabel,
+               'softWrap': softWrap,
+               'strutStyle': strutStyle,
+               'style': style,
+               'textAlign': textAlign,
+               'textDirection': textDirection,
+               'textHeightBehavior': textHeightBehavior,
+               'textScaleFactor': textScaleFactor,
+               'textScaler': textScaler,
+               'textWidthBasis': textWidthBasis,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonTextBuilder.kType,
        );
 
@@ -654,6 +653,5 @@ class TextSchema {
       'textScaler': SchemaHelper.objectSchema(TextScalerSchema.id),
       'textWidthBasis': SchemaHelper.objectSchema(TextWidthBasisSchema.id),
     },
-    'required': ['text'],
   };
 }

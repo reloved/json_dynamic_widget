@@ -76,14 +76,13 @@ class JsonSetWidget extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonSetWidgetBuilder(
-               args: JsonSetWidgetBuilderModel.fromDynamic(
-                 {'widgets': widgets, 'child': child, ...args},
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+         jsonWidgetBuilder: () => JsonSetWidgetBuilder(
+           args: JsonSetWidgetBuilderModel.fromDynamic(
+             {'widgets': widgets, 'child': child, ...args},
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonSetWidgetBuilder.kType,
        );
 
@@ -175,6 +174,5 @@ class SetWidgetSchema {
       'widgets': SchemaHelper.anySchema,
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': [],
   };
 }

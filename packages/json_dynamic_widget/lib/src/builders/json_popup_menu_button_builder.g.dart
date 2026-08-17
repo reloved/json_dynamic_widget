@@ -163,47 +163,46 @@ class JsonPopupMenuButton extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonPopupMenuButtonBuilder(
-               args: JsonPopupMenuButtonBuilderModel.fromDynamic(
-                 {
-                   'borderRadius': borderRadius,
-                   'clipBehavior': clipBehavior,
-                   'color': color,
-                   'constraints': constraints,
-                   'elevation': elevation,
-                   'enableFeedback': enableFeedback,
-                   'enabled': enabled,
-                   'icon': icon,
-                   'iconColor': iconColor,
-                   'iconSize': iconSize,
-                   'initialValue': initialValue,
-                   'itemBuilder': itemBuilder,
-                   'menuPadding': menuPadding,
-                   'offset': offset,
-                   'onCanceled': onCanceled,
-                   'onOpened': onOpened,
-                   'onSelected': onSelected,
-                   'padding': padding,
-                   'popUpAnimationStyle': popUpAnimationStyle,
-                   'position': position,
-                   'requestFocus': requestFocus,
-                   'routeSettings': routeSettings,
-                   'shadowColor': shadowColor,
-                   'shape': shape,
-                   'splashRadius': splashRadius,
-                   'style': style,
-                   'surfaceTintColor': surfaceTintColor,
-                   'tooltip': tooltip,
-                   'useRootNavigator': useRootNavigator,
-                   'child': child,
+         jsonWidgetBuilder: () => JsonPopupMenuButtonBuilder(
+           args: JsonPopupMenuButtonBuilderModel.fromDynamic(
+             {
+               'borderRadius': borderRadius,
+               'clipBehavior': clipBehavior,
+               'color': color,
+               'constraints': constraints,
+               'elevation': elevation,
+               'enableFeedback': enableFeedback,
+               'enabled': enabled,
+               'icon': icon,
+               'iconColor': iconColor,
+               'iconSize': iconSize,
+               'initialValue': initialValue,
+               'itemBuilder': itemBuilder,
+               'menuPadding': menuPadding,
+               'offset': offset,
+               'onCanceled': onCanceled,
+               'onOpened': onOpened,
+               'onSelected': onSelected,
+               'padding': padding,
+               'popUpAnimationStyle': popUpAnimationStyle,
+               'position': position,
+               'requestFocus': requestFocus,
+               'routeSettings': routeSettings,
+               'shadowColor': shadowColor,
+               'shape': shape,
+               'splashRadius': splashRadius,
+               'style': style,
+               'surfaceTintColor': surfaceTintColor,
+               'tooltip': tooltip,
+               'useRootNavigator': useRootNavigator,
+               'child': child,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonPopupMenuButtonBuilder.kType,
        );
 
@@ -953,10 +952,9 @@ class JsonPopupMenuButtonBuilderModel extends JsonWidgetBuilderModel {
   Map<String, dynamic> toJson() {
     return JsonClass.removeNull({
       'borderRadius': ThemeEncoder.encodeBorderRadius(borderRadius),
-      'clipBehavior':
-          Clip.none == clipBehavior
-              ? null
-              : ThemeEncoder.encodeClip(clipBehavior),
+      'clipBehavior': Clip.none == clipBehavior
+          ? null
+          : ThemeEncoder.encodeClip(clipBehavior),
       'color': ThemeEncoder.encodeColor(color),
       'constraints': ThemeEncoder.encodeBoxConstraints(constraints),
       'elevation': elevation,
@@ -968,15 +966,15 @@ class JsonPopupMenuButtonBuilderModel extends JsonWidgetBuilderModel {
       'initialValue': initialValue,
       'itemBuilder': itemBuilder,
       'menuPadding': ThemeEncoder.encodeEdgeInsetsGeometry(menuPadding),
-      'offset':
-          Offset.zero == offset ? null : ThemeEncoder.encodeOffset(offset),
+      'offset': Offset.zero == offset
+          ? null
+          : ThemeEncoder.encodeOffset(offset),
       'onCanceled': onCanceled,
       'onOpened': onOpened,
       'onSelected': onSelected,
-      'padding':
-          const EdgeInsets.all(8.0) == padding
-              ? null
-              : ThemeEncoder.encodeEdgeInsetsGeometry(padding),
+      'padding': const EdgeInsets.all(8.0) == padding
+          ? null
+          : ThemeEncoder.encodeEdgeInsetsGeometry(padding),
       'popUpAnimationStyle': ThemeEncoder.encodeAnimationStyle(
         popUpAnimationStyle,
       ),
@@ -1039,6 +1037,5 @@ class PopupMenuButtonSchema {
       'useRootNavigator': SchemaHelper.boolSchema,
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': ['itemBuilder'],
   };
 }

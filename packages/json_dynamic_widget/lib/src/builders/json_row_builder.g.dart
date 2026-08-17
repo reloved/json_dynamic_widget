@@ -100,25 +100,24 @@ class JsonRow extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonRowBuilder(
-               args: JsonRowBuilderModel.fromDynamic(
-                 {
-                   'crossAxisAlignment': crossAxisAlignment,
-                   'mainAxisAlignment': mainAxisAlignment,
-                   'mainAxisSize': mainAxisSize,
-                   'spacing': spacing,
-                   'textBaseline': textBaseline,
-                   'textDirection': textDirection,
-                   'verticalDirection': verticalDirection,
-                   'children': children,
+         jsonWidgetBuilder: () => JsonRowBuilder(
+           args: JsonRowBuilderModel.fromDynamic(
+             {
+               'crossAxisAlignment': crossAxisAlignment,
+               'mainAxisAlignment': mainAxisAlignment,
+               'mainAxisSize': mainAxisSize,
+               'spacing': spacing,
+               'textBaseline': textBaseline,
+               'textDirection': textDirection,
+               'verticalDirection': verticalDirection,
+               'children': children,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonRowBuilder.kType,
        );
 
@@ -293,29 +292,24 @@ class JsonRowBuilderModel extends JsonWidgetBuilderModel {
   @override
   Map<String, dynamic> toJson() {
     return JsonClass.removeNull({
-      'crossAxisAlignment':
-          CrossAxisAlignment.center == crossAxisAlignment
-              ? null
-              : ThemeEncoder.encodeCrossAxisAlignment(crossAxisAlignment),
-      'mainAxisAlignment':
-          MainAxisAlignment.start == mainAxisAlignment
-              ? null
-              : ThemeEncoder.encodeMainAxisAlignment(mainAxisAlignment),
-      'mainAxisSize':
-          MainAxisSize.max == mainAxisSize
-              ? null
-              : ThemeEncoder.encodeMainAxisSize(mainAxisSize),
+      'crossAxisAlignment': CrossAxisAlignment.center == crossAxisAlignment
+          ? null
+          : ThemeEncoder.encodeCrossAxisAlignment(crossAxisAlignment),
+      'mainAxisAlignment': MainAxisAlignment.start == mainAxisAlignment
+          ? null
+          : ThemeEncoder.encodeMainAxisAlignment(mainAxisAlignment),
+      'mainAxisSize': MainAxisSize.max == mainAxisSize
+          ? null
+          : ThemeEncoder.encodeMainAxisSize(mainAxisSize),
       'spacing': 0.0 == spacing ? null : spacing,
       'textBaseline': ThemeEncoder.encodeTextBaseline(textBaseline),
       'textDirection': ThemeEncoder.encodeTextDirection(textDirection),
-      'verticalDirection':
-          VerticalDirection.down == verticalDirection
-              ? null
-              : ThemeEncoder.encodeVerticalDirection(verticalDirection),
-      'children':
-          const <JsonWidgetData>[] == children
-              ? null
-              : JsonClass.toJsonList(children),
+      'verticalDirection': VerticalDirection.down == verticalDirection
+          ? null
+          : ThemeEncoder.encodeVerticalDirection(verticalDirection),
+      'children': const <JsonWidgetData>[] == children
+          ? null
+          : JsonClass.toJsonList(children),
 
       ...args,
     });
@@ -348,6 +342,5 @@ class RowSchema {
       ),
       'children': SchemaHelper.arraySchema(JsonWidgetDataSchema.id),
     },
-    'required': [],
   };
 }

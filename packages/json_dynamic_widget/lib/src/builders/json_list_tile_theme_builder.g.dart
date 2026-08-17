@@ -124,34 +124,33 @@ class JsonListTileTheme extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonListTileThemeBuilder(
-               args: JsonListTileThemeBuilderModel.fromDynamic(
-                 {
-                   'contentPadding': contentPadding,
-                   'controlAffinity': controlAffinity,
-                   'data': data,
-                   'dense': dense,
-                   'enableFeedback': enableFeedback,
-                   'horizontalTitleGap': horizontalTitleGap,
-                   'iconColor': iconColor,
-                   'minLeadingWidth': minLeadingWidth,
-                   'minVerticalPadding': minVerticalPadding,
-                   'mouseCursor': mouseCursor,
-                   'selectedColor': selectedColor,
-                   'selectedTileColor': selectedTileColor,
-                   'shape': shape,
-                   'style': style,
-                   'textColor': textColor,
-                   'tileColor': tileColor,
-                   'child': child,
+         jsonWidgetBuilder: () => JsonListTileThemeBuilder(
+           args: JsonListTileThemeBuilderModel.fromDynamic(
+             {
+               'contentPadding': contentPadding,
+               'controlAffinity': controlAffinity,
+               'data': data,
+               'dense': dense,
+               'enableFeedback': enableFeedback,
+               'horizontalTitleGap': horizontalTitleGap,
+               'iconColor': iconColor,
+               'minLeadingWidth': minLeadingWidth,
+               'minVerticalPadding': minVerticalPadding,
+               'mouseCursor': mouseCursor,
+               'selectedColor': selectedColor,
+               'selectedTileColor': selectedTileColor,
+               'shape': shape,
+               'style': style,
+               'textColor': textColor,
+               'tileColor': tileColor,
+               'child': child,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonListTileThemeBuilder.kType,
        );
 
@@ -468,6 +467,5 @@ class ListTileThemeSchema {
       'tileColor': SchemaHelper.objectSchema(ColorSchema.id),
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': ['child'],
   };
 }

@@ -69,14 +69,13 @@ class JsonJsonExportable extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonExportableBuilder(
-               args: JsonExportableBuilderModel.fromDynamic(
-                 {'child': child, ...args},
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+         jsonWidgetBuilder: () => JsonExportableBuilder(
+           args: JsonExportableBuilderModel.fromDynamic(
+             {'child': child, ...args},
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonExportableBuilder.kType,
        );
 
@@ -160,6 +159,5 @@ class JsonExportableSchema {
     'type': 'object',
     'additionalProperties': false,
     'properties': {'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id)},
-    'required': ['child'],
   };
 }

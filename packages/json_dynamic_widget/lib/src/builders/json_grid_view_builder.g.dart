@@ -131,36 +131,35 @@ class JsonGridView extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonGridViewBuilder(
-               args: JsonGridViewBuilderModel.fromDynamic(
-                 {
-                   'addAutomaticKeepAlives': addAutomaticKeepAlives,
-                   'addRepaintBoundaries': addRepaintBoundaries,
-                   'addSemanticIndexes': addSemanticIndexes,
-                   'cacheExtent': cacheExtent,
-                   'childBuilder': childBuilder,
-                   'clipBehavior': clipBehavior,
-                   'controller': controller,
-                   'dragStartBehavior': dragStartBehavior,
-                   'findChildIndexCallback': findChildIndexCallback,
-                   'gridDelegate': gridDelegate,
-                   'keyboardDismissBehavior': keyboardDismissBehavior,
-                   'padding': padding,
-                   'physics': physics,
-                   'primary': primary,
-                   'restorationId': restorationId,
-                   'reverse': reverse,
-                   'scrollDirection': scrollDirection,
-                   'shrinkWrap': shrinkWrap,
-                   'children': children,
+         jsonWidgetBuilder: () => JsonGridViewBuilder(
+           args: JsonGridViewBuilderModel.fromDynamic(
+             {
+               'addAutomaticKeepAlives': addAutomaticKeepAlives,
+               'addRepaintBoundaries': addRepaintBoundaries,
+               'addSemanticIndexes': addSemanticIndexes,
+               'cacheExtent': cacheExtent,
+               'childBuilder': childBuilder,
+               'clipBehavior': clipBehavior,
+               'controller': controller,
+               'dragStartBehavior': dragStartBehavior,
+               'findChildIndexCallback': findChildIndexCallback,
+               'gridDelegate': gridDelegate,
+               'keyboardDismissBehavior': keyboardDismissBehavior,
+               'padding': padding,
+               'physics': physics,
+               'primary': primary,
+               'restorationId': restorationId,
+               'reverse': reverse,
+               'scrollDirection': scrollDirection,
+               'shrinkWrap': shrinkWrap,
+               'children': children,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonGridViewBuilder.kType,
        );
 
@@ -396,40 +395,40 @@ class JsonGridViewBuilderModel extends JsonWidgetBuilderModel {
   @override
   Map<String, dynamic> toJson() {
     return JsonClass.removeNull({
-      'addAutomaticKeepAlives':
-          true == addAutomaticKeepAlives ? null : addAutomaticKeepAlives,
-      'addRepaintBoundaries':
-          true == addRepaintBoundaries ? null : addRepaintBoundaries,
-      'addSemanticIndexes':
-          true == addSemanticIndexes ? null : addSemanticIndexes,
+      'addAutomaticKeepAlives': true == addAutomaticKeepAlives
+          ? null
+          : addAutomaticKeepAlives,
+      'addRepaintBoundaries': true == addRepaintBoundaries
+          ? null
+          : addRepaintBoundaries,
+      'addSemanticIndexes': true == addSemanticIndexes
+          ? null
+          : addSemanticIndexes,
       'cacheExtent': cacheExtent,
       'childBuilder': childBuilder,
-      'clipBehavior':
-          Clip.hardEdge == clipBehavior
-              ? null
-              : ThemeEncoder.encodeClip(clipBehavior),
+      'clipBehavior': Clip.hardEdge == clipBehavior
+          ? null
+          : ThemeEncoder.encodeClip(clipBehavior),
       'controller': controller,
-      'dragStartBehavior':
-          DragStartBehavior.start == dragStartBehavior
-              ? null
-              : ThemeEncoder.encodeDragStartBehavior(dragStartBehavior),
+      'dragStartBehavior': DragStartBehavior.start == dragStartBehavior
+          ? null
+          : ThemeEncoder.encodeDragStartBehavior(dragStartBehavior),
       'findChildIndexCallback': findChildIndexCallback,
       'gridDelegate': gridDelegate,
       'keyboardDismissBehavior':
           ScrollViewKeyboardDismissBehavior.manual == keyboardDismissBehavior
-              ? null
-              : ThemeEncoder.encodeScrollViewKeyboardDismissBehavior(
-                keyboardDismissBehavior,
-              ),
+          ? null
+          : ThemeEncoder.encodeScrollViewKeyboardDismissBehavior(
+              keyboardDismissBehavior,
+            ),
       'padding': ThemeEncoder.encodeEdgeInsets(padding),
       'physics': ThemeEncoder.encodeScrollPhysics(physics),
       'primary': primary,
       'restorationId': restorationId,
       'reverse': false == reverse ? null : reverse,
-      'scrollDirection':
-          Axis.vertical == scrollDirection
-              ? null
-              : ThemeEncoder.encodeAxis(scrollDirection),
+      'scrollDirection': Axis.vertical == scrollDirection
+          ? null
+          : ThemeEncoder.encodeAxis(scrollDirection),
       'shrinkWrap': false == shrinkWrap ? null : shrinkWrap,
       'children': JsonClass.maybeToJsonList(children),
 
@@ -473,6 +472,5 @@ class GridViewSchema {
       'shrinkWrap': SchemaHelper.boolSchema,
       'children': SchemaHelper.arraySchema(JsonWidgetDataSchema.id),
     },
-    'required': ['gridDelegate', 'primary'],
   };
 }

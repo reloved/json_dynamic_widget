@@ -92,22 +92,21 @@ class JsonPrimaryScrollController extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonPrimaryScrollControllerBuilder(
-               args: JsonPrimaryScrollControllerBuilderModel.fromDynamic(
-                 {
-                   'automaticallyInheritForPlatforms':
-                       automaticallyInheritForPlatforms,
-                   'controller': controller,
-                   'scrollDirection': scrollDirection,
-                   'child': child,
+         jsonWidgetBuilder: () => JsonPrimaryScrollControllerBuilder(
+           args: JsonPrimaryScrollControllerBuilderModel.fromDynamic(
+             {
+               'automaticallyInheritForPlatforms':
+                   automaticallyInheritForPlatforms,
+               'controller': controller,
+               'scrollDirection': scrollDirection,
+               'child': child,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonPrimaryScrollControllerBuilder.kType,
        );
 
@@ -300,11 +299,5 @@ class PrimaryScrollControllerSchema {
       'scrollDirection': SchemaHelper.objectSchema(AxisSchema.id),
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': [
-      'automaticallyInheritForPlatforms',
-      'controller',
-      'scrollDirection',
-      'child',
-    ],
   };
 }

@@ -116,28 +116,27 @@ class JsonAnimatedCrossFade extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonAnimatedCrossFadeBuilder(
-               args: JsonAnimatedCrossFadeBuilderModel.fromDynamic(
-                 {
-                   'alignment': alignment,
-                   'crossFadeState': crossFadeState,
-                   'duration': duration,
-                   'excludeBottomFocus': excludeBottomFocus,
-                   'firstChild': firstChild,
-                   'firstCurve': firstCurve,
-                   'layoutBuilder': layoutBuilder,
-                   'reverseDuration': reverseDuration,
-                   'secondChild': secondChild,
-                   'secondCurve': secondCurve,
-                   'sizeCurve': sizeCurve,
+         jsonWidgetBuilder: () => JsonAnimatedCrossFadeBuilder(
+           args: JsonAnimatedCrossFadeBuilderModel.fromDynamic(
+             {
+               'alignment': alignment,
+               'crossFadeState': crossFadeState,
+               'duration': duration,
+               'excludeBottomFocus': excludeBottomFocus,
+               'firstChild': firstChild,
+               'firstCurve': firstCurve,
+               'layoutBuilder': layoutBuilder,
+               'reverseDuration': reverseDuration,
+               'secondChild': secondChild,
+               'secondCurve': secondCurve,
+               'sizeCurve': sizeCurve,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonAnimatedCrossFadeBuilder.kType,
        );
 
@@ -471,29 +470,29 @@ class JsonAnimatedCrossFadeBuilderModel extends JsonWidgetBuilderModel {
   @override
   Map<String, dynamic> toJson() {
     return JsonClass.removeNull({
-      'alignment':
-          Alignment.topCenter == alignment
-              ? null
-              : ThemeEncoder.encodeAlignmentGeometry(alignment),
+      'alignment': Alignment.topCenter == alignment
+          ? null
+          : ThemeEncoder.encodeAlignmentGeometry(alignment),
       'crossFadeState': ThemeEncoder.encodeCrossFadeState(crossFadeState),
       'duration': duration.inMilliseconds,
-      'excludeBottomFocus':
-          true == excludeBottomFocus ? null : excludeBottomFocus,
+      'excludeBottomFocus': true == excludeBottomFocus
+          ? null
+          : excludeBottomFocus,
       'firstChild': firstChild.toJson(),
-      'firstCurve':
-          Curves.linear == firstCurve ? null : CurvesValues.encode(firstCurve),
-      'layoutBuilder':
-          AnimatedCrossFade.defaultLayoutBuilder == layoutBuilder
-              ? null
-              : layoutBuilder,
+      'firstCurve': Curves.linear == firstCurve
+          ? null
+          : CurvesValues.encode(firstCurve),
+      'layoutBuilder': AnimatedCrossFade.defaultLayoutBuilder == layoutBuilder
+          ? null
+          : layoutBuilder,
       'reverseDuration': reverseDuration?.inMilliseconds,
       'secondChild': secondChild.toJson(),
-      'secondCurve':
-          Curves.linear == secondCurve
-              ? null
-              : CurvesValues.encode(secondCurve),
-      'sizeCurve':
-          Curves.linear == sizeCurve ? null : CurvesValues.encode(sizeCurve),
+      'secondCurve': Curves.linear == secondCurve
+          ? null
+          : CurvesValues.encode(secondCurve),
+      'sizeCurve': Curves.linear == sizeCurve
+          ? null
+          : CurvesValues.encode(sizeCurve),
 
       ...args,
     });
@@ -523,6 +522,5 @@ class AnimatedCrossFadeSchema {
       'secondCurve': SchemaHelper.anySchema,
       'sizeCurve': SchemaHelper.anySchema,
     },
-    'required': ['crossFadeState', 'duration', 'firstChild', 'secondChild'],
   };
 }

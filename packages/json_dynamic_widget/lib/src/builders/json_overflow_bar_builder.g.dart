@@ -97,24 +97,23 @@ class JsonOverflowBar extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonOverflowBarBuilder(
-               args: JsonOverflowBarBuilderModel.fromDynamic(
-                 {
-                   'alignment': alignment,
-                   'overflowAlignment': overflowAlignment,
-                   'overflowDirection': overflowDirection,
-                   'overflowSpacing': overflowSpacing,
-                   'spacing': spacing,
-                   'textDirection': textDirection,
-                   'children': children,
+         jsonWidgetBuilder: () => JsonOverflowBarBuilder(
+           args: JsonOverflowBarBuilderModel.fromDynamic(
+             {
+               'alignment': alignment,
+               'overflowAlignment': overflowAlignment,
+               'overflowDirection': overflowDirection,
+               'overflowSpacing': overflowSpacing,
+               'spacing': spacing,
+               'textDirection': textDirection,
+               'children': children,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonOverflowBarBuilder.kType,
        );
 
@@ -497,21 +496,18 @@ class JsonOverflowBarBuilderModel extends JsonWidgetBuilderModel {
   Map<String, dynamic> toJson() {
     return JsonClass.removeNull({
       'alignment': ThemeEncoder.encodeMainAxisAlignment(alignment),
-      'overflowAlignment':
-          OverflowBarAlignment.start == overflowAlignment
-              ? null
-              : overflowAlignment,
-      'overflowDirection':
-          VerticalDirection.down == overflowDirection
-              ? null
-              : ThemeEncoder.encodeVerticalDirection(overflowDirection),
+      'overflowAlignment': OverflowBarAlignment.start == overflowAlignment
+          ? null
+          : overflowAlignment,
+      'overflowDirection': VerticalDirection.down == overflowDirection
+          ? null
+          : ThemeEncoder.encodeVerticalDirection(overflowDirection),
       'overflowSpacing': 0.0 == overflowSpacing ? null : overflowSpacing,
       'spacing': 0.0 == spacing ? null : spacing,
       'textDirection': ThemeEncoder.encodeTextDirection(textDirection),
-      'children':
-          const <JsonWidgetData>[] == children
-              ? null
-              : JsonClass.toJsonList(children),
+      'children': const <JsonWidgetData>[] == children
+          ? null
+          : JsonClass.toJsonList(children),
 
       ...args,
     });
@@ -539,6 +535,5 @@ class OverflowBarSchema {
       'textDirection': SchemaHelper.objectSchema(TextDirectionSchema.id),
       'children': SchemaHelper.arraySchema(JsonWidgetDataSchema.id),
     },
-    'required': [],
   };
 }

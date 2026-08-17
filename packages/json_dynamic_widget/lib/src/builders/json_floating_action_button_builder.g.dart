@@ -142,40 +142,39 @@ class JsonFloatingActionButton extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonFloatingActionButtonBuilder(
-               args: JsonFloatingActionButtonBuilderModel.fromDynamic(
-                 {
-                   'autofocus': autofocus,
-                   'backgroundColor': backgroundColor,
-                   'clipBehavior': clipBehavior,
-                   'disabledElevation': disabledElevation,
-                   'elevation': elevation,
-                   'enableFeedback': enableFeedback,
-                   'focusColor': focusColor,
-                   'focusElevation': focusElevation,
-                   'focusNode': focusNode,
-                   'foregroundColor': foregroundColor,
-                   'heroTag': heroTag,
-                   'highlightElevation': highlightElevation,
-                   'hoverColor': hoverColor,
-                   'hoverElevation': hoverElevation,
-                   'isExtended': isExtended,
-                   'materialTapTargetSize': materialTapTargetSize,
-                   'mini': mini,
-                   'mouseCursor': mouseCursor,
-                   'onPressed': onPressed,
-                   'shape': shape,
-                   'splashColor': splashColor,
-                   'tooltip': tooltip,
-                   'child': child,
+         jsonWidgetBuilder: () => JsonFloatingActionButtonBuilder(
+           args: JsonFloatingActionButtonBuilderModel.fromDynamic(
+             {
+               'autofocus': autofocus,
+               'backgroundColor': backgroundColor,
+               'clipBehavior': clipBehavior,
+               'disabledElevation': disabledElevation,
+               'elevation': elevation,
+               'enableFeedback': enableFeedback,
+               'focusColor': focusColor,
+               'focusElevation': focusElevation,
+               'focusNode': focusNode,
+               'foregroundColor': foregroundColor,
+               'heroTag': heroTag,
+               'highlightElevation': highlightElevation,
+               'hoverColor': hoverColor,
+               'hoverElevation': hoverElevation,
+               'isExtended': isExtended,
+               'materialTapTargetSize': materialTapTargetSize,
+               'mini': mini,
+               'mouseCursor': mouseCursor,
+               'onPressed': onPressed,
+               'shape': shape,
+               'splashColor': splashColor,
+               'tooltip': tooltip,
+               'child': child,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonFloatingActionButtonBuilder.kType,
        );
 
@@ -839,10 +838,9 @@ class JsonFloatingActionButtonBuilderModel extends JsonWidgetBuilderModel {
     return JsonClass.removeNull({
       'autofocus': false == autofocus ? null : autofocus,
       'backgroundColor': ThemeEncoder.encodeColor(backgroundColor),
-      'clipBehavior':
-          Clip.none == clipBehavior
-              ? null
-              : ThemeEncoder.encodeClip(clipBehavior),
+      'clipBehavior': Clip.none == clipBehavior
+          ? null
+          : ThemeEncoder.encodeClip(clipBehavior),
       'disabledElevation': disabledElevation,
       'elevation': elevation,
       'enableFeedback': enableFeedback,
@@ -850,10 +848,9 @@ class JsonFloatingActionButtonBuilderModel extends JsonWidgetBuilderModel {
       'focusElevation': focusElevation,
       'focusNode': focusNode,
       'foregroundColor': ThemeEncoder.encodeColor(foregroundColor),
-      'heroTag':
-          '<default JsonWidget FloatingActionButton tag>' == heroTag
-              ? null
-              : heroTagEncoded,
+      'heroTag': '<default JsonWidget FloatingActionButton tag>' == heroTag
+          ? null
+          : heroTagEncoded,
       'highlightElevation': highlightElevation,
       'hoverColor': ThemeEncoder.encodeColor(hoverColor),
       'hoverElevation': hoverElevation,
@@ -911,6 +908,5 @@ class FloatingActionButtonSchema {
       'tooltip': SchemaHelper.stringSchema,
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': ['onPressed'],
   };
 }

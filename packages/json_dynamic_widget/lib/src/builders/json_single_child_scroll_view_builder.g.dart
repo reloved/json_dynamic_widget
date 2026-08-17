@@ -110,29 +110,28 @@ class JsonSingleChildScrollView extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonSingleChildScrollViewBuilder(
-               args: JsonSingleChildScrollViewBuilderModel.fromDynamic(
-                 {
-                   'clipBehavior': clipBehavior,
-                   'controller': controller,
-                   'dragStartBehavior': dragStartBehavior,
-                   'hitTestBehavior': hitTestBehavior,
-                   'keyboardDismissBehavior': keyboardDismissBehavior,
-                   'padding': padding,
-                   'physics': physics,
-                   'primary': primary,
-                   'restorationId': restorationId,
-                   'reverse': reverse,
-                   'scrollDirection': scrollDirection,
-                   'child': child,
+         jsonWidgetBuilder: () => JsonSingleChildScrollViewBuilder(
+           args: JsonSingleChildScrollViewBuilderModel.fromDynamic(
+             {
+               'clipBehavior': clipBehavior,
+               'controller': controller,
+               'dragStartBehavior': dragStartBehavior,
+               'hitTestBehavior': hitTestBehavior,
+               'keyboardDismissBehavior': keyboardDismissBehavior,
+               'padding': padding,
+               'physics': physics,
+               'primary': primary,
+               'restorationId': restorationId,
+               'reverse': reverse,
+               'scrollDirection': scrollDirection,
+               'child': child,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonSingleChildScrollViewBuilder.kType,
        );
 
@@ -442,19 +441,16 @@ class JsonSingleChildScrollViewBuilderModel extends JsonWidgetBuilderModel {
   @override
   Map<String, dynamic> toJson() {
     return JsonClass.removeNull({
-      'clipBehavior':
-          Clip.hardEdge == clipBehavior
-              ? null
-              : ThemeEncoder.encodeClip(clipBehavior),
+      'clipBehavior': Clip.hardEdge == clipBehavior
+          ? null
+          : ThemeEncoder.encodeClip(clipBehavior),
       'controller': controller,
-      'dragStartBehavior':
-          DragStartBehavior.start == dragStartBehavior
-              ? null
-              : ThemeEncoder.encodeDragStartBehavior(dragStartBehavior),
-      'hitTestBehavior':
-          HitTestBehavior.opaque == hitTestBehavior
-              ? null
-              : ThemeEncoder.encodeHitTestBehavior(hitTestBehavior),
+      'dragStartBehavior': DragStartBehavior.start == dragStartBehavior
+          ? null
+          : ThemeEncoder.encodeDragStartBehavior(dragStartBehavior),
+      'hitTestBehavior': HitTestBehavior.opaque == hitTestBehavior
+          ? null
+          : ThemeEncoder.encodeHitTestBehavior(hitTestBehavior),
       'keyboardDismissBehavior':
           ThemeEncoder.encodeScrollViewKeyboardDismissBehavior(
             keyboardDismissBehavior,
@@ -464,10 +460,9 @@ class JsonSingleChildScrollViewBuilderModel extends JsonWidgetBuilderModel {
       'primary': primary,
       'restorationId': restorationId,
       'reverse': false == reverse ? null : reverse,
-      'scrollDirection':
-          Axis.vertical == scrollDirection
-              ? null
-              : ThemeEncoder.encodeAxis(scrollDirection),
+      'scrollDirection': Axis.vertical == scrollDirection
+          ? null
+          : ThemeEncoder.encodeAxis(scrollDirection),
       'child': child?.toJson(),
 
       ...args,
@@ -503,6 +498,5 @@ class SingleChildScrollViewSchema {
       'scrollDirection': SchemaHelper.objectSchema(AxisSchema.id),
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': [],
   };
 }

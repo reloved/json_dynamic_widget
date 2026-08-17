@@ -74,14 +74,13 @@ class JsonMeasured extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonMeasuredBuilder(
-               args: JsonMeasuredBuilderModel.fromDynamic(
-                 {'child': child, ...args},
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+         jsonWidgetBuilder: () => JsonMeasuredBuilder(
+           args: JsonMeasuredBuilderModel.fromDynamic(
+             {'child': child, ...args},
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonMeasuredBuilder.kType,
        );
 
@@ -160,6 +159,5 @@ class MeasuredSchema {
     'type': 'object',
     'additionalProperties': false,
     'properties': {'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id)},
-    'required': [],
   };
 }

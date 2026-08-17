@@ -72,14 +72,13 @@ class JsonIntrinsicHeight extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonIntrinsicHeightBuilder(
-               args: JsonIntrinsicHeightBuilderModel.fromDynamic(
-                 {'child': child, ...args},
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+         jsonWidgetBuilder: () => JsonIntrinsicHeightBuilder(
+           args: JsonIntrinsicHeightBuilderModel.fromDynamic(
+             {'child': child, ...args},
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonIntrinsicHeightBuilder.kType,
        );
 
@@ -162,6 +161,5 @@ class IntrinsicHeightSchema {
     'type': 'object',
     'additionalProperties': false,
     'properties': {'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id)},
-    'required': [],
   };
 }

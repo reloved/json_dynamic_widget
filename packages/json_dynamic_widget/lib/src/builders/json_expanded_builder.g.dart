@@ -74,14 +74,13 @@ class JsonExpanded extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonExpandedBuilder(
-               args: JsonExpandedBuilderModel.fromDynamic(
-                 {'flex': flex, 'child': child, ...args},
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+         jsonWidgetBuilder: () => JsonExpandedBuilder(
+           args: JsonExpandedBuilderModel.fromDynamic(
+             {'flex': flex, 'child': child, ...args},
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonExpandedBuilder.kType,
        );
 
@@ -192,6 +191,5 @@ class ExpandedSchema {
       'flex': SchemaHelper.numberSchema,
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': ['child'],
   };
 }

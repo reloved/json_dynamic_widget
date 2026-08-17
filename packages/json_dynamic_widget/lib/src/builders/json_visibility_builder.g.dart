@@ -99,25 +99,24 @@ class JsonVisibility extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonVisibilityBuilder(
-               args: JsonVisibilityBuilderModel.fromDynamic(
-                 {
-                   'maintainAnimation': maintainAnimation,
-                   'maintainInteractivity': maintainInteractivity,
-                   'maintainSemantics': maintainSemantics,
-                   'maintainSize': maintainSize,
-                   'maintainState': maintainState,
-                   'replacement': replacement,
-                   'visible': visible,
-                   'child': child,
+         jsonWidgetBuilder: () => JsonVisibilityBuilder(
+           args: JsonVisibilityBuilderModel.fromDynamic(
+             {
+               'maintainAnimation': maintainAnimation,
+               'maintainInteractivity': maintainInteractivity,
+               'maintainSemantics': maintainSemantics,
+               'maintainSize': maintainSize,
+               'maintainState': maintainState,
+               'replacement': replacement,
+               'visible': visible,
+               'child': child,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonVisibilityBuilder.kType,
        );
 
@@ -254,12 +253,15 @@ class JsonVisibilityBuilderModel extends JsonWidgetBuilderModel {
   @override
   Map<String, dynamic> toJson() {
     return JsonClass.removeNull({
-      'maintainAnimation':
-          false == maintainAnimation ? null : maintainAnimation,
-      'maintainInteractivity':
-          false == maintainInteractivity ? null : maintainInteractivity,
-      'maintainSemantics':
-          false == maintainSemantics ? null : maintainSemantics,
+      'maintainAnimation': false == maintainAnimation
+          ? null
+          : maintainAnimation,
+      'maintainInteractivity': false == maintainInteractivity
+          ? null
+          : maintainInteractivity,
+      'maintainSemantics': false == maintainSemantics
+          ? null
+          : maintainSemantics,
       'maintainSize': false == maintainSize ? null : maintainSize,
       'maintainState': false == maintainState ? null : maintainState,
       'replacement': replacement?.toJson(),
@@ -291,6 +293,5 @@ class VisibilitySchema {
       'visible': SchemaHelper.boolSchema,
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': ['child'],
   };
 }

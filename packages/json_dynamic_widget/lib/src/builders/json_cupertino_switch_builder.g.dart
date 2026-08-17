@@ -114,30 +114,29 @@ class JsonCupertinoSwitch extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonCupertinoSwitchBuilder(
-               args: JsonCupertinoSwitchBuilderModel.fromDynamic(
-                 {
-                   'activeColor': activeColor,
-                   'autovalidateMode': autovalidateMode,
-                   'dragStartBehavior': dragStartBehavior,
-                   'enabled': enabled,
-                   'label': label,
-                   'onChanged': onChanged,
-                   'onSaved': onSaved,
-                   'restorationId': restorationId,
-                   'thumbColor': thumbColor,
-                   'trackColor': trackColor,
-                   'validators': validators,
-                   'value': value,
-                   'visualDensity': visualDensity,
+         jsonWidgetBuilder: () => JsonCupertinoSwitchBuilder(
+           args: JsonCupertinoSwitchBuilderModel.fromDynamic(
+             {
+               'activeColor': activeColor,
+               'autovalidateMode': autovalidateMode,
+               'dragStartBehavior': dragStartBehavior,
+               'enabled': enabled,
+               'label': label,
+               'onChanged': onChanged,
+               'onSaved': onSaved,
+               'restorationId': restorationId,
+               'thumbColor': thumbColor,
+               'trackColor': trackColor,
+               'validators': validators,
+               'value': value,
+               'visualDensity': visualDensity,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonCupertinoSwitchBuilder.kType,
        );
 
@@ -360,6 +359,5 @@ class CupertinoSwitchSchema {
       'value': SchemaHelper.boolSchema,
       'visualDensity': SchemaHelper.objectSchema(VisualDensitySchema.id),
     },
-    'required': [],
   };
 }

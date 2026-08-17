@@ -94,23 +94,22 @@ class JsonIndexedStack extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonIndexedStackBuilder(
-               args: JsonIndexedStackBuilderModel.fromDynamic(
-                 {
-                   'alignment': alignment,
-                   'clipBehavior': clipBehavior,
-                   'index': index,
-                   'sizing': sizing,
-                   'textDirection': textDirection,
-                   'children': children,
+         jsonWidgetBuilder: () => JsonIndexedStackBuilder(
+           args: JsonIndexedStackBuilderModel.fromDynamic(
+             {
+               'alignment': alignment,
+               'clipBehavior': clipBehavior,
+               'index': index,
+               'sizing': sizing,
+               'textDirection': textDirection,
+               'children': children,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonIndexedStackBuilder.kType,
        );
 
@@ -312,22 +311,20 @@ class JsonIndexedStackBuilderModel extends JsonWidgetBuilderModel {
   @override
   Map<String, dynamic> toJson() {
     return JsonClass.removeNull({
-      'alignment':
-          AlignmentDirectional.topStart == alignment
-              ? null
-              : ThemeEncoder.encodeAlignmentGeometry(alignment),
-      'clipBehavior':
-          Clip.hardEdge == clipBehavior
-              ? null
-              : ThemeEncoder.encodeClip(clipBehavior),
+      'alignment': AlignmentDirectional.topStart == alignment
+          ? null
+          : ThemeEncoder.encodeAlignmentGeometry(alignment),
+      'clipBehavior': Clip.hardEdge == clipBehavior
+          ? null
+          : ThemeEncoder.encodeClip(clipBehavior),
       'index': 0 == index ? null : index,
-      'sizing':
-          StackFit.loose == sizing ? null : ThemeEncoder.encodeStackFit(sizing),
+      'sizing': StackFit.loose == sizing
+          ? null
+          : ThemeEncoder.encodeStackFit(sizing),
       'textDirection': ThemeEncoder.encodeTextDirection(textDirection),
-      'children':
-          const <JsonWidgetData>[] == children
-              ? null
-              : JsonClass.toJsonList(children),
+      'children': const <JsonWidgetData>[] == children
+          ? null
+          : JsonClass.toJsonList(children),
 
       ...args,
     });
@@ -352,6 +349,5 @@ class IndexedStackSchema {
       'textDirection': SchemaHelper.objectSchema(TextDirectionSchema.id),
       'children': SchemaHelper.arraySchema(JsonWidgetDataSchema.id),
     },
-    'required': [],
   };
 }

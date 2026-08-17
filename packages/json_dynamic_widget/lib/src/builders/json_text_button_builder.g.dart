@@ -106,28 +106,27 @@ class JsonTextButton extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonTextButtonBuilder(
-               args: JsonTextButtonBuilderModel.fromDynamic(
-                 {
-                   'autofocus': autofocus,
-                   'clipBehavior': clipBehavior,
-                   'focusNode': focusNode,
-                   'isSemanticButton': isSemanticButton,
-                   'onFocusChange': onFocusChange,
-                   'onHover': onHover,
-                   'onLongPress': onLongPress,
-                   'onPressed': onPressed,
-                   'statesController': statesController,
-                   'style': style,
-                   'child': child,
+         jsonWidgetBuilder: () => JsonTextButtonBuilder(
+           args: JsonTextButtonBuilderModel.fromDynamic(
+             {
+               'autofocus': autofocus,
+               'clipBehavior': clipBehavior,
+               'focusNode': focusNode,
+               'isSemanticButton': isSemanticButton,
+               'onFocusChange': onFocusChange,
+               'onHover': onHover,
+               'onLongPress': onLongPress,
+               'onPressed': onPressed,
+               'statesController': statesController,
+               'style': style,
+               'child': child,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonTextButtonBuilder.kType,
        );
 
@@ -316,6 +315,5 @@ class TextButtonSchema {
       'style': SchemaHelper.objectSchema(ButtonStyleSchema.id),
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': ['onPressed', 'child'],
   };
 }

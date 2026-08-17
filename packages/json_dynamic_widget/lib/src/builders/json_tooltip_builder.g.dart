@@ -139,39 +139,38 @@ class JsonTooltip extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonTooltipBuilder(
-               args: JsonTooltipBuilderModel.fromDynamic(
-                 {
-                   'constraints': constraints,
-                   'decoration': decoration,
-                   'enableFeedback': enableFeedback,
-                   'enableTapToDismiss': enableTapToDismiss,
-                   'excludeFromSemantics': excludeFromSemantics,
-                   'exitDuration': exitDuration,
-                   'height': height,
-                   'ignorePointer': ignorePointer,
-                   'margin': margin,
-                   'message': message,
-                   'mouseCursor': mouseCursor,
-                   'onTriggered': onTriggered,
-                   'padding': padding,
-                   'preferBelow': preferBelow,
-                   'richMessage': richMessage,
-                   'showDuration': showDuration,
-                   'textAlign': textAlign,
-                   'textStyle': textStyle,
-                   'triggerMode': triggerMode,
-                   'verticalOffset': verticalOffset,
-                   'waitDuration': waitDuration,
-                   'child': child,
+         jsonWidgetBuilder: () => JsonTooltipBuilder(
+           args: JsonTooltipBuilderModel.fromDynamic(
+             {
+               'constraints': constraints,
+               'decoration': decoration,
+               'enableFeedback': enableFeedback,
+               'enableTapToDismiss': enableTapToDismiss,
+               'excludeFromSemantics': excludeFromSemantics,
+               'exitDuration': exitDuration,
+               'height': height,
+               'ignorePointer': ignorePointer,
+               'margin': margin,
+               'message': message,
+               'mouseCursor': mouseCursor,
+               'onTriggered': onTriggered,
+               'padding': padding,
+               'preferBelow': preferBelow,
+               'richMessage': richMessage,
+               'showDuration': showDuration,
+               'textAlign': textAlign,
+               'textStyle': textStyle,
+               'triggerMode': triggerMode,
+               'verticalOffset': verticalOffset,
+               'waitDuration': waitDuration,
+               'child': child,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonTooltipBuilder.kType,
        );
 
@@ -789,8 +788,9 @@ class JsonTooltipBuilderModel extends JsonWidgetBuilderModel {
       'constraints': ThemeEncoder.encodeBoxConstraints(constraints),
       'decoration': decoration,
       'enableFeedback': enableFeedback,
-      'enableTapToDismiss':
-          true == enableTapToDismiss ? null : enableTapToDismiss,
+      'enableTapToDismiss': true == enableTapToDismiss
+          ? null
+          : enableTapToDismiss,
       'excludeFromSemantics': excludeFromSemantics,
       'exitDuration': exitDuration?.inMilliseconds,
       'height': height,
@@ -849,6 +849,5 @@ class TooltipSchema {
       'waitDuration': SchemaHelper.anySchema,
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': [],
   };
 }

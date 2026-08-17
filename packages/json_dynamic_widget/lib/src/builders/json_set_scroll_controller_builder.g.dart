@@ -92,23 +92,22 @@ class JsonSetScrollController extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonSetScrollControllerBuilder(
-               args: JsonSetScrollControllerBuilderModel.fromDynamic(
-                 {
-                   'childBuilder': childBuilder,
-                   'debugLabel': debugLabel,
-                   'initialScrollOffset': initialScrollOffset,
-                   'keepScrollOffset': keepScrollOffset,
-                   'key': varName,
-                   'child': child,
+         jsonWidgetBuilder: () => JsonSetScrollControllerBuilder(
+           args: JsonSetScrollControllerBuilderModel.fromDynamic(
+             {
+               'childBuilder': childBuilder,
+               'debugLabel': debugLabel,
+               'initialScrollOffset': initialScrollOffset,
+               'keepScrollOffset': keepScrollOffset,
+               'key': varName,
+               'child': child,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonSetScrollControllerBuilder.kType,
        );
 
@@ -245,6 +244,5 @@ class SetScrollControllerSchema {
       'key': SchemaHelper.stringSchema,
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': ['childBuilder', 'keepScrollOffset'],
   };
 }

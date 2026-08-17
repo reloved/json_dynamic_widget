@@ -103,27 +103,26 @@ class JsonOutlinedButton extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonOutlinedButtonBuilder(
-               args: JsonOutlinedButtonBuilderModel.fromDynamic(
-                 {
-                   'autofocus': autofocus,
-                   'clipBehavior': clipBehavior,
-                   'focusNode': focusNode,
-                   'onFocusChange': onFocusChange,
-                   'onHover': onHover,
-                   'onLongPress': onLongPress,
-                   'onPressed': onPressed,
-                   'statesController': statesController,
-                   'style': style,
-                   'child': child,
+         jsonWidgetBuilder: () => JsonOutlinedButtonBuilder(
+           args: JsonOutlinedButtonBuilderModel.fromDynamic(
+             {
+               'autofocus': autofocus,
+               'clipBehavior': clipBehavior,
+               'focusNode': focusNode,
+               'onFocusChange': onFocusChange,
+               'onHover': onHover,
+               'onLongPress': onLongPress,
+               'onPressed': onPressed,
+               'statesController': statesController,
+               'style': style,
+               'child': child,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonOutlinedButtonBuilder.kType,
        );
 
@@ -299,6 +298,5 @@ class OutlinedButtonSchema {
       'style': SchemaHelper.objectSchema(ButtonStyleSchema.id),
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': ['onPressed', 'child'],
   };
 }

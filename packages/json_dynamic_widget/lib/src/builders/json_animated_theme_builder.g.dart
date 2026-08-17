@@ -88,22 +88,21 @@ class JsonAnimatedTheme extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonAnimatedThemeBuilder(
-               args: JsonAnimatedThemeBuilderModel.fromDynamic(
-                 {
-                   'curve': curve,
-                   'data': data,
-                   'duration': duration,
-                   'onEnd': onEnd,
-                   'child': child,
+         jsonWidgetBuilder: () => JsonAnimatedThemeBuilder(
+           args: JsonAnimatedThemeBuilderModel.fromDynamic(
+             {
+               'curve': curve,
+               'data': data,
+               'duration': duration,
+               'onEnd': onEnd,
+               'child': child,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonAnimatedThemeBuilder.kType,
        );
 
@@ -244,8 +243,9 @@ class JsonAnimatedThemeBuilderModel extends JsonWidgetBuilderModel {
     return JsonClass.removeNull({
       'curve': Curves.linear == curve ? null : CurvesValues.encode(curve),
       'data': ThemeEncoder.encodeThemeData(data),
-      'duration':
-          kThemeAnimationDuration == duration ? null : duration.inMilliseconds,
+      'duration': kThemeAnimationDuration == duration
+          ? null
+          : duration.inMilliseconds,
       'onEnd': onEnd,
       'child': child.toJson(),
 
@@ -271,6 +271,5 @@ class AnimatedThemeSchema {
       'onEnd': SchemaHelper.anySchema,
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': ['data', 'child'],
   };
 }

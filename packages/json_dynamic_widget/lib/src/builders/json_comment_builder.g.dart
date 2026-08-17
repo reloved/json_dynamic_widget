@@ -76,20 +76,19 @@ class JsonComment extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonCommentBuilder(
-               args: JsonCommentBuilderModel.fromDynamic(
-                 {
-                   'comment': comment,
-                   'comments': comments,
-                   'child': child,
+         jsonWidgetBuilder: () => JsonCommentBuilder(
+           args: JsonCommentBuilderModel.fromDynamic(
+             {
+               'comment': comment,
+               'comments': comments,
+               'child': child,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonCommentBuilder.kType,
        );
 
@@ -201,6 +200,5 @@ class CommentSchema {
       'comments': SchemaHelper.anySchema,
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': [],
   };
 }

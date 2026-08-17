@@ -100,26 +100,25 @@ class JsonCardTheme extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonCardThemeBuilder(
-               args: JsonCardThemeBuilderModel.fromDynamic(
-                 {
-                   'clipBehavior': clipBehavior,
-                   'color': color,
-                   'data': data,
-                   'elevation': elevation,
-                   'margin': margin,
-                   'shadowColor': shadowColor,
-                   'shape': shape,
-                   'surfaceTintColor': surfaceTintColor,
-                   'child': child,
+         jsonWidgetBuilder: () => JsonCardThemeBuilder(
+           args: JsonCardThemeBuilderModel.fromDynamic(
+             {
+               'clipBehavior': clipBehavior,
+               'color': color,
+               'data': data,
+               'elevation': elevation,
+               'margin': margin,
+               'shadowColor': shadowColor,
+               'shape': shape,
+               'surfaceTintColor': surfaceTintColor,
+               'child': child,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonCardThemeBuilder.kType,
        );
 
@@ -328,6 +327,5 @@ class CardThemeSchema {
       'surfaceTintColor': SchemaHelper.objectSchema(ColorSchema.id),
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': [],
   };
 }

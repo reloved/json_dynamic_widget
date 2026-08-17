@@ -92,13 +92,12 @@ class JsonScaffoldBuilder extends _JsonScaffoldBuilder {
       onDrawerChanged: model.onDrawerChanged,
       onEndDrawerChanged: model.onEndDrawerChanged,
       persistentFooterAlignment: model.persistentFooterAlignment,
-      persistentFooterButtons:
-          model.persistentFooterButtons == null
-              ? null
-              : [
-                for (var d in model.persistentFooterButtons!)
-                  d.build(childBuilder: childBuilder, context: context),
-              ],
+      persistentFooterButtons: model.persistentFooterButtons == null
+          ? null
+          : [
+              for (var d in model.persistentFooterButtons!)
+                d.build(childBuilder: childBuilder, context: context),
+            ],
       persistentFooterDecoration: model.persistentFooterDecoration,
       primary: model.primary,
       resizeToAvoidBottomInset: model.resizeToAvoidBottomInset,
@@ -174,45 +173,43 @@ class JsonScaffold extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonScaffoldBuilder(
-               args: JsonScaffoldBuilderModel.fromDynamic(
-                 {
-                   'appBar': appBar,
-                   'backgroundColor': backgroundColor,
-                   'body': body,
-                   'bottomNavigationBar': bottomNavigationBar,
-                   'bottomSheet': bottomSheet,
-                   'bottomSheetScrimBuilder': bottomSheetScrimBuilder,
-                   'drawer': drawer,
-                   'drawerBarrierDismissible': drawerBarrierDismissible,
-                   'drawerDragStartBehavior': drawerDragStartBehavior,
-                   'drawerEdgeDragWidth': drawerEdgeDragWidth,
-                   'drawerEnableOpenDragGesture': drawerEnableOpenDragGesture,
-                   'drawerScrimColor': drawerScrimColor,
-                   'endDrawer': endDrawer,
-                   'endDrawerEnableOpenDragGesture':
-                       endDrawerEnableOpenDragGesture,
-                   'extendBody': extendBody,
-                   'extendBodyBehindAppBar': extendBodyBehindAppBar,
-                   'floatingActionButton': floatingActionButton,
-                   'floatingActionButtonAnimator': floatingActionButtonAnimator,
-                   'floatingActionButtonLocation': floatingActionButtonLocation,
-                   'onDrawerChanged': onDrawerChanged,
-                   'onEndDrawerChanged': onEndDrawerChanged,
-                   'persistentFooterAlignment': persistentFooterAlignment,
-                   'persistentFooterButtons': persistentFooterButtons,
-                   'persistentFooterDecoration': persistentFooterDecoration,
-                   'primary': primary,
-                   'resizeToAvoidBottomInset': resizeToAvoidBottomInset,
-                   'restorationId': restorationId,
+         jsonWidgetBuilder: () => JsonScaffoldBuilder(
+           args: JsonScaffoldBuilderModel.fromDynamic(
+             {
+               'appBar': appBar,
+               'backgroundColor': backgroundColor,
+               'body': body,
+               'bottomNavigationBar': bottomNavigationBar,
+               'bottomSheet': bottomSheet,
+               'bottomSheetScrimBuilder': bottomSheetScrimBuilder,
+               'drawer': drawer,
+               'drawerBarrierDismissible': drawerBarrierDismissible,
+               'drawerDragStartBehavior': drawerDragStartBehavior,
+               'drawerEdgeDragWidth': drawerEdgeDragWidth,
+               'drawerEnableOpenDragGesture': drawerEnableOpenDragGesture,
+               'drawerScrimColor': drawerScrimColor,
+               'endDrawer': endDrawer,
+               'endDrawerEnableOpenDragGesture': endDrawerEnableOpenDragGesture,
+               'extendBody': extendBody,
+               'extendBodyBehindAppBar': extendBodyBehindAppBar,
+               'floatingActionButton': floatingActionButton,
+               'floatingActionButtonAnimator': floatingActionButtonAnimator,
+               'floatingActionButtonLocation': floatingActionButtonLocation,
+               'onDrawerChanged': onDrawerChanged,
+               'onEndDrawerChanged': onEndDrawerChanged,
+               'persistentFooterAlignment': persistentFooterAlignment,
+               'persistentFooterButtons': persistentFooterButtons,
+               'persistentFooterDecoration': persistentFooterDecoration,
+               'primary': primary,
+               'resizeToAvoidBottomInset': resizeToAvoidBottomInset,
+               'restorationId': restorationId,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonScaffoldBuilder.kType,
        );
 
@@ -1086,29 +1083,29 @@ class JsonScaffoldBuilderModel extends JsonWidgetBuilderModel {
       'bottomSheet': bottomSheet?.toJson(),
       'bottomSheetScrimBuilder':
           _defaultBottomSheetScrimBuilder == bottomSheetScrimBuilder
-              ? null
-              : bottomSheetScrimBuilder,
+          ? null
+          : bottomSheetScrimBuilder,
       'drawer': drawer?.toJson(),
-      'drawerBarrierDismissible':
-          true == drawerBarrierDismissible ? null : drawerBarrierDismissible,
+      'drawerBarrierDismissible': true == drawerBarrierDismissible
+          ? null
+          : drawerBarrierDismissible,
       'drawerDragStartBehavior':
           DragStartBehavior.start == drawerDragStartBehavior
-              ? null
-              : ThemeEncoder.encodeDragStartBehavior(drawerDragStartBehavior),
+          ? null
+          : ThemeEncoder.encodeDragStartBehavior(drawerDragStartBehavior),
       'drawerEdgeDragWidth': drawerEdgeDragWidth,
-      'drawerEnableOpenDragGesture':
-          true == drawerEnableOpenDragGesture
-              ? null
-              : drawerEnableOpenDragGesture,
+      'drawerEnableOpenDragGesture': true == drawerEnableOpenDragGesture
+          ? null
+          : drawerEnableOpenDragGesture,
       'drawerScrimColor': ThemeEncoder.encodeColor(drawerScrimColor),
       'endDrawer': endDrawer?.toJson(),
-      'endDrawerEnableOpenDragGesture':
-          true == endDrawerEnableOpenDragGesture
-              ? null
-              : endDrawerEnableOpenDragGesture,
+      'endDrawerEnableOpenDragGesture': true == endDrawerEnableOpenDragGesture
+          ? null
+          : endDrawerEnableOpenDragGesture,
       'extendBody': false == extendBody ? null : extendBody,
-      'extendBodyBehindAppBar':
-          false == extendBodyBehindAppBar ? null : extendBodyBehindAppBar,
+      'extendBodyBehindAppBar': false == extendBodyBehindAppBar
+          ? null
+          : extendBodyBehindAppBar,
       'floatingActionButton': floatingActionButton?.toJson(),
       'floatingActionButtonAnimator':
           ThemeEncoder.encodeFloatingActionButtonAnimator(
@@ -1122,10 +1119,8 @@ class JsonScaffoldBuilderModel extends JsonWidgetBuilderModel {
       'onEndDrawerChanged': onEndDrawerChanged,
       'persistentFooterAlignment':
           AlignmentDirectional.centerEnd == persistentFooterAlignment
-              ? null
-              : ThemeEncoder.encodeAlignmentDirectional(
-                persistentFooterAlignment,
-              ),
+          ? null
+          : ThemeEncoder.encodeAlignmentDirectional(persistentFooterAlignment),
       'persistentFooterButtons': JsonClass.maybeToJsonList(
         persistentFooterButtons,
       ),
@@ -1194,6 +1189,5 @@ class ScaffoldSchema {
       'resizeToAvoidBottomInset': SchemaHelper.boolSchema,
       'restorationId': SchemaHelper.stringSchema,
     },
-    'required': [],
   };
 }

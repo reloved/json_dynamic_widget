@@ -87,20 +87,19 @@ class JsonConditional extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonConditionalBuilder(
-               args: JsonConditionalBuilderModel.fromDynamic(
-                 {
-                   'conditional': conditional,
-                   'onFalse': onFalse,
-                   'onTrue': onTrue,
+         jsonWidgetBuilder: () => JsonConditionalBuilder(
+           args: JsonConditionalBuilderModel.fromDynamic(
+             {
+               'conditional': conditional,
+               'onFalse': onFalse,
+               'onTrue': onTrue,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonConditionalBuilder.kType,
        );
 
@@ -211,6 +210,5 @@ class ConditionalSchema {
       'onFalse': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
       'onTrue': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': ['conditional'],
   };
 }

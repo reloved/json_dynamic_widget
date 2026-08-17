@@ -82,20 +82,19 @@ class JsonOpacity extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonOpacityBuilder(
-               args: JsonOpacityBuilderModel.fromDynamic(
-                 {
-                   'alwaysIncludeSemantics': alwaysIncludeSemantics,
-                   'opacity': opacity,
-                   'child': child,
+         jsonWidgetBuilder: () => JsonOpacityBuilder(
+           args: JsonOpacityBuilderModel.fromDynamic(
+             {
+               'alwaysIncludeSemantics': alwaysIncludeSemantics,
+               'opacity': opacity,
+               'child': child,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonOpacityBuilder.kType,
        );
 
@@ -225,8 +224,9 @@ class JsonOpacityBuilderModel extends JsonWidgetBuilderModel {
   @override
   Map<String, dynamic> toJson() {
     return JsonClass.removeNull({
-      'alwaysIncludeSemantics':
-          false == alwaysIncludeSemantics ? null : alwaysIncludeSemantics,
+      'alwaysIncludeSemantics': false == alwaysIncludeSemantics
+          ? null
+          : alwaysIncludeSemantics,
       'opacity': opacity,
       'child': child?.toJson(),
 
@@ -250,6 +250,5 @@ class OpacitySchema {
       'opacity': SchemaHelper.numberSchema,
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': ['opacity'],
   };
 }

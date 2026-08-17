@@ -82,20 +82,19 @@ class JsonBaseline extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonBaselineBuilder(
-               args: JsonBaselineBuilderModel.fromDynamic(
-                 {
-                   'baseline': baseline,
-                   'baselineType': baselineType,
-                   'child': child,
+         jsonWidgetBuilder: () => JsonBaselineBuilder(
+           args: JsonBaselineBuilderModel.fromDynamic(
+             {
+               'baseline': baseline,
+               'baselineType': baselineType,
+               'child': child,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonBaselineBuilder.kType,
        );
 
@@ -232,6 +231,5 @@ class BaselineSchema {
       'baselineType': SchemaHelper.objectSchema(TextBaselineSchema.id),
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': ['baseline', 'baselineType'],
   };
 }

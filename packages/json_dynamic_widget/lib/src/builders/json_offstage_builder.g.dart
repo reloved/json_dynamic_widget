@@ -74,14 +74,13 @@ class JsonOffstage extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonOffstageBuilder(
-               args: JsonOffstageBuilderModel.fromDynamic(
-                 {'offstage': offstage, 'child': child, ...args},
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+         jsonWidgetBuilder: () => JsonOffstageBuilder(
+           args: JsonOffstageBuilderModel.fromDynamic(
+             {'offstage': offstage, 'child': child, ...args},
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonOffstageBuilder.kType,
        );
 
@@ -207,6 +206,5 @@ class OffstageSchema {
       'offstage': SchemaHelper.boolSchema,
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': [],
   };
 }

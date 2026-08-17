@@ -74,14 +74,13 @@ class JsonDataTableTheme extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonDataTableThemeBuilder(
-               args: JsonDataTableThemeBuilderModel.fromDynamic(
-                 {'data': data, 'child': child, ...args},
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+         jsonWidgetBuilder: () => JsonDataTableThemeBuilder(
+           args: JsonDataTableThemeBuilderModel.fromDynamic(
+             {'data': data, 'child': child, ...args},
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonDataTableThemeBuilder.kType,
        );
 
@@ -201,6 +200,5 @@ class DataTableThemeSchema {
       'data': SchemaHelper.objectSchema(DataTableThemeDataSchema.id),
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': ['data', 'child'],
   };
 }

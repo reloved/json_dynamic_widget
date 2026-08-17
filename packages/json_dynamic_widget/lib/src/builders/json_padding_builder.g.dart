@@ -74,14 +74,13 @@ class JsonPadding extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonPaddingBuilder(
-               args: JsonPaddingBuilderModel.fromDynamic(
-                 {'padding': padding, 'child': child, ...args},
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+         jsonWidgetBuilder: () => JsonPaddingBuilder(
+           args: JsonPaddingBuilderModel.fromDynamic(
+             {'padding': padding, 'child': child, ...args},
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonPaddingBuilder.kType,
        );
 
@@ -195,6 +194,5 @@ class PaddingSchema {
       'padding': SchemaHelper.objectSchema(EdgeInsetsGeometrySchema.id),
       'child': SchemaHelper.objectSchema(JsonWidgetDataSchema.id),
     },
-    'required': ['padding'],
   };
 }

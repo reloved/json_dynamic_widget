@@ -116,30 +116,29 @@ class JsonCircularProgressIndicator extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonCircularProgressIndicatorBuilder(
-               args: JsonCircularProgressIndicatorBuilderModel.fromDynamic(
-                 {
-                   'backgroundColor': backgroundColor,
-                   'color': color,
-                   'constraints': constraints,
-                   'padding': padding,
-                   'semanticsLabel': semanticsLabel,
-                   'semanticsValue': semanticsValue,
-                   'strokeAlign': strokeAlign,
-                   'strokeCap': strokeCap,
-                   'strokeWidth': strokeWidth,
-                   'trackGap': trackGap,
-                   'value': value,
-                   'valueColor': valueColor,
-                   'year2023': year2023,
+         jsonWidgetBuilder: () => JsonCircularProgressIndicatorBuilder(
+           args: JsonCircularProgressIndicatorBuilderModel.fromDynamic(
+             {
+               'backgroundColor': backgroundColor,
+               'color': color,
+               'constraints': constraints,
+               'padding': padding,
+               'semanticsLabel': semanticsLabel,
+               'semanticsValue': semanticsValue,
+               'strokeAlign': strokeAlign,
+               'strokeCap': strokeCap,
+               'strokeWidth': strokeWidth,
+               'trackGap': trackGap,
+               'value': value,
+               'valueColor': valueColor,
+               'year2023': year2023,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonCircularProgressIndicatorBuilder.kType,
        );
 
@@ -460,10 +459,9 @@ class JsonCircularProgressIndicatorBuilderModel extends JsonWidgetBuilderModel {
       'padding': ThemeEncoder.encodeEdgeInsetsGeometry(padding),
       'semanticsLabel': semanticsLabel,
       'semanticsValue': semanticsValue,
-      'strokeAlign':
-          CircularProgressIndicator.strokeAlignCenter == strokeAlign
-              ? null
-              : strokeAlign,
+      'strokeAlign': CircularProgressIndicator.strokeAlignCenter == strokeAlign
+          ? null
+          : strokeAlign,
       'strokeCap': ThemeEncoder.encodeStrokeCap(strokeCap),
       'strokeWidth': strokeWidth,
       'trackGap': trackGap,
@@ -501,6 +499,5 @@ class CircularProgressIndicatorSchema {
       'valueColor': SchemaHelper.anySchema,
       'year2023': SchemaHelper.boolSchema,
     },
-    'required': [],
   };
 }

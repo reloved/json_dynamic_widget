@@ -105,27 +105,26 @@ class JsonWrap extends JsonWidgetData {
            args: args,
            registry: registry,
          ),
-         jsonWidgetBuilder:
-             () => JsonWrapBuilder(
-               args: JsonWrapBuilderModel.fromDynamic(
-                 {
-                   'alignment': alignment,
-                   'clipBehavior': clipBehavior,
-                   'crossAxisAlignment': crossAxisAlignment,
-                   'direction': direction,
-                   'runAlignment': runAlignment,
-                   'runSpacing': runSpacing,
-                   'spacing': spacing,
-                   'textDirection': textDirection,
-                   'verticalDirection': verticalDirection,
-                   'children': children,
+         jsonWidgetBuilder: () => JsonWrapBuilder(
+           args: JsonWrapBuilderModel.fromDynamic(
+             {
+               'alignment': alignment,
+               'clipBehavior': clipBehavior,
+               'crossAxisAlignment': crossAxisAlignment,
+               'direction': direction,
+               'runAlignment': runAlignment,
+               'runSpacing': runSpacing,
+               'spacing': spacing,
+               'textDirection': textDirection,
+               'verticalDirection': verticalDirection,
+               'children': children,
 
-                   ...args,
-                 },
-                 args: args,
-                 registry: registry,
-               ),
-             ),
+               ...args,
+             },
+             args: args,
+             registry: registry,
+           ),
+         ),
          jsonWidgetType: JsonWrapBuilder.kType,
        );
 
@@ -350,6 +349,5 @@ class WrapSchema {
       ),
       'children': SchemaHelper.arraySchema(JsonWidgetDataSchema.id),
     },
-    'required': [],
   };
 }
